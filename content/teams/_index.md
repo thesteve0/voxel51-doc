@@ -1,7 +1,7 @@
 +++
-archetype = "chapter"
+
 title = "Teams"
-weight = 1
+weight = 60
 +++
 
 This is a new chapter.

@@ -1,7 +1,7 @@
 +++
 
-title = "ClI"
-weight = 55
+title = "Plugins"
+weight = 1
 +++
 
 This is a new chapter.

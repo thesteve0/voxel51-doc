@@ -1,5 +1,5 @@
 +++
-archetype = "chapter"
+
 title = "Reference"
 weight = 40
 +++

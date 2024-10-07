@@ -1,7 +1,7 @@
 +++
-archetype = "chapter"
+
 title = "Integrations"
-weight = 1
+weight = 10
 +++
 
 This is a new chapter.

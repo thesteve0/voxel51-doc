@@ -1,7 +1,7 @@
 +++
-archetype = "chapter"
+
 title = "Releases"
-weight = 1
+weight = 70
 +++
 
 This is a new chapter.

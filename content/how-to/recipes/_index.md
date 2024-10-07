@@ -1,7 +1,7 @@
 +++
 
-title = "ClI"
-weight = 55
+title = "Recipes"
+weight = 5
 +++
 
 This is a new chapter.

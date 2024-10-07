@@ -1,7 +1,7 @@
 +++
 
-title = "ClI"
-weight = 55
+title = "Model Zoo"
+weight = 1
 +++
 
 This is a new chapter.

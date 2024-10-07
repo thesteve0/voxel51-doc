@@ -1,7 +1,8 @@
 +++
-archetype = "chapter"
+
 title = "Data and Models"
-weight = 1
+weight = 25
+
 +++
 
 This is a new chapter.

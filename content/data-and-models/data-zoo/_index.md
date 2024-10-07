@@ -1,6 +1,6 @@
 +++
-archetype = "chapter"
-title = "Plugins"
+
+title = "Data Zoo"
 weight = 1
 +++
 

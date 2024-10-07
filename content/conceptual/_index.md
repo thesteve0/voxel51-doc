@@ -1,6 +1,5 @@
 +++
-
-title = "Conceptual"
+title = "Conceptual Docs"
 weight = 20
 +++
 

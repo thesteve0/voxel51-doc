@@ -8,8 +8,10 @@ weight = 1
 
 ### cards with explanation of the different sections
 
-### Topics I am not sure where to place
-1. FiftyOne brain
-2. Environments
-3. Cheat Sheets
-4. 
+### Topic I am not sure where to place
+1. FiftyOne brain 
+
+May want to break this into two different docs
+1. Conceptual for the brain
+2. How to do stuff with the brain
+ 

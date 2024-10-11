@@ -9,9 +9,11 @@ weight = 1
 ### cards with explanation of the different sections
 
 ### Topic I am not sure where to place
-1. FiftyOne brain 
+1. FiftyOne brain  - it mixes both user guide, how-tos, and reference all throughout the docS
 
-May want to break this into two different docs
-1. Conceptual for the brain
-2. How to do stuff with the brain
+There are two options
+1. Give brain its own doc site
+2. Break apart the docs into two different directories
+    1. Conceptual for the brain
+    2. How to do stuff with the brain
  

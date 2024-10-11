@@ -18,7 +18,7 @@ in one doc leads to confusion and more cognitive load for the user.
 This site is already being built and deployed using CI/CD
 
 
-### cCrds with explanation of the different sections
+### Cards with explanation of the different sections
 
 There should be a brief intro on this page and then perhaps cards desribing the top level elements of the TOC. 
 

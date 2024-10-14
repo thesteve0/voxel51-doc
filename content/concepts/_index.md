@@ -1,5 +1,5 @@
 +++
-title = "Conceptual Docs"
+title = "FiftyOne Concepts"
 weight = 20
 +++
 

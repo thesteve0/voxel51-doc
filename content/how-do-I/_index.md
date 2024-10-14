@@ -1,7 +1,7 @@
 +++
 
-title = "How To"
-weight = 30
+title = "How Do I"
+weight = 25
 +++
 
 This is a new chapter.

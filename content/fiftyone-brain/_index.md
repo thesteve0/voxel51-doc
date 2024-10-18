@@ -1,7 +1,7 @@
 +++
 
 title = "FiftyOne Brain"
-weight = 39
+weight = 30
 +++
 
 This is a new chapter.

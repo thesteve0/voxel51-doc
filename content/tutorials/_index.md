@@ -1,7 +1,7 @@
 +++
 
 title = "Tutorials"
-weight = 50         
+weight = 27         
 +++
 
 This is a new chapter.

@@ -1,6 +1,6 @@
 +++
 
-title = "Teams"
+title = "FiftyOne Enterprise"
 weight = 60
 +++
 

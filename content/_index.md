@@ -16,7 +16,7 @@ _items that will be on this page_
 
 ### Notes to reviewers
 The only thing we are focused on at the point is the top level of the table of contents. 
-![toc_arrow.png](../toc_arrow.png)
+![toc_arrow.png](toc_arrow.png)
 
 **No feedback is needed right now about anything other than the top level headings in the table of contents**
 

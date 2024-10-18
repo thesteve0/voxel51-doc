@@ -4,32 +4,26 @@ description = "Computer Vision FTW"
 weight = 1
 +++
 
-## Our goal
+## Welcome to FiftyOne
+_items that will be on this page_
 
-The structure and approach to the doc will be using best practices from the tech writing community. 
+1. Intro material
+   2. What is FiftyOne
+   3. What each of the areas in the TOC cover
+2. Suggested next steps
 
-A good summary of those practices are found on the [Diataxis diataxis.webpsite](https://diataxis.fr/)
+--------------
 
-The main idea to understand right now is the 4 main types of documentation. Mixing two different purposes
-in one doc leads to confusion and more cognitive load for the user.
-![diataxis.webp](./diataxis.webp)
+### Notes to reviewers
+The only thing we are focused on at the point is the top level of the table of contents. 
+
+**No feedback is needed right now about anything other than the top level headings in the table of contents**
+
+Even though you see some of the preliminary work  under the top level TOC, the actual items and organization under the TOC will be decided together at a later time. 
+
+I have put together some [short notes](notes.md) about the design principles and the goals I am using to guide this work. 
+
+Please excuse the ugly theme - I tried making it look a little nicer but front end design is not my forte. 
 
 
-This site is already being built and deployed using CI/CD
-
-
-### Cards with explanation of the different sections
-
-There should be a brief intro on this page and then perhaps cards desribing the top level elements of the TOC. 
-
-After the cards we can put a bit more text with some suggested actions. 
-
-### Topic I am not sure where to place
-1. FiftyOne brain  - it mixes both user guide, how-tos, and reference all throughout the docS
-
-There are two options
-1. Give brain its own doc site
-2. Break apart the docs into two different directories
-    1. Conceptual for the brain
-    2. How to do stuff with the brain
  

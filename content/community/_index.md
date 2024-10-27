@@ -4,4 +4,4 @@ title = "Community"
 weight = 46
 +++
 
-This is a new chapter.
+All the different ways to join and interact with the community. We should also list events here     

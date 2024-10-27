@@ -4,4 +4,4 @@ title = "Tutorials"
 weight = 27         
 +++
 
-This is a new chapter.
+Tutorials link together how-tos. They show users how to complete a workflow and not just a task

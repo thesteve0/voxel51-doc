@@ -1,6 +1,6 @@
 +++
 
-title = "Plugins and Panels"
+title = "Panels"
 weight = 32
 +++
 

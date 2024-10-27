@@ -1,5 +1,5 @@
 +++
-title = "Welcome to the Voxel51 documentation"
+title = "Welcome"
 description = "Computer Vision FTW"
 weight = 1
 +++

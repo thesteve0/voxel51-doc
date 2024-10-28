@@ -21,10 +21,6 @@ The only thing we are focused on at the point is the top level of the table of c
 
 **No feedback is needed right now about anything other than the top level headings in the table of contents**
 
-Even though you see some of the preliminary work  under the top level TOC, the actual items and organization under the TOC will be decided together at a later time. 
-
-I have put together some [short notes](notes.md) about the design principles and the goals I am using to guide this work. 
-
 Please excuse the ugly theme - I tried making it look a little nicer but front end design is not my forte. 
 
 

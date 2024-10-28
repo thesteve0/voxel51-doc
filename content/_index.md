@@ -7,6 +7,9 @@ weight = 3
 ## Welcome to FiftyOne
 _items that will be on this page_
 
+Page, above the fold, will have two large cards. One card describes FiftyOne Open Source and the other will explain FiftyOne
+teams/enterprise. Based on the description the user can choose which section of the documentation to read. 
+
 1. Intro material
    2. What is FiftyOne
    3. What each of the areas in the TOC cover

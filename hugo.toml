@@ -1,10 +1,10 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Voxe51 Doc'
-#[module]
-#  [[module.imports]]
-#    path = 'github.com/McShelby/hugo-theme-relearn'
-theme = 'hugo-theme-relearn'
+[module]
+  [[module.imports]]
+    path = 'github.com/thingsym/hugo-theme-techdoc'
+#theme = 'hugo-theme-relearn'
 [params]
 linkTitle = 'Voxel51'
 

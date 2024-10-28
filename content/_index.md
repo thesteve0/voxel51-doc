@@ -1,7 +1,7 @@
 +++
 title = "Welcome"
 description = "Computer Vision FTW"
-weight = 1
+weight = 3
 +++
 
 ## Welcome to FiftyOne

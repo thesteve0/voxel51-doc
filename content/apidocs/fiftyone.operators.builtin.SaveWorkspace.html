@@ -1,0 +1,1218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fiftyone.operators.builtin.SaveWorkspace</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          fiftyone <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="fiftyone.operators.builtin.SaveWorkspace.html" class="internal-link" title="This class"><wbr></wbr>Save<wbr></wbr>Workspace</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#execute" class="internal-link" title="fiftyone.operators.builtin.SaveWorkspace.execute">execute</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#resolve_input" class="internal-link" title="fiftyone.operators.builtin.SaveWorkspace.resolve_input">resolve<wbr></wbr>_input</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#__init__" class="internal-link" title="fiftyone.operators.operator.Operator.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#add_secrets" class="internal-link" title="fiftyone.operators.operator.Operator.add_secrets">add<wbr></wbr>_secrets</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#method_to_uri" class="internal-link" title="fiftyone.operators.operator.Operator.method_to_uri">method<wbr></wbr>_to<wbr></wbr>_uri</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#resolve_delegation" class="internal-link" title="fiftyone.operators.operator.Operator.resolve_delegation">resolve<wbr></wbr>_delegation</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#resolve_execution_options" class="internal-link" title="fiftyone.operators.operator.Operator.resolve_execution_options">resolve<wbr></wbr>_execution<wbr></wbr>_options</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#resolve_output" class="internal-link" title="fiftyone.operators.operator.Operator.resolve_output">resolve<wbr></wbr>_output</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#resolve_placement" class="internal-link" title="fiftyone.operators.operator.Operator.resolve_placement">resolve<wbr></wbr>_placement</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#resolve_type" class="internal-link" title="fiftyone.operators.operator.Operator.resolve_type">resolve<wbr></wbr>_type</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#to_json" class="internal-link" title="fiftyone.operators.operator.Operator.to_json">to<wbr></wbr>_json</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#config" class="internal-link" title="fiftyone.operators.builtin.SaveWorkspace.config">config</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#plugin_name" class="internal-link" title="fiftyone.operators.operator.Operator.plugin_name">plugin<wbr></wbr>_name</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#builtin" class="internal-link" title="fiftyone.operators.operator.Operator.builtin">builtin</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#name" class="internal-link" title="fiftyone.operators.operator.Operator.name">name</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#uri" class="internal-link" title="fiftyone.operators.operator.Operator.uri">uri</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#_builtin" class="internal-link" title="fiftyone.operators.operator.Operator._builtin">_builtin</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operator.Operator.html#_plugin_secrets" class="internal-link" title="fiftyone.operators.operator.Operator._plugin_secrets">_plugin<wbr></wbr>_secrets</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="fiftyone.operators.builtin.html" class="internal-link" title="The parent of this class">builtin</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.AddGroupSlice.html" class="internal-link" title="fiftyone.operators.builtin.AddGroupSlice"><wbr></wbr>Add<wbr></wbr>Group<wbr></wbr>Slice</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.ClearFrameField.html" class="internal-link" title="fiftyone.operators.builtin.ClearFrameField"><wbr></wbr>Clear<wbr></wbr>Frame<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.ClearSampleField.html" class="internal-link" title="fiftyone.operators.builtin.ClearSampleField"><wbr></wbr>Clear<wbr></wbr>Sample<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.CloneFrameField.html" class="internal-link" title="fiftyone.operators.builtin.CloneFrameField"><wbr></wbr>Clone<wbr></wbr>Frame<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.CloneSampleField.html" class="internal-link" title="fiftyone.operators.builtin.CloneSampleField"><wbr></wbr>Clone<wbr></wbr>Sample<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.CloneSelectedSamples.html" class="internal-link" title="fiftyone.operators.builtin.CloneSelectedSamples"><wbr></wbr>Clone<wbr></wbr>Selected<wbr></wbr>Samples</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.CreateIndex.html" class="internal-link" title="fiftyone.operators.builtin.CreateIndex"><wbr></wbr>Create<wbr></wbr>Index</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.CreateSummaryField.html" class="internal-link" title="fiftyone.operators.builtin.CreateSummaryField"><wbr></wbr>Create<wbr></wbr>Summary<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.DeleteFrameField.html" class="internal-link" title="fiftyone.operators.builtin.DeleteFrameField"><wbr></wbr>Delete<wbr></wbr>Frame<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.DeleteGroupSlice.html" class="internal-link" title="fiftyone.operators.builtin.DeleteGroupSlice"><wbr></wbr>Delete<wbr></wbr>Group<wbr></wbr>Slice</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.DeleteSampleField.html" class="internal-link" title="fiftyone.operators.builtin.DeleteSampleField"><wbr></wbr>Delete<wbr></wbr>Sample<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.DeleteSavedView.html" class="internal-link" title="fiftyone.operators.builtin.DeleteSavedView"><wbr></wbr>Delete<wbr></wbr>Saved<wbr></wbr>View</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.DeleteSelectedLabels.html" class="internal-link" title="fiftyone.operators.builtin.DeleteSelectedLabels"><wbr></wbr>Delete<wbr></wbr>Selected<wbr></wbr>Labels</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.DeleteSelectedSamples.html" class="internal-link" title="fiftyone.operators.builtin.DeleteSelectedSamples"><wbr></wbr>Delete<wbr></wbr>Selected<wbr></wbr>Samples</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.DeleteSummaryField.html" class="internal-link" title="fiftyone.operators.builtin.DeleteSummaryField"><wbr></wbr>Delete<wbr></wbr>Summary<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.DeleteWorkspace.html" class="internal-link" title="fiftyone.operators.builtin.DeleteWorkspace"><wbr></wbr>Delete<wbr></wbr>Workspace</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.DropIndex.html" class="internal-link" title="fiftyone.operators.builtin.DropIndex"><wbr></wbr>Drop<wbr></wbr>Index</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.EditFieldInfo.html" class="internal-link" title="fiftyone.operators.builtin.EditFieldInfo"><wbr></wbr>Edit<wbr></wbr>Field<wbr></wbr>Info</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.EditSavedViewInfo.html" class="internal-link" title="fiftyone.operators.builtin.EditSavedViewInfo"><wbr></wbr>Edit<wbr></wbr>Saved<wbr></wbr>View<wbr></wbr>Info</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.EditWorkspaceInfo.html" class="internal-link" title="fiftyone.operators.builtin.EditWorkspaceInfo"><wbr></wbr>Edit<wbr></wbr>Workspace<wbr></wbr>Info</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.ListFiles.html" class="internal-link" title="fiftyone.operators.builtin.ListFiles"><wbr></wbr>List<wbr></wbr>Files</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.ListSavedViews.html" class="internal-link" title="fiftyone.operators.builtin.ListSavedViews"><wbr></wbr>List<wbr></wbr>Saved<wbr></wbr>Views</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.ListWorkspaces.html" class="internal-link" title="fiftyone.operators.builtin.ListWorkspaces"><wbr></wbr>List<wbr></wbr>Workspaces</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.LoadSavedView.html" class="internal-link" title="fiftyone.operators.builtin.LoadSavedView"><wbr></wbr>Load<wbr></wbr>Saved<wbr></wbr>View</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.LoadWorkspace.html" class="internal-link" title="fiftyone.operators.builtin.LoadWorkspace"><wbr></wbr>Load<wbr></wbr>Workspace</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.RenameFrameField.html" class="internal-link" title="fiftyone.operators.builtin.RenameFrameField"><wbr></wbr>Rename<wbr></wbr>Frame<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.RenameGroupSlice.html" class="internal-link" title="fiftyone.operators.builtin.RenameGroupSlice"><wbr></wbr>Rename<wbr></wbr>Group<wbr></wbr>Slice</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.RenameSampleField.html" class="internal-link" title="fiftyone.operators.builtin.RenameSampleField"><wbr></wbr>Rename<wbr></wbr>Sample<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.SaveView.html" class="internal-link" title="fiftyone.operators.builtin.SaveView"><wbr></wbr>Save<wbr></wbr>View</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.SaveWorkspace.html" class="internal-link" title="fiftyone.operators.builtin.SaveWorkspace"><wbr></wbr>Save<wbr></wbr>Workspace</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.SyncLastModifiedAt.html" class="internal-link" title="fiftyone.operators.builtin.SyncLastModifiedAt"><wbr></wbr>Sync<wbr></wbr>Last<wbr></wbr>Modified<wbr></wbr>At</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.UpdateSummaryField.html" class="internal-link" title="fiftyone.operators.builtin.UpdateSummaryField"><wbr></wbr>Update<wbr></wbr>Summary<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#get_default_path_for_filesystem" class="internal-link" title="fiftyone.operators.builtin.get_default_path_for_filesystem">get<wbr></wbr>_default<wbr></wbr>_path<wbr></wbr>_for<wbr></wbr>_filesystem</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#list_files" class="internal-link" title="fiftyone.operators.builtin.list_files">list<wbr></wbr>_files</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#list_filesystems" class="internal-link" title="fiftyone.operators.builtin.list_filesystems">list<wbr></wbr>_filesystems</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_clear_frame_field_inputs" class="internal-link" title="fiftyone.operators.builtin._clear_frame_field_inputs">_clear<wbr></wbr>_frame<wbr></wbr>_field<wbr></wbr>_inputs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_clear_sample_field_inputs" class="internal-link" title="fiftyone.operators.builtin._clear_sample_field_inputs">_clear<wbr></wbr>_sample<wbr></wbr>_field<wbr></wbr>_inputs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_clone_frame_field_inputs" class="internal-link" title="fiftyone.operators.builtin._clone_frame_field_inputs">_clone<wbr></wbr>_frame<wbr></wbr>_field<wbr></wbr>_inputs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_clone_sample_field_inputs" class="internal-link" title="fiftyone.operators.builtin._clone_sample_field_inputs">_clone<wbr></wbr>_sample<wbr></wbr>_field<wbr></wbr>_inputs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_create_summary_field_inputs" class="internal-link" title="fiftyone.operators.builtin._create_summary_field_inputs">_create<wbr></wbr>_summary<wbr></wbr>_field<wbr></wbr>_inputs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_delete_frame_field_inputs" class="internal-link" title="fiftyone.operators.builtin._delete_frame_field_inputs">_delete<wbr></wbr>_frame<wbr></wbr>_field<wbr></wbr>_inputs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_delete_sample_field_inputs" class="internal-link" title="fiftyone.operators.builtin._delete_sample_field_inputs">_delete<wbr></wbr>_sample<wbr></wbr>_field<wbr></wbr>_inputs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_edit_field_info_inputs" class="internal-link" title="fiftyone.operators.builtin._edit_field_info_inputs">_edit<wbr></wbr>_field<wbr></wbr>_info<wbr></wbr>_inputs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_edit_saved_view_info_inputs" class="internal-link" title="fiftyone.operators.builtin._edit_saved_view_info_inputs">_edit<wbr></wbr>_saved<wbr></wbr>_view<wbr></wbr>_info<wbr></wbr>_inputs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_edit_workspace_info_inputs" class="internal-link" title="fiftyone.operators.builtin._edit_workspace_info_inputs">_edit<wbr></wbr>_workspace<wbr></wbr>_info<wbr></wbr>_inputs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_get_dynamic" class="internal-link" title="fiftyone.operators.builtin._get_dynamic">_get<wbr></wbr>_dynamic</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_get_non_default_frame_fields" class="internal-link" title="fiftyone.operators.builtin._get_non_default_frame_fields">_get<wbr></wbr>_non<wbr></wbr>_default<wbr></wbr>_frame<wbr></wbr>_fields</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_get_non_default_sample_fields" class="internal-link" title="fiftyone.operators.builtin._get_non_default_sample_fields">_get<wbr></wbr>_non<wbr></wbr>_default<wbr></wbr>_sample<wbr></wbr>_fields</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_get_target_view" class="internal-link" title="fiftyone.operators.builtin._get_target_view">_get<wbr></wbr>_target<wbr></wbr>_view</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_parse_spaces" class="internal-link" title="fiftyone.operators.builtin._parse_spaces">_parse<wbr></wbr>_spaces</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_rename_frame_field_inputs" class="internal-link" title="fiftyone.operators.builtin._rename_frame_field_inputs">_rename<wbr></wbr>_frame<wbr></wbr>_field<wbr></wbr>_inputs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_rename_sample_field_inputs" class="internal-link" title="fiftyone.operators.builtin._rename_sample_field_inputs">_rename<wbr></wbr>_sample<wbr></wbr>_field<wbr></wbr>_inputs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#_update_summary_field_inputs" class="internal-link" title="fiftyone.operators.builtin._update_summary_field_inputs">_update<wbr></wbr>_summary<wbr></wbr>_field<wbr></wbr>_inputs</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#BUILTIN_OPERATORS" class="internal-link" title="fiftyone.operators.builtin.BUILTIN_OPERATORS">BUILTIN<wbr></wbr>_OPERATORS</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.builtin.html#BUILTIN_PANELS" class="internal-link" title="fiftyone.operators.builtin.BUILTIN_PANELS">BUILTIN<wbr></wbr>_PANELS</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">fiftyone</a></code><wbr></wbr>.<code><a href="fiftyone.operators.html" class="internal-link" title="fiftyone.operators">operators</a></code><wbr></wbr>.<code><a href="fiftyone.operators.builtin.html" class="internal-link" title="fiftyone.operators.builtin">builtin</a></code><wbr></wbr>.<code><a href="fiftyone.operators.builtin.SaveWorkspace.html" class="internal-link" title="fiftyone.operators.builtin.SaveWorkspace">SaveWorkspace</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">SaveWorkspace</span>(<a href="fiftyone.operators.operator.Operator.html" class="internal-link" title="fiftyone.operators.operator.Operator">foo.Operator</a>):</code></p><p>Constructor: <code><a href="fiftyone.operators.operator.Operator.html#__init__" class="internal-link" title="fiftyone.operators.operator.Operator.__init__">SaveWorkspace(_builtin)</a></code></p>
+          <p><a href="classIndex.html#fiftyone.operators.builtin.SaveWorkspace">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id983">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#execute" class="internal-link" title="fiftyone.operators.builtin.SaveWorkspace.execute">execute</a></code></td>
+    <td>Executes the operator.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#resolve_input" class="internal-link" title="fiftyone.operators.builtin.SaveWorkspace.resolve_input">resolve<wbr></wbr>_input</a></code></td>
+    <td>Returns the resolved input property.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#config" class="internal-link" title="fiftyone.operators.builtin.SaveWorkspace.config">config</a></code></td>
+    <td>The :class:`OperatorConfig` for the operator.</td>
+  </tr>
+</table>
+          
+            <p class="inheritedFrom">
+              Inherited from <code><a href="fiftyone.operators.operator.Operator.html" class="internal-link" title="fiftyone.operators.operator.Operator">Operator</a></code>:
+            </p>
+            <table class="children sortable" id="id984">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fiftyone.operators.operator.Operator.html#__init__" class="internal-link" title="fiftyone.operators.operator.Operator.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fiftyone.operators.operator.Operator.html#add_secrets" class="internal-link" title="fiftyone.operators.operator.Operator.add_secrets">add<wbr></wbr>_secrets</a></code></td>
+    <td>Adds secrets to the operator.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fiftyone.operators.operator.Operator.html#method_to_uri" class="internal-link" title="fiftyone.operators.operator.Operator.method_to_uri">method<wbr></wbr>_to<wbr></wbr>_uri</a></code></td>
+    <td>Converts a method name to a URI.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fiftyone.operators.operator.Operator.html#resolve_delegation" class="internal-link" title="fiftyone.operators.operator.Operator.resolve_delegation">resolve<wbr></wbr>_delegation</a></code></td>
+    <td>Returns the resolved *forced* delegation flag.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fiftyone.operators.operator.Operator.html#resolve_execution_options" class="internal-link" title="fiftyone.operators.operator.Operator.resolve_execution_options">resolve<wbr></wbr>_execution<wbr></wbr>_options</a></code></td>
+    <td>Returns the resolved execution options.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fiftyone.operators.operator.Operator.html#resolve_output" class="internal-link" title="fiftyone.operators.operator.Operator.resolve_output">resolve<wbr></wbr>_output</a></code></td>
+    <td>Returns the resolved output property.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fiftyone.operators.operator.Operator.html#resolve_placement" class="internal-link" title="fiftyone.operators.operator.Operator.resolve_placement">resolve<wbr></wbr>_placement</a></code></td>
+    <td>Returns the resolved placement of the operator.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fiftyone.operators.operator.Operator.html#resolve_type" class="internal-link" title="fiftyone.operators.operator.Operator.resolve_type">resolve<wbr></wbr>_type</a></code></td>
+    <td>Returns the resolved input or output property.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fiftyone.operators.operator.Operator.html#to_json" class="internal-link" title="fiftyone.operators.operator.Operator.to_json">to<wbr></wbr>_json</a></code></td>
+    <td>Returns a JSON representation of the operator.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fiftyone.operators.operator.Operator.html#plugin_name" class="internal-link" title="fiftyone.operators.operator.Operator.plugin_name">plugin<wbr></wbr>_name</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseproperty">
+    
+    <td>Property</td>
+    <td><code><a href="fiftyone.operators.operator.Operator.html#builtin" class="internal-link" title="fiftyone.operators.operator.Operator.builtin">builtin</a></code></td>
+    <td>Whether the operator is builtin.</td>
+  </tr><tr class="baseproperty">
+    
+    <td>Property</td>
+    <td><code><a href="fiftyone.operators.operator.Operator.html#name" class="internal-link" title="fiftyone.operators.operator.Operator.name">name</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseproperty">
+    
+    <td>Property</td>
+    <td><code><a href="fiftyone.operators.operator.Operator.html#uri" class="internal-link" title="fiftyone.operators.operator.Operator.uri">uri</a></code></td>
+    <td>The unique identifier of the operator: ``plugin_name/operator_name``.</td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fiftyone.operators.operator.Operator.html#_builtin" class="internal-link" title="fiftyone.operators.operator.Operator._builtin">_builtin</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fiftyone.operators.operator.Operator.html#_plugin_secrets" class="internal-link" title="fiftyone.operators.operator.Operator._plugin_secrets">_plugin<wbr></wbr>_secrets</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+            
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.builtin.SaveWorkspace.execute">
+    
+  </a>
+  <a name="execute">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">execute</span><span class="function-signature">(self, ctx)</span>:
+    
+    <a class="headerLink" href="#execute" title="fiftyone.operators.builtin.SaveWorkspace.execute">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fiftyone.operators.operator.Operator.html#execute" class="internal-link">fiftyone.operators.operator.Operator.execute</a></code></div>
+    <div><p class="pre">Executes the operator.
+
+Subclasses must implement this method.
+
+Args:
+    ctx: the :class:`fiftyone.operators.executor.ExecutionContext`
+
+Returns:
+    JSON serializable data, or None</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.builtin.SaveWorkspace.resolve_input">
+    
+  </a>
+  <a name="resolve_input">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">resolve_input</span><span class="function-signature">(self, ctx)</span>:
+    
+    <a class="headerLink" href="#resolve_input" title="fiftyone.operators.builtin.SaveWorkspace.resolve_input">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fiftyone.operators.operator.Operator.html#resolve_input" class="internal-link">fiftyone.operators.operator.Operator.resolve_input</a></code></div>
+    <div><p class="pre">Returns the resolved input property.
+
+Subclasses can implement this method to define the inputs to the
+operator. This method should never be called directly. Instead
+use :meth:`resolve_type`.
+
+By default, this method is called once when the operator is created.
+If the operator is dynamic, this method is called each time the input
+changes.
+
+Args:
+    ctx: the :class:`fiftyone.operators.executor.ExecutionContext`
+
+Returns:
+    a :class:`fiftyone.operators.types.Property`, or None</p></div>
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.builtin.SaveWorkspace.config">
+    
+  </a>
+  <a name="config">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">config</span> =
+    
+    <a class="headerLink" href="#config" title="fiftyone.operators.builtin.SaveWorkspace.config">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fiftyone.operators.operator.Operator.html#config" class="internal-link">fiftyone.operators.operator.Operator.config</a></code></div>
+    <div><p>The :class:`OperatorConfig` for the operator.</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for fiftyone,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-11-17 20:16:35.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

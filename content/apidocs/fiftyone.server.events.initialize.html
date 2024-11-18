@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fiftyone.server.events.initialize</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          fiftyone <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code class="thisobject"><a href="fiftyone.server.events.initialize.html" class="internal-link" title="This module">initialize</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.server.events.initialize.InitializedListener.html" class="internal-link" title="fiftyone.server.events.initialize.InitializedListener"><wbr></wbr>Initialized<wbr></wbr>Listener</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#handle_app_initializer" class="internal-link" title="fiftyone.server.events.initialize.handle_app_initializer">handle<wbr></wbr>_app<wbr></wbr>_initializer</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#handle_dataset_change" class="internal-link" title="fiftyone.server.events.initialize.handle_dataset_change">handle<wbr></wbr>_dataset<wbr></wbr>_change</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#handle_group_id" class="internal-link" title="fiftyone.server.events.initialize.handle_group_id">handle<wbr></wbr>_group<wbr></wbr>_id</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#handle_group_slice" class="internal-link" title="fiftyone.server.events.initialize.handle_group_slice">handle<wbr></wbr>_group<wbr></wbr>_slice</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#handle_sample_id" class="internal-link" title="fiftyone.server.events.initialize.handle_sample_id">handle<wbr></wbr>_sample<wbr></wbr>_id</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#handle_saved_view" class="internal-link" title="fiftyone.server.events.initialize.handle_saved_view">handle<wbr></wbr>_saved<wbr></wbr>_view</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#handle_workspace" class="internal-link" title="fiftyone.server.events.initialize.handle_workspace">handle<wbr></wbr>_workspace</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#initialize_listener" class="internal-link" title="fiftyone.server.events.initialize.initialize_listener">initialize<wbr></wbr>_listener</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#initialize_listener_sync" class="internal-link" title="fiftyone.server.events.initialize.initialize_listener_sync">initialize<wbr></wbr>_listener<wbr></wbr>_sync</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="fiftyone.server.events.html" class="internal-link" title="The parent of this module">events</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.server.events.dispatch.html" class="internal-link" title="fiftyone.server.events.dispatch">dispatch</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.server.events.initialize.html" class="internal-link" title="fiftyone.server.events.initialize">initialize</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.server.events.listener.html" class="internal-link" title="fiftyone.server.events.listener">listener</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.server.events.polling.html" class="internal-link" title="fiftyone.server.events.polling">polling</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.server.events.state.html" class="internal-link" title="fiftyone.server.events.state">state</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+        
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">fiftyone</a></code><wbr></wbr>.<code><a href="fiftyone.server.html" class="internal-link" title="fiftyone.server">server</a></code><wbr></wbr>.<code><a href="fiftyone.server.events.html" class="internal-link" title="fiftyone.server.events">events</a></code><wbr></wbr>.<code><a href="fiftyone.server.events.initialize.html" class="internal-link" title="fiftyone.server.events.initialize">initialize</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          module documentation
+        </div>
+
+        <div class="extrasDocstring">
+          
+          <p></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>FiftyOne Server events initialization.</p>
+<p>| Copyright 2017-2024, Voxel51, Inc. | `voxel51.com &lt;https://voxel51.com/&gt;`_ |</p>
+</div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id1323">
+  
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.server.events.initialize.InitializedListener.html" class="internal-link" title="fiftyone.server.events.initialize.InitializedListener"><wbr></wbr>Initialized<wbr></wbr>Listener</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#handle_app_initializer" class="internal-link" title="fiftyone.server.events.initialize.handle_app_initializer">handle<wbr></wbr>_app<wbr></wbr>_initializer</a></code></td>
+    <td>Handle an App initialization request</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#handle_dataset_change" class="internal-link" title="fiftyone.server.events.initialize.handle_dataset_change">handle<wbr></wbr>_dataset<wbr></wbr>_change</a></code></td>
+    <td>Handle a dataset change request.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#handle_group_id" class="internal-link" title="fiftyone.server.events.initialize.handle_group_id">handle<wbr></wbr>_group<wbr></wbr>_id</a></code></td>
+    <td>Handle a group id.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#handle_group_slice" class="internal-link" title="fiftyone.server.events.initialize.handle_group_slice">handle<wbr></wbr>_group<wbr></wbr>_slice</a></code></td>
+    <td>Handle a group slice.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#handle_sample_id" class="internal-link" title="fiftyone.server.events.initialize.handle_sample_id">handle<wbr></wbr>_sample<wbr></wbr>_id</a></code></td>
+    <td>Handle a sample id.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#handle_saved_view" class="internal-link" title="fiftyone.server.events.initialize.handle_saved_view">handle<wbr></wbr>_saved<wbr></wbr>_view</a></code></td>
+    <td>Handle a saved view slug.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#handle_workspace" class="internal-link" title="fiftyone.server.events.initialize.handle_workspace">handle<wbr></wbr>_workspace</a></code></td>
+    <td>Handle a workspace slug request.</td>
+  </tr><tr class="function">
+    
+    <td>Async Function</td>
+    <td><code><a href="#initialize_listener" class="internal-link" title="fiftyone.server.events.initialize.initialize_listener">initialize<wbr></wbr>_listener</a></code></td>
+    <td>Initialize a state listener.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#initialize_listener_sync" class="internal-link" title="fiftyone.server.events.initialize.initialize_listener_sync">initialize<wbr></wbr>_listener<wbr></wbr>_sync</a></code></td>
+    <td>Synchronously initializer a listener</td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basefunction">
+  
+  
+  <a name="fiftyone.server.events.initialize.handle_app_initializer">
+    
+  </a>
+  <a name="handle_app_initializer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">handle_app_initializer</span><span class="function-signature">(subscription: <code>str</code>, initializer: <code><a href="fiftyone.core.session.events.AppInitializer.html" class="internal-link" title="fiftyone.core.session.events.AppInitializer">AppInitializer</a></code>)</span>:
+    
+    <a class="headerLink" href="#handle_app_initializer" title="fiftyone.server.events.initialize.handle_app_initializer">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Handle an App initialization request
+
+Args:
+    subscription: a subscription id
+    initializer: an app initializer
+
+Returns:
+    ``None`` or a coroutine</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.server.events.initialize.handle_dataset_change">
+    
+  </a>
+  <a name="handle_dataset_change">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">handle_dataset_change</span><span class="function-signature">(state: <code><a href="fiftyone.core.state.StateDescription.html" class="internal-link" title="fiftyone.core.state.StateDescription">fos.StateDescription</a></code>, initializer: <code><a href="fiftyone.core.session.events.AppInitializer.html" class="internal-link" title="fiftyone.core.session.events.AppInitializer">AppInitializer</a></code>)</span>:
+    
+    <a class="headerLink" href="#handle_dataset_change" title="fiftyone.server.events.initialize.handle_dataset_change">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Handle a dataset change request.
+
+Args:
+    state: the state description
+    initializer: an app initializer</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.server.events.initialize.handle_group_id">
+    
+  </a>
+  <a name="handle_group_id">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">handle_group_id</span><span class="function-signature">(state: <code><a href="fiftyone.core.state.StateDescription.html" class="internal-link" title="fiftyone.core.state.StateDescription">fos.StateDescription</a></code>, group_id: <code>str | None</code> = None)</span>:
+    
+    <a class="headerLink" href="#handle_group_id" title="fiftyone.server.events.initialize.handle_group_id">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Handle a group id.
+
+Args:
+    state: the state description
+    group_id (None): an optional group ID
+
+Returns:
+    True/False indicating if a state update event should be dispatched</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.server.events.initialize.handle_group_slice">
+    
+  </a>
+  <a name="handle_group_slice">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">handle_group_slice</span><span class="function-signature">(state: <code><a href="fiftyone.core.state.StateDescription.html" class="internal-link" title="fiftyone.core.state.StateDescription">fos.StateDescription</a></code>, group_slice: <code>str | None</code> = None)</span>:
+    
+    <a class="headerLink" href="#handle_group_slice" title="fiftyone.server.events.initialize.handle_group_slice">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Handle a group slice.
+
+Args:
+    state: the state description
+    group_slice (None): an optional group slice
+
+Returns:
+    True/False indicating if a state update event should be dispatched</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.server.events.initialize.handle_sample_id">
+    
+  </a>
+  <a name="handle_sample_id">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">handle_sample_id</span><span class="function-signature">(state: <code><a href="fiftyone.core.state.StateDescription.html" class="internal-link" title="fiftyone.core.state.StateDescription">fos.StateDescription</a></code>, sample_id: <code>str | None</code> = None)</span>:
+    
+    <a class="headerLink" href="#handle_sample_id" title="fiftyone.server.events.initialize.handle_sample_id">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Handle a sample id.
+
+Args:
+    state: the state description
+    sample_id (None): an optional sample ID
+
+
+Returns:
+    True/False indicating if a state update event should be dispatched</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.server.events.initialize.handle_saved_view">
+    
+  </a>
+  <a name="handle_saved_view">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">handle_saved_view</span><span class="function-signature">(state: <code><a href="fiftyone.core.state.StateDescription.html" class="internal-link" title="fiftyone.core.state.StateDescription">fos.StateDescription</a></code>, slug: <code>str | None</code> = None)</span>:
+    
+    <a class="headerLink" href="#handle_saved_view" title="fiftyone.server.events.initialize.handle_saved_view">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Handle a saved view slug.
+
+Args:
+    state: the state description
+    slug (None): an optional slug
+
+
+Returns:
+    True/False indicating if a state update event should be dispatched</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.server.events.initialize.handle_workspace">
+    
+  </a>
+  <a name="handle_workspace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">handle_workspace</span><span class="function-signature">(state: <code><a href="fiftyone.core.state.StateDescription.html" class="internal-link" title="fiftyone.core.state.StateDescription">fos.StateDescription</a></code>, slug: <code>str | None</code> = None)</span>:
+    
+    <a class="headerLink" href="#handle_workspace" title="fiftyone.server.events.initialize.handle_workspace">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Handle a workspace slug request.
+
+Args:
+    state: the state description
+    slug (None): an optional slug
+
+
+Returns:
+    True/False indicating if a state update event should be dispatched</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.server.events.initialize.initialize_listener">
+    
+  </a>
+  <a name="initialize_listener">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">async def</span> <span class="py-defname">initialize_listener</span><span class="function-signature">(payload: <code><a href="fiftyone.core.session.events.ListenPayload.html" class="internal-link" title="fiftyone.core.session.events.ListenPayload">ListenPayload</a></code>)</span>:
+    
+    <a class="headerLink" href="#initialize_listener" title="fiftyone.server.events.initialize.initialize_listener">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Initialize a state listener.
+
+Args:
+    payload: a :class:`fiftyone.core.session.events.ListenPayload`
+
+Returns:
+    an :class:`InitializedListener`</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.server.events.initialize.initialize_listener_sync">
+    
+  </a>
+  <a name="initialize_listener_sync">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">initialize_listener_sync</span><span class="function-signature">(payload: <code><a href="fiftyone.core.session.events.ListenPayload.html" class="internal-link" title="fiftyone.core.session.events.ListenPayload">ListenPayload</a></code>)</span>:
+    
+    <a class="headerLink" href="#initialize_listener_sync" title="fiftyone.server.events.initialize.initialize_listener_sync">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Synchronously initializer a listener
+
+Args:
+    payload: a :class:`fiftyone.core.session.events.ListenPayload`</p></div>
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for fiftyone,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-11-17 20:16:35.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

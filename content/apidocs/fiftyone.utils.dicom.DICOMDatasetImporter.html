@@ -1,0 +1,1333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fiftyone.utils.dicom.DICOMDatasetImporter</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          fiftyone <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="fiftyone.utils.dicom.DICOMDatasetImporter.html" class="internal-link" title="This class"><wbr></wbr>DICOMDataset<wbr></wbr>Importer</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__iter__" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.__iter__">__iter__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__len__" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.__len__">__len__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__next__" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.__next__">__next__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#close" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.close">close</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#setup" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.setup">setup</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#__enter__" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter.__enter__">__enter__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#__exit__" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter.__exit__">__exit__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#get_dataset_info" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter.get_dataset_info">get<wbr></wbr>_dataset<wbr></wbr>_info</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.data.importers.ImportPathsMixin.html#_load_data_map" class="internal-link" title="fiftyone.utils.data.importers.ImportPathsMixin._load_data_map">_load<wbr></wbr>_data<wbr></wbr>_map</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.data.importers.ImportPathsMixin.html#_parse_data_path" class="internal-link" title="fiftyone.utils.data.importers.ImportPathsMixin._parse_data_path">_parse<wbr></wbr>_data<wbr></wbr>_path</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.data.importers.ImportPathsMixin.html#_parse_labels_path" class="internal-link" title="fiftyone.utils.data.importers.ImportPathsMixin._parse_labels_path">_parse<wbr></wbr>_labels<wbr></wbr>_path</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#_preprocess_list" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter._preprocess_list">_preprocess<wbr></wbr>_list</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#dicom_path" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.dicom_path">dicom<wbr></wbr>_path</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#image_format" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.image_format">image<wbr></wbr>_format</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#images_dir" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.images_dir">images<wbr></wbr>_dir</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#keywords" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.keywords">keywords</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#parsers" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.parsers">parsers</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#has_dataset_info" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.has_dataset_info">has<wbr></wbr>_dataset<wbr></wbr>_info</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#has_image_metadata" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.has_image_metadata">has<wbr></wbr>_image<wbr></wbr>_metadata</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#label_cls" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.label_cls">label<wbr></wbr>_cls</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_dataset_ingestor" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter._dataset_ingestor">_dataset<wbr></wbr>_ingestor</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_iter_dataset_ingestor" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter._iter_dataset_ingestor">_iter<wbr></wbr>_dataset<wbr></wbr>_ingestor</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_num_samples" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter._num_samples">_num<wbr></wbr>_samples</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_sample_parser" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter._sample_parser">_sample<wbr></wbr>_parser</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#dataset_dir" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter.dataset_dir">dataset<wbr></wbr>_dir</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#max_samples" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter.max_samples">max<wbr></wbr>_samples</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#seed" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter.seed">seed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#shuffle" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter.shuffle">shuffle</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="fiftyone.utils.dicom.html" class="internal-link" title="The parent of this class">dicom</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.dicom.DICOMDatasetImporter.html" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter"><wbr></wbr>DICOMDataset<wbr></wbr>Importer</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.dicom.DICOMSampleParser.html" class="internal-link" title="fiftyone.utils.dicom.DICOMSampleParser"><wbr></wbr>DICOMSample<wbr></wbr>Parser</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.dicom.html#_get_image" class="internal-link" title="fiftyone.utils.dicom._get_image">_get<wbr></wbr>_image</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.dicom.html#_to_python" class="internal-link" title="fiftyone.utils.dicom._to_python">_to<wbr></wbr>_python</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.dicom.html#logger" class="internal-link" title="fiftyone.utils.dicom.logger">logger</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.dicom.html#_LIST_TYPES" class="internal-link" title="fiftyone.utils.dicom._LIST_TYPES">_LIST<wbr></wbr>_TYPES</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.dicom.html#_PRIMITIVE_TYPES" class="internal-link" title="fiftyone.utils.dicom._PRIMITIVE_TYPES">_PRIMITIVE<wbr></wbr>_TYPES</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.dicom.html#_SCALAR_FIELD_TYPES_MAP" class="internal-link" title="fiftyone.utils.dicom._SCALAR_FIELD_TYPES_MAP">_SCALAR<wbr></wbr>_FIELD<wbr></wbr>_TYPES<wbr></wbr>_MAP</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">fiftyone</a></code><wbr></wbr>.<code><a href="fiftyone.utils.html" class="internal-link" title="fiftyone.utils">utils</a></code><wbr></wbr>.<code><a href="fiftyone.utils.dicom.html" class="internal-link" title="fiftyone.utils.dicom">dicom</a></code><wbr></wbr>.<code><a href="fiftyone.utils.dicom.DICOMDatasetImporter.html" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter">DICOMDatasetImporter</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">DICOMDatasetImporter</span>(<a href="fiftyone.utils.data.importers.LabeledImageDatasetImporter.html" class="internal-link" title="fiftyone.utils.data.importers.LabeledImageDatasetImporter">foud.LabeledImageDatasetImporter</a>, <a href="fiftyone.utils.data.importers.ImportPathsMixin.html" class="internal-link" title="fiftyone.utils.data.importers.ImportPathsMixin">foud.ImportPathsMixin</a>):</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.__init__">DICOMDatasetImporter(dataset_dir, dicom_path, images_dir, keywords, ...)</a></code></p>
+          <p><a href="classIndex.html#fiftyone.utils.dicom.DICOMDatasetImporter">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="pre">Importer for DICOM datasets datasets stored on disk.
+
+See :ref:`this page &lt;DICOMDataset-import&gt;` for format details.
+
+Args:
+    dataset_dir (None): the dataset directory. If omitted, ``dicom_path``
+        must be provided
+    dicom_path (None): an optional parameter that enables explicit control
+        over the location of the DICOM files. Can be any of the following:
+
+        -   a glob pattern like ``"*.dcm"`` specifying the location of the
+            DICOM files in ``dataset_dir``
+        -   the name of a DICOMDIR file in ``dataset_dir``
+        -   an absolute glob pattern of DICOM files or the absolute path to
+            a DICOMDIR file. In this case, ``dataset_dir`` has no effect
+
+        If None, the parameter will default to ``*.dcm``
+    images_dir (None): the directory in which the images will be written.
+        If not provided, the images will be unpacked into ``dataset_dir``
+    keywords (None): an optional keyword or list of keywords from
+        :meth:`pydicom:pydicom.dataset.Dataset.dir` to load from the DICOM
+        files. By default, all available fields are loaded
+    parsers (None): an optional dict mapping keywords to functions that
+        parse the values generated by
+        :meth:`pydicom:pydicom.dataset.Dataset.get` for certain fields. By
+        default, all fields are converted to primitive values, if possible
+    image_format (None): the image format to use to write the images to
+        disk. By default, ``fiftyone.config.default_image_ext`` is used
+    shuffle (False): whether to randomly shuffle the order in which the
+        samples are imported
+    seed (None): a random seed to use when shuffling
+    max_samples (None): a maximum number of samples to import. By default,
+        all samples are imported</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id1874">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__iter__" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.__iter__">__iter__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__len__" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.__len__">__len__</a></code></td>
+    <td>The total number of samples that will be imported.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__next__" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.__next__">__next__</a></code></td>
+    <td>Returns information about the next sample in the dataset.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#close" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.close">close</a></code></td>
+    <td>Performs any necessary actions after the last sample has been imported.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#setup" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.setup">setup</a></code></td>
+    <td>Performs any necessary setup before importing the first sample in the dataset.</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#dicom_path" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.dicom_path">dicom<wbr></wbr>_path</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#image_format" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.image_format">image<wbr></wbr>_format</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#images_dir" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.images_dir">images<wbr></wbr>_dir</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#keywords" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.keywords">keywords</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#parsers" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.parsers">parsers</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#has_dataset_info" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.has_dataset_info">has<wbr></wbr>_dataset<wbr></wbr>_info</a></code></td>
+    <td>Whether this importer produces a dataset info dictionary.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#has_image_metadata" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.has_image_metadata">has<wbr></wbr>_image<wbr></wbr>_metadata</a></code></td>
+    <td>Whether this importer produces :class:`fiftyone.core.metadata.ImageMetadata` instances for each image.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#label_cls" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter.label_cls">label<wbr></wbr>_cls</a></code></td>
+    <td>The :class:`fiftyone.core.labels.Label` class(es) returned by this importer.</td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_dataset_ingestor" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter._dataset_ingestor">_dataset<wbr></wbr>_ingestor</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_iter_dataset_ingestor" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter._iter_dataset_ingestor">_iter<wbr></wbr>_dataset<wbr></wbr>_ingestor</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_num_samples" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter._num_samples">_num<wbr></wbr>_samples</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_sample_parser" class="internal-link" title="fiftyone.utils.dicom.DICOMDatasetImporter._sample_parser">_sample<wbr></wbr>_parser</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+            <p class="inheritedFrom">
+              Inherited from <code><a href="fiftyone.utils.data.importers.DatasetImporter.html" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter">DatasetImporter</a></code> (via <code><a href="fiftyone.utils.data.importers.LabeledImageDatasetImporter.html" class="internal-link" title="fiftyone.utils.data.importers.LabeledImageDatasetImporter">LabeledImageDatasetImporter</a></code>):
+            </p>
+            <table class="children sortable" id="id1875">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#__enter__" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter.__enter__">__enter__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#__exit__" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter.__exit__">__exit__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#get_dataset_info" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter.get_dataset_info">get<wbr></wbr>_dataset<wbr></wbr>_info</a></code></td>
+    <td>Returns the dataset info for the dataset.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#dataset_dir" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter.dataset_dir">dataset<wbr></wbr>_dir</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#max_samples" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter.max_samples">max<wbr></wbr>_samples</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#seed" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter.seed">seed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#shuffle" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter.shuffle">shuffle</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><code><a href="fiftyone.utils.data.importers.DatasetImporter.html#_preprocess_list" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter._preprocess_list">_preprocess<wbr></wbr>_list</a></code></td>
+    <td>Internal utility that preprocesses the given list---which is presumed to be a list defining the samples that should be imported---by applying the values of the ``shuffle``, ``seed``, and ``max_samples`` parameters of the importer.</td>
+  </tr>
+</table>
+            
+            <p class="inheritedFrom">
+              Inherited from <code><a href="fiftyone.utils.data.importers.ImportPathsMixin.html" class="internal-link" title="fiftyone.utils.data.importers.ImportPathsMixin">ImportPathsMixin</a></code> (via <code><a href="fiftyone.utils.data.importers.LabeledImageDatasetImporter.html" class="internal-link" title="fiftyone.utils.data.importers.LabeledImageDatasetImporter">LabeledImageDatasetImporter</a></code>, <code><a href="fiftyone.utils.data.importers.DatasetImporter.html" class="internal-link" title="fiftyone.utils.data.importers.DatasetImporter">DatasetImporter</a></code>):
+            </p>
+            <table class="children sortable" id="id1876">
+  
+  
+  <tr class="basestaticmethod private">
+    
+    <td>Static Method</td>
+    <td><code><a href="fiftyone.utils.data.importers.ImportPathsMixin.html#_load_data_map" class="internal-link" title="fiftyone.utils.data.importers.ImportPathsMixin._load_data_map">_load<wbr></wbr>_data<wbr></wbr>_map</a></code></td>
+    <td>Helper function that parses either a data directory or a data manifest file into a UUID -&gt; filepath map.</td>
+  </tr><tr class="basestaticmethod private">
+    
+    <td>Static Method</td>
+    <td><code><a href="fiftyone.utils.data.importers.ImportPathsMixin.html#_parse_data_path" class="internal-link" title="fiftyone.utils.data.importers.ImportPathsMixin._parse_data_path">_parse<wbr></wbr>_data<wbr></wbr>_path</a></code></td>
+    <td>Helper function that computes default values for the ``data_path`` parameter supported by many importers.</td>
+  </tr><tr class="basestaticmethod private">
+    
+    <td>Static Method</td>
+    <td><code><a href="fiftyone.utils.data.importers.ImportPathsMixin.html#_parse_labels_path" class="internal-link" title="fiftyone.utils.data.importers.ImportPathsMixin._parse_labels_path">_parse<wbr></wbr>_labels<wbr></wbr>_path</a></code></td>
+    <td>Helper function that computes default values for the ``labels_path`` parameter supported by many importers.</td>
+  </tr>
+</table>
+            
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, dataset_dir=None, dicom_path=None, images_dir=None, keywords=None, parsers=None, image_format=None, shuffle=False, seed=None, max_samples=None)</span>:
+    
+    <a class="headerLink" href="#__init__" title="fiftyone.utils.dicom.DICOMDatasetImporter.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fiftyone.utils.data.importers.DatasetImporter.html#__init__" class="internal-link">fiftyone.utils.data.importers.DatasetImporter.__init__</a></code></div>
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter.__iter__">
+    
+  </a>
+  <a name="__iter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__iter__</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__iter__" title="fiftyone.utils.dicom.DICOMDatasetImporter.__iter__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fiftyone.utils.data.importers.DatasetImporter.html#__iter__" class="internal-link">fiftyone.utils.data.importers.DatasetImporter.__iter__</a></code></div>
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter.__len__">
+    
+  </a>
+  <a name="__len__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__len__</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__len__" title="fiftyone.utils.dicom.DICOMDatasetImporter.__len__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fiftyone.utils.data.importers.DatasetImporter.html#__len__" class="internal-link">fiftyone.utils.data.importers.DatasetImporter.__len__</a></code></div>
+    <div><p class="pre">The total number of samples that will be imported.
+
+Raises:
+    TypeError: if the total number is not known</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter.__next__">
+    
+  </a>
+  <a name="__next__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__next__</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__next__" title="fiftyone.utils.dicom.DICOMDatasetImporter.__next__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fiftyone.utils.data.importers.LabeledImageDatasetImporter.html#__next__" class="internal-link">fiftyone.utils.data.importers.LabeledImageDatasetImporter.__next__</a></code></div>
+    <div><p class="pre">Returns information about the next sample in the dataset.
+
+Returns:
+    an  ``(image_path, image_metadata, label)`` tuple, where
+
+    -   ``image_path``: the path to the image on disk
+    -   ``image_metadata``: an
+        :class:`fiftyone.core.metadata.ImageMetadata` instances for the
+        image, or ``None`` if :meth:`has_image_metadata` is ``False``
+    -   ``label``: an instance of :meth:`label_cls`, or a dictionary
+        mapping field names to :class:`fiftyone.core.labels.Label`
+        instances, or ``None`` if the sample is unlabeled
+
+Raises:
+    StopIteration: if there are no more samples to import</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">close</span><span class="function-signature">(self, *args)</span>:
+    
+    <a class="headerLink" href="#close" title="fiftyone.utils.dicom.DICOMDatasetImporter.close">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fiftyone.utils.data.importers.DatasetImporter.html#close" class="internal-link">fiftyone.utils.data.importers.DatasetImporter.close</a></code></div>
+    <div><p class="pre">Performs any necessary actions after the last sample has been
+imported.
+
+This method is called when the importer's context manager interface is
+exited, :func:`DatasetImporter.__exit__`.
+
+Args:
+    *args: the arguments to :func:`DatasetImporter.__exit__`</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter.setup">
+    
+  </a>
+  <a name="setup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">setup</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#setup" title="fiftyone.utils.dicom.DICOMDatasetImporter.setup">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fiftyone.utils.data.importers.DatasetImporter.html#setup" class="internal-link">fiftyone.utils.data.importers.DatasetImporter.setup</a></code></div>
+    <div><p>Performs any necessary setup before importing the first sample in the dataset.</p>
+<p>This method is called when the importer's context manager interface is entered, :func:`DatasetImporter.__enter__`.</p>
+</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter.dicom_path">
+    
+  </a>
+  <a name="dicom_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">dicom_path</span> =
+    
+    <a class="headerLink" href="#dicom_path" title="fiftyone.utils.dicom.DICOMDatasetImporter.dicom_path">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter.image_format">
+    
+  </a>
+  <a name="image_format">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">image_format</span> =
+    
+    <a class="headerLink" href="#image_format" title="fiftyone.utils.dicom.DICOMDatasetImporter.image_format">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter.images_dir">
+    
+  </a>
+  <a name="images_dir">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">images_dir</span> =
+    
+    <a class="headerLink" href="#images_dir" title="fiftyone.utils.dicom.DICOMDatasetImporter.images_dir">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter.keywords">
+    
+  </a>
+  <a name="keywords">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">keywords</span> =
+    
+    <a class="headerLink" href="#keywords" title="fiftyone.utils.dicom.DICOMDatasetImporter.keywords">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter.parsers">
+    
+  </a>
+  <a name="parsers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">parsers</span> =
+    
+    <a class="headerLink" href="#parsers" title="fiftyone.utils.dicom.DICOMDatasetImporter.parsers">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter.has_dataset_info">
+    
+  </a>
+  <a name="has_dataset_info">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">has_dataset_info</span> =
+    
+    <a class="headerLink" href="#has_dataset_info" title="fiftyone.utils.dicom.DICOMDatasetImporter.has_dataset_info">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fiftyone.utils.data.importers.DatasetImporter.html#has_dataset_info" class="internal-link">fiftyone.utils.data.importers.DatasetImporter.has_dataset_info</a></code></div>
+    <div><p>Whether this importer produces a dataset info dictionary.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter.has_image_metadata">
+    
+  </a>
+  <a name="has_image_metadata">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">has_image_metadata</span> =
+    
+    <a class="headerLink" href="#has_image_metadata" title="fiftyone.utils.dicom.DICOMDatasetImporter.has_image_metadata">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fiftyone.utils.data.importers.LabeledImageDatasetImporter.html#has_image_metadata" class="internal-link">fiftyone.utils.data.importers.LabeledImageDatasetImporter.has_image_metadata</a></code></div>
+    <div><p>Whether this importer produces :class:`fiftyone.core.metadata.ImageMetadata` instances for each image.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter.label_cls">
+    
+  </a>
+  <a name="label_cls">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">label_cls</span> =
+    
+    <a class="headerLink" href="#label_cls" title="fiftyone.utils.dicom.DICOMDatasetImporter.label_cls">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fiftyone.utils.data.importers.LabeledImageDatasetImporter.html#label_cls" class="internal-link">fiftyone.utils.data.importers.LabeledImageDatasetImporter.label_cls</a></code></div>
+    <div><p class="pre">The :class:`fiftyone.core.labels.Label` class(es) returned by this
+importer.
+
+This can be any of the following:
+
+-   a :class:`fiftyone.core.labels.Label` class. In this case, the
+    importer is guaranteed to return labels of this type
+-   a list or tuple of :class:`fiftyone.core.labels.Label` classes. In
+    this case, the importer can produce a single label field of any of
+    these types
+-   a dict mapping keys to :class:`fiftyone.core.labels.Label` classes.
+    In this case, the importer will return label dictionaries with keys
+    and value-types specified by this dictionary. Not all keys need be
+    present in the imported labels
+-   ``None``. In this case, the importer makes no guarantees about the
+    labels that it may return</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter._dataset_ingestor">
+    
+  </a>
+  <a name="_dataset_ingestor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_dataset_ingestor</span> =
+    
+    <a class="headerLink" href="#_dataset_ingestor" title="fiftyone.utils.dicom.DICOMDatasetImporter._dataset_ingestor">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter._iter_dataset_ingestor">
+    
+  </a>
+  <a name="_iter_dataset_ingestor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_iter_dataset_ingestor</span> =
+    
+    <a class="headerLink" href="#_iter_dataset_ingestor" title="fiftyone.utils.dicom.DICOMDatasetImporter._iter_dataset_ingestor">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter._num_samples">
+    
+  </a>
+  <a name="_num_samples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_num_samples</span> =
+    
+    <a class="headerLink" href="#_num_samples" title="fiftyone.utils.dicom.DICOMDatasetImporter._num_samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.utils.dicom.DICOMDatasetImporter._sample_parser">
+    
+  </a>
+  <a name="_sample_parser">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_sample_parser</span> =
+    
+    <a class="headerLink" href="#_sample_parser" title="fiftyone.utils.dicom.DICOMDatasetImporter._sample_parser">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for fiftyone,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-11-17 20:16:35.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

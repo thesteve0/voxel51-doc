@@ -1,0 +1,1550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fiftyone.zoo.datasets.ZooDatasetInfo</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          fiftyone <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="fiftyone.zoo.datasets.ZooDatasetInfo.html" class="internal-link" title="This class"><wbr></wbr>Zoo<wbr></wbr>Dataset<wbr></wbr>Info</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#from_dict" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.from_dict">from<wbr></wbr>_dict</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#from_json" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.from_json">from<wbr></wbr>_json</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#add_split" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.add_split">add<wbr></wbr>_split</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#attributes" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.attributes">attributes</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_dataset_type" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.get_dataset_type">get<wbr></wbr>_dataset<wbr></wbr>_type</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_zoo_dataset" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.get_zoo_dataset">get<wbr></wbr>_zoo<wbr></wbr>_dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#is_split_downloaded" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.is_split_downloaded">is<wbr></wbr>_split<wbr></wbr>_downloaded</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#remove_split" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.remove_split">remove<wbr></wbr>_split</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_from_dict" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo._from_dict">_from<wbr></wbr>_dict</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_compute_num_samples" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo._compute_num_samples">_compute<wbr></wbr>_num<wbr></wbr>_samples</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#classes" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.classes">classes</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#downloaded_splits" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.downloaded_splits">downloaded<wbr></wbr>_splits</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#num_samples" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.num_samples">num<wbr></wbr>_samples</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#parameters" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.parameters">parameters</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#dataset_type" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.dataset_type">dataset<wbr></wbr>_type</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#name" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.name">name</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#supported_splits" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.supported_splits">supported<wbr></wbr>_splits</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#url" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.url">url</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#zoo_dataset" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.zoo_dataset">zoo<wbr></wbr>_dataset</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_dataset_type" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo._dataset_type">_dataset<wbr></wbr>_type</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_zoo_dataset" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo._zoo_dataset">_zoo<wbr></wbr>_dataset</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="fiftyone.zoo.datasets.html" class="internal-link" title="The parent of this class">datasets</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.base.html" class="internal-link" title="fiftyone.zoo.datasets.base">base</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.tf.html" class="internal-link" title="fiftyone.zoo.datasets.tf">tf</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.torch.html" class="internal-link" title="fiftyone.zoo.datasets.torch">torch</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.DeprecatedZooDataset.html" class="internal-link" title="fiftyone.zoo.datasets.DeprecatedZooDataset"><wbr></wbr>Deprecated<wbr></wbr>Zoo<wbr></wbr>Dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.RemoteZooDataset.html" class="internal-link" title="fiftyone.zoo.datasets.RemoteZooDataset"><wbr></wbr>Remote<wbr></wbr>Zoo<wbr></wbr>Dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.ZooDataset.html" class="internal-link" title="fiftyone.zoo.datasets.ZooDataset"><wbr></wbr>Zoo<wbr></wbr>Dataset</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.ZooDatasetInfo.html" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo"><wbr></wbr>Zoo<wbr></wbr>Dataset<wbr></wbr>Info</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.ZooDatasetSplitInfo.html" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetSplitInfo"><wbr></wbr>Zoo<wbr></wbr>Dataset<wbr></wbr>Split<wbr></wbr>Info</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#delete_zoo_dataset" class="internal-link" title="fiftyone.zoo.datasets.delete_zoo_dataset">delete<wbr></wbr>_zoo<wbr></wbr>_dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#download_zoo_dataset" class="internal-link" title="fiftyone.zoo.datasets.download_zoo_dataset">download<wbr></wbr>_zoo<wbr></wbr>_dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#find_zoo_dataset" class="internal-link" title="fiftyone.zoo.datasets.find_zoo_dataset">find<wbr></wbr>_zoo<wbr></wbr>_dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#get_zoo_dataset" class="internal-link" title="fiftyone.zoo.datasets.get_zoo_dataset">get<wbr></wbr>_zoo<wbr></wbr>_dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#list_downloaded_zoo_datasets" class="internal-link" title="fiftyone.zoo.datasets.list_downloaded_zoo_datasets">list<wbr></wbr>_downloaded<wbr></wbr>_zoo<wbr></wbr>_datasets</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#list_zoo_dataset_sources" class="internal-link" title="fiftyone.zoo.datasets.list_zoo_dataset_sources">list<wbr></wbr>_zoo<wbr></wbr>_dataset<wbr></wbr>_sources</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#list_zoo_datasets" class="internal-link" title="fiftyone.zoo.datasets.list_zoo_datasets">list<wbr></wbr>_zoo<wbr></wbr>_datasets</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#load_zoo_dataset" class="internal-link" title="fiftyone.zoo.datasets.load_zoo_dataset">load<wbr></wbr>_zoo<wbr></wbr>_dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#load_zoo_dataset_info" class="internal-link" title="fiftyone.zoo.datasets.load_zoo_dataset_info">load<wbr></wbr>_zoo<wbr></wbr>_dataset<wbr></wbr>_info</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_download_archive" class="internal-link" title="fiftyone.zoo.datasets._download_archive">_download<wbr></wbr>_archive</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_download_dataset_metadata" class="internal-link" title="fiftyone.zoo.datasets._download_dataset_metadata">_download<wbr></wbr>_dataset<wbr></wbr>_metadata</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_find_dataset_metadata" class="internal-link" title="fiftyone.zoo.datasets._find_dataset_metadata">_find<wbr></wbr>_dataset<wbr></wbr>_metadata</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_get_zoo_dataset_dir" class="internal-link" title="fiftyone.zoo.datasets._get_zoo_dataset_dir">_get<wbr></wbr>_zoo<wbr></wbr>_dataset<wbr></wbr>_dir</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_get_zoo_dataset_sources" class="internal-link" title="fiftyone.zoo.datasets._get_zoo_dataset_sources">_get<wbr></wbr>_zoo<wbr></wbr>_dataset<wbr></wbr>_sources</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_get_zoo_datasets" class="internal-link" title="fiftyone.zoo.datasets._get_zoo_datasets">_get<wbr></wbr>_zoo<wbr></wbr>_datasets</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_init_zoo_datasets" class="internal-link" title="fiftyone.zoo.datasets._init_zoo_datasets">_init<wbr></wbr>_zoo<wbr></wbr>_datasets</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_list_zoo_datasets" class="internal-link" title="fiftyone.zoo.datasets._list_zoo_datasets">_list<wbr></wbr>_zoo<wbr></wbr>_datasets</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_load_dataset_metadata" class="internal-link" title="fiftyone.zoo.datasets._load_dataset_metadata">_load<wbr></wbr>_dataset<wbr></wbr>_metadata</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_load_zoo_dataset_manifest" class="internal-link" title="fiftyone.zoo.datasets._load_zoo_dataset_manifest">_load<wbr></wbr>_zoo<wbr></wbr>_dataset<wbr></wbr>_manifest</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_migrate_zoo_dataset_info" class="internal-link" title="fiftyone.zoo.datasets._migrate_zoo_dataset_info">_migrate<wbr></wbr>_zoo<wbr></wbr>_dataset<wbr></wbr>_info</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_normalize_ref" class="internal-link" title="fiftyone.zoo.datasets._normalize_ref">_normalize<wbr></wbr>_ref</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_overwrite_download" class="internal-link" title="fiftyone.zoo.datasets._overwrite_download">_overwrite<wbr></wbr>_download</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_parse_dataset_details" class="internal-link" title="fiftyone.zoo.datasets._parse_dataset_details">_parse<wbr></wbr>_dataset<wbr></wbr>_details</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_parse_dataset_identifier" class="internal-link" title="fiftyone.zoo.datasets._parse_dataset_identifier">_parse<wbr></wbr>_dataset<wbr></wbr>_identifier</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#_parse_splits" class="internal-link" title="fiftyone.zoo.datasets._parse_splits">_parse<wbr></wbr>_splits</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#DATASET_METADATA_FILENAMES" class="internal-link" title="fiftyone.zoo.datasets.DATASET_METADATA_FILENAMES">DATASET<wbr></wbr>_METADATA<wbr></wbr>_FILENAMES</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.zoo.datasets.html#logger" class="internal-link" title="fiftyone.zoo.datasets.logger">logger</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">fiftyone</a></code><wbr></wbr>.<code><a href="fiftyone.zoo.html" class="internal-link" title="fiftyone.zoo">zoo</a></code><wbr></wbr>.<code><a href="fiftyone.zoo.datasets.html" class="internal-link" title="fiftyone.zoo.datasets">datasets</a></code><wbr></wbr>.<code><a href="fiftyone.zoo.datasets.ZooDatasetInfo.html" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo">ZooDatasetInfo</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ZooDatasetInfo</span>(etas.Serializable):</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.__init__">ZooDatasetInfo(zoo_dataset, dataset_type, num_samples, downloaded_splits, ...)</a></code></p>
+          <p><a href="classIndex.html#fiftyone.zoo.datasets.ZooDatasetInfo">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="pre">Class containing info about a dataset in the FiftyOne Dataset Zoo.
+
+Args:
+    zoo_dataset: the :class:`ZooDataset` instance for the dataset
+    dataset_type: the :class:`fiftyone.types.Dataset` type of the dataset
+    num_samples: the total number of samples in all downloaded splits of
+        the dataset
+    downloaded_splits (None): a dict of :class:`ZooDatasetSplitInfo`
+        instances describing the downloaded splits of the dataset, if
+        applicable
+    parameters (None): a dict of parameters for the dataset
+    classes (None): a list of class label strings</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id2559">
+  
+  
+  <tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><code><a href="#from_dict" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.from_dict">from<wbr></wbr>_dict</a></code></td>
+    <td>Loads a :class:`ZooDatasetInfo` from a JSON dictionary.</td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><code><a href="#from_json" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.from_json">from<wbr></wbr>_json</a></code></td>
+    <td>Loads a :class:`ZooDatasetInfo` from a JSON file on disk.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add_split" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.add_split">add<wbr></wbr>_split</a></code></td>
+    <td>Adds the split to the dataset.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#attributes" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.attributes">attributes</a></code></td>
+    <td>Returns a list of class attributes to be serialized.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_dataset_type" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.get_dataset_type">get<wbr></wbr>_dataset<wbr></wbr>_type</a></code></td>
+    <td>Returns the :class:`fiftyone.types.Dataset` type instance for the dataset.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_zoo_dataset" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.get_zoo_dataset">get<wbr></wbr>_zoo<wbr></wbr>_dataset</a></code></td>
+    <td>Returns the :class:`ZooDataset` instance for the dataset.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#is_split_downloaded" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.is_split_downloaded">is<wbr></wbr>_split<wbr></wbr>_downloaded</a></code></td>
+    <td>Whether the given dataset split is downloaded.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#remove_split" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.remove_split">remove<wbr></wbr>_split</a></code></td>
+    <td>Removes the split from the dataset.</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#classes" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.classes">classes</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#downloaded_splits" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.downloaded_splits">downloaded<wbr></wbr>_splits</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#num_samples" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.num_samples">num<wbr></wbr>_samples</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#parameters" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.parameters">parameters</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#dataset_type" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.dataset_type">dataset<wbr></wbr>_type</a></code></td>
+    <td>The fully-qualified class string of the :class:`fiftyone.types.Dataset` type, if any.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#name" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.name">name</a></code></td>
+    <td>The name of the dataset.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#supported_splits" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.supported_splits">supported<wbr></wbr>_splits</a></code></td>
+    <td>A tuple of supported splits for the dataset, or None if the dataset does not have splits.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#url" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.url">url</a></code></td>
+    <td>The dataset's URL, or None if it is not remotely-sourced.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#zoo_dataset" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo.zoo_dataset">zoo<wbr></wbr>_dataset</a></code></td>
+    <td>The fully-qualified class string for the :class:`ZooDataset` of the dataset.</td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><code><a href="#_from_dict" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo._from_dict">_from<wbr></wbr>_dict</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_compute_num_samples" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo._compute_num_samples">_compute<wbr></wbr>_num<wbr></wbr>_samples</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_dataset_type" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo._dataset_type">_dataset<wbr></wbr>_type</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_zoo_dataset" class="internal-link" title="fiftyone.zoo.datasets.ZooDatasetInfo._zoo_dataset">_zoo<wbr></wbr>_dataset</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="baseclassmethod">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.from_dict">
+    
+  </a>
+  <a name="from_dict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @classmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">from_dict</span><span class="function-signature">(cls, d)</span>:
+    
+    <a class="headerLink" href="#from_dict" title="fiftyone.zoo.datasets.ZooDatasetInfo.from_dict">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Loads a :class:`ZooDatasetInfo` from a JSON dictionary.
+
+Args:
+    d: a JSON dictionary
+
+Returns:
+    a :class:`ZooDatasetInfo`</p></div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.from_json">
+    
+  </a>
+  <a name="from_json">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @classmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">from_json</span><span class="function-signature">(cls, json_path, zoo_dataset=None, upgrade=False, warn_deprecated=False)</span>:
+    
+    <a class="headerLink" href="#from_json" title="fiftyone.zoo.datasets.ZooDatasetInfo.from_json">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Loads a :class:`ZooDatasetInfo` from a JSON file on disk.
+
+Args:
+    json_path: path to JSON file
+    zoo_dataset (None): an existing :class:`ZooDataset` instance
+    upgrade (False): whether to upgrade the JSON file on disk if any
+        migrations were necessary
+    warn_deprecated (False): whether to issue a warning if the dataset
+        has a deprecated format
+
+Returns:
+    a :class:`ZooDatasetInfo`</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, zoo_dataset, dataset_type, num_samples, downloaded_splits=None, parameters=None, classes=None)</span>:
+    
+    <a class="headerLink" href="#__init__" title="fiftyone.zoo.datasets.ZooDatasetInfo.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.add_split">
+    
+  </a>
+  <a name="add_split">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add_split</span><span class="function-signature">(self, split_info)</span>:
+    
+    <a class="headerLink" href="#add_split" title="fiftyone.zoo.datasets.ZooDatasetInfo.add_split">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Adds the split to the dataset.
+
+Args:
+    split_info: a :class:`ZooDatasetSplitInfo`</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.attributes">
+    
+  </a>
+  <a name="attributes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">attributes</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#attributes" title="fiftyone.zoo.datasets.ZooDatasetInfo.attributes">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Returns a list of class attributes to be serialized.
+
+Returns:
+    a list of class attributes</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.get_dataset_type">
+    
+  </a>
+  <a name="get_dataset_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_dataset_type</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#get_dataset_type" title="fiftyone.zoo.datasets.ZooDatasetInfo.get_dataset_type">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Returns the :class:`fiftyone.types.Dataset` type instance for the
+dataset.
+
+Returns:
+    a :class:`fiftyone.types.Dataset` instance</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.get_zoo_dataset">
+    
+  </a>
+  <a name="get_zoo_dataset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_zoo_dataset</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#get_zoo_dataset" title="fiftyone.zoo.datasets.ZooDatasetInfo.get_zoo_dataset">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Returns the :class:`ZooDataset` instance for the dataset.
+
+Returns:
+    a :class:`ZooDataset` instance</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.is_split_downloaded">
+    
+  </a>
+  <a name="is_split_downloaded">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">is_split_downloaded</span><span class="function-signature">(self, split)</span>:
+    
+    <a class="headerLink" href="#is_split_downloaded" title="fiftyone.zoo.datasets.ZooDatasetInfo.is_split_downloaded">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Whether the given dataset split is downloaded.
+
+Args:
+    split: the dataset split
+
+Returns:
+    True/False</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.remove_split">
+    
+  </a>
+  <a name="remove_split">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">remove_split</span><span class="function-signature">(self, split)</span>:
+    
+    <a class="headerLink" href="#remove_split" title="fiftyone.zoo.datasets.ZooDatasetInfo.remove_split">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Removes the split from the dataset.
+
+Args:
+    split: the name of the split</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.classes">
+    
+  </a>
+  <a name="classes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">classes</span> =
+    
+    <a class="headerLink" href="#classes" title="fiftyone.zoo.datasets.ZooDatasetInfo.classes">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.downloaded_splits">
+    
+  </a>
+  <a name="downloaded_splits">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">downloaded_splits</span> =
+    
+    <a class="headerLink" href="#downloaded_splits" title="fiftyone.zoo.datasets.ZooDatasetInfo.downloaded_splits">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.num_samples">
+    
+  </a>
+  <a name="num_samples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">num_samples</span> =
+    
+    <a class="headerLink" href="#num_samples" title="fiftyone.zoo.datasets.ZooDatasetInfo.num_samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.parameters">
+    
+  </a>
+  <a name="parameters">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">parameters</span> =
+    
+    <a class="headerLink" href="#parameters" title="fiftyone.zoo.datasets.ZooDatasetInfo.parameters">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.dataset_type">
+    
+  </a>
+  <a name="dataset_type">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">dataset_type</span> =
+    
+    <a class="headerLink" href="#dataset_type" title="fiftyone.zoo.datasets.ZooDatasetInfo.dataset_type">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The fully-qualified class string of the :class:`fiftyone.types.Dataset` type, if any.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">name</span> =
+    
+    <a class="headerLink" href="#name" title="fiftyone.zoo.datasets.ZooDatasetInfo.name">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The name of the dataset.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.supported_splits">
+    
+  </a>
+  <a name="supported_splits">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">supported_splits</span> =
+    
+    <a class="headerLink" href="#supported_splits" title="fiftyone.zoo.datasets.ZooDatasetInfo.supported_splits">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>A tuple of supported splits for the dataset, or None if the dataset does not have splits.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.url">
+    
+  </a>
+  <a name="url">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">url</span> =
+    
+    <a class="headerLink" href="#url" title="fiftyone.zoo.datasets.ZooDatasetInfo.url">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The dataset's URL, or None if it is not remotely-sourced.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo.zoo_dataset">
+    
+  </a>
+  <a name="zoo_dataset">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">zoo_dataset</span> =
+    
+    <a class="headerLink" href="#zoo_dataset" title="fiftyone.zoo.datasets.ZooDatasetInfo.zoo_dataset">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The fully-qualified class string for the :class:`ZooDataset` of the dataset.</p></div>
+    
+  </div>
+</div><div class="baseclassmethod private">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo._from_dict">
+    
+  </a>
+  <a name="_from_dict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @classmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_from_dict</span><span class="function-signature">(cls, d, zoo_dataset=None)</span>:
+    
+    <a class="headerLink" href="#_from_dict" title="fiftyone.zoo.datasets.ZooDatasetInfo._from_dict">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo._compute_num_samples">
+    
+  </a>
+  <a name="_compute_num_samples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_compute_num_samples</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#_compute_num_samples" title="fiftyone.zoo.datasets.ZooDatasetInfo._compute_num_samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo._dataset_type">
+    
+  </a>
+  <a name="_dataset_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_dataset_type</span> =
+    
+    <a class="headerLink" href="#_dataset_type" title="fiftyone.zoo.datasets.ZooDatasetInfo._dataset_type">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.zoo.datasets.ZooDatasetInfo._zoo_dataset">
+    
+  </a>
+  <a name="_zoo_dataset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_zoo_dataset</span> =
+    
+    <a class="headerLink" href="#_zoo_dataset" title="fiftyone.zoo.datasets.ZooDatasetInfo._zoo_dataset">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for fiftyone,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-11-17 20:16:35.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

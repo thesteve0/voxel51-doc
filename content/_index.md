@@ -15,6 +15,7 @@ teams/enterprise. Based on the description the user can choose which section of 
    3. What each of the areas in the TOC cover
 2. Suggested next steps
 
+Here are the [API Docs](apidocs/index.html)
 --------------
 
 ### Notes to reviewers

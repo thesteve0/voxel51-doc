@@ -1,0 +1,2516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fiftyone.operators.executor.ExecutionContext</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          fiftyone <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="fiftyone.operators.executor.ExecutionContext.html" class="internal-link" title="This class"><wbr></wbr>Execution<wbr></wbr>Context</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#log" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.log">log</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#prompt" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.prompt">prompt</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#resolve_secret_values" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.resolve_secret_values">resolve<wbr></wbr>_secret<wbr></wbr>_values</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#secret" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.secret">secret</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#serialize" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.serialize">serialize</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_progress" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.set_progress">set<wbr></wbr>_progress</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#store" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.store">store</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#target_view" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.target_view">target<wbr></wbr>_view</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#to_dict" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.to_dict">to<wbr></wbr>_dict</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#trigger" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.trigger">trigger</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#executor" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.executor">executor</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#params" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.params">params</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#request_params" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.request_params">request<wbr></wbr>_params</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#user" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.user">user</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#current_sample" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.current_sample">current<wbr></wbr>_sample</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#dataset" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.dataset">dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#dataset_id" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.dataset_id">dataset<wbr></wbr>_id</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#dataset_name" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.dataset_name">dataset<wbr></wbr>_name</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#delegated" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.delegated">delegated</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#delegation_target" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.delegation_target">delegation<wbr></wbr>_target</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#extended_selection" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.extended_selection">extended<wbr></wbr>_selection</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#group_slice" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.group_slice">group<wbr></wbr>_slice</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#has_custom_view" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.has_custom_view">has<wbr></wbr>_custom<wbr></wbr>_view</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ops" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.ops">ops</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#panel" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.panel">panel</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#panel_id" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.panel_id">panel<wbr></wbr>_id</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#panel_state" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.panel_state">panel<wbr></wbr>_state</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#query_performance" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.query_performance">query<wbr></wbr>_performance</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#requesting_delegated_execution" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.requesting_delegated_execution">requesting<wbr></wbr>_delegated<wbr></wbr>_execution</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#results" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.results">results</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#secrets" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.secrets">secrets</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#selected" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.selected">selected</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#selected_labels" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.selected_labels">selected<wbr></wbr>_labels</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#spaces" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.spaces">spaces</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#user_id" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.user_id">user<wbr></wbr>_id</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#user_request_token" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.user_request_token">user<wbr></wbr>_request<wbr></wbr>_token</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#view" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.view">view</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_dataset" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._dataset">_dataset</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_delegated_operation_id" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._delegated_operation_id">_delegated<wbr></wbr>_operation<wbr></wbr>_id</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_operator_uri" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._operator_uri">_operator<wbr></wbr>_uri</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_ops" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._ops">_ops</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_panel" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._panel">_panel</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_panel_state" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._panel_state">_panel<wbr></wbr>_state</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_required_secret_keys" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._required_secret_keys">_required<wbr></wbr>_secret<wbr></wbr>_keys</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_secrets" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._secrets">_secrets</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_secrets_client" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._secrets_client">_secrets<wbr></wbr>_client</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_set_progress" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._set_progress">_set<wbr></wbr>_progress</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_view" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._view">_view</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="fiftyone.operators.executor.html" class="internal-link" title="The parent of this class">executor</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.ExecutionContext.html" class="internal-link" title="fiftyone.operators.executor.ExecutionContext"><wbr></wbr>Execution<wbr></wbr>Context</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.ExecutionOptions.html" class="internal-link" title="fiftyone.operators.executor.ExecutionOptions"><wbr></wbr>Execution<wbr></wbr>Options</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.ExecutionProgress.html" class="internal-link" title="fiftyone.operators.executor.ExecutionProgress"><wbr></wbr>Execution<wbr></wbr>Progress</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.ExecutionResult.html" class="internal-link" title="fiftyone.operators.executor.ExecutionResult"><wbr></wbr>Execution<wbr></wbr>Result</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.ExecutionRunState.html" class="internal-link" title="fiftyone.operators.executor.ExecutionRunState"><wbr></wbr>Execution<wbr></wbr>Run<wbr></wbr>State</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.Executor.html" class="internal-link" title="fiftyone.operators.executor.Executor"><wbr></wbr>Executor</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.InvocationRequest.html" class="internal-link" title="fiftyone.operators.executor.InvocationRequest"><wbr></wbr>Invocation<wbr></wbr>Request</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.ValidationContext.html" class="internal-link" title="fiftyone.operators.executor.ValidationContext"><wbr></wbr>Validation<wbr></wbr>Context</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.ValidationError.html" class="internal-link" title="fiftyone.operators.executor.ValidationError"><wbr></wbr>Validation<wbr></wbr>Error</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.ExecutionError.html" class="internal-link" title="fiftyone.operators.executor.ExecutionError"><wbr></wbr>Execution<wbr></wbr>Error</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.html#do_execute_operator" class="internal-link" title="fiftyone.operators.executor.do_execute_operator">do<wbr></wbr>_execute<wbr></wbr>_operator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.html#execute_operator" class="internal-link" title="fiftyone.operators.executor.execute_operator">execute<wbr></wbr>_operator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.html#execute_or_delegate_operator" class="internal-link" title="fiftyone.operators.executor.execute_or_delegate_operator">execute<wbr></wbr>_or<wbr></wbr>_delegate<wbr></wbr>_operator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.html#prepare_operator_executor" class="internal-link" title="fiftyone.operators.executor.prepare_operator_executor">prepare<wbr></wbr>_operator<wbr></wbr>_executor</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.html#resolve_execution_options" class="internal-link" title="fiftyone.operators.executor.resolve_execution_options">resolve<wbr></wbr>_execution<wbr></wbr>_options</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.html#resolve_placement" class="internal-link" title="fiftyone.operators.executor.resolve_placement">resolve<wbr></wbr>_placement</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.html#resolve_type" class="internal-link" title="fiftyone.operators.executor.resolve_type">resolve<wbr></wbr>_type</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.html#resolve_type_with_context" class="internal-link" title="fiftyone.operators.executor.resolve_type_with_context">resolve<wbr></wbr>_type<wbr></wbr>_with<wbr></wbr>_context</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.html#_convert_callables_to_operator_uris" class="internal-link" title="fiftyone.operators.executor._convert_callables_to_operator_uris">_convert<wbr></wbr>_callables<wbr></wbr>_to<wbr></wbr>_operator<wbr></wbr>_uris</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.html#_parse_ctx" class="internal-link" title="fiftyone.operators.executor._parse_ctx">_parse<wbr></wbr>_ctx</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.executor.html#logger" class="internal-link" title="fiftyone.operators.executor.logger">logger</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">fiftyone</a></code><wbr></wbr>.<code><a href="fiftyone.operators.html" class="internal-link" title="fiftyone.operators">operators</a></code><wbr></wbr>.<code><a href="fiftyone.operators.executor.html" class="internal-link" title="fiftyone.operators.executor">executor</a></code><wbr></wbr>.<code><a href="fiftyone.operators.executor.ExecutionContext.html" class="internal-link" title="fiftyone.operators.executor.ExecutionContext">ExecutionContext</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ExecutionContext</span>(object):</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.__init__">ExecutionContext(request_params, executor, set_progress, delegated_operation_id, ...)</a></code></p>
+          <p><a href="classIndex.html#fiftyone.operators.executor.ExecutionContext">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="pre">Represents the execution context of an operator.
+
+Operators can use the execution context to access the view, dataset, and
+selected samples, as well as to trigger other operators.
+
+Args:
+    request_params (None): a optional dictionary of request parameters
+    executor (None): an optional :class:`Executor` instance
+    set_progress (None): an optional function to set the progress of the
+        current operation
+    delegated_operation_id (None): an optional ID of the delegated
+        operation
+    operator_uri (None): the unique id of the operator
+    required_secrets (None): the list of required secrets from the
+        plugin's definition</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id1003">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#log" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.log">log</a></code></td>
+    <td>Logs a message to the browser console.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#prompt" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.prompt">prompt</a></code></td>
+    <td>Prompts the user to execute the operator with the given URI.</td>
+  </tr><tr class="method">
+    
+    <td>Async Method</td>
+    <td><code><a href="#resolve_secret_values" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.resolve_secret_values">resolve<wbr></wbr>_secret<wbr></wbr>_values</a></code></td>
+    <td>Resolves the values of the given secrets keys.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#secret" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.secret">secret</a></code></td>
+    <td>Retrieves the secret with the given key.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#serialize" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.serialize">serialize</a></code></td>
+    <td>Serializes the execution context.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_progress" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.set_progress">set<wbr></wbr>_progress</a></code></td>
+    <td>Sets the progress of the current operation.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#store" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.store">store</a></code></td>
+    <td>Create (if not previously created) and use a store with the specified name.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#target_view" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.target_view">target<wbr></wbr>_view</a></code></td>
+    <td>The target :class:`fiftyone.core.view.DatasetView` for the operator being executed.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#to_dict" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.to_dict">to<wbr></wbr>_dict</a></code></td>
+    <td>Returns the properties of the execution context as a dict.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#trigger" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.trigger">trigger</a></code></td>
+    <td>Triggers an invocation of the operator with the given name.</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#executor" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.executor">executor</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#params" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.params">params</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#request_params" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.request_params">request<wbr></wbr>_params</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#user" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.user">user</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#current_sample" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.current_sample">current<wbr></wbr>_sample</a></code></td>
+    <td>The ID of the current sample being processed (if any).</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#dataset" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.dataset">dataset</a></code></td>
+    <td>The :class:`fiftyone.core.dataset.Dataset` being operated on.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#dataset_id" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.dataset_id">dataset<wbr></wbr>_id</a></code></td>
+    <td>The ID of the :class:`fiftyone.core.dataset.Dataset` being operated on.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#dataset_name" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.dataset_name">dataset<wbr></wbr>_name</a></code></td>
+    <td>The name of the :class:`fiftyone.core.dataset.Dataset` being operated on.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#delegated" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.delegated">delegated</a></code></td>
+    <td>Whether delegated execution has been forced for the operation.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#delegation_target" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.delegation_target">delegation<wbr></wbr>_target</a></code></td>
+    <td>The orchestrator to which the operation was delegated (if any).</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#extended_selection" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.extended_selection">extended<wbr></wbr>_selection</a></code></td>
+    <td>The extended selection of the view (if any).</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#group_slice" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.group_slice">group<wbr></wbr>_slice</a></code></td>
+    <td>The current group slice of the view (if any).</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#has_custom_view" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.has_custom_view">has<wbr></wbr>_custom<wbr></wbr>_view</a></code></td>
+    <td>Whether the operator has a custom view.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#ops" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.ops">ops</a></code></td>
+    <td>A :class:`fiftyone.operators.operations.Operations` instance that you can use to trigger builtin operations on the current context.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#panel" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.panel">panel</a></code></td>
+    <td>A :class:`fiftyone.operators.panel.PanelRef` instance that you can use to read and write the state and data of the current panel.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#panel_id" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.panel_id">panel<wbr></wbr>_id</a></code></td>
+    <td>The ID of the panel that invoked the operator, if any.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#panel_state" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.panel_state">panel<wbr></wbr>_state</a></code></td>
+    <td>The current panel state.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#query_performance" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.query_performance">query<wbr></wbr>_performance</a></code></td>
+    <td>Whether query performance is enabled.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#requesting_delegated_execution" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.requesting_delegated_execution">requesting<wbr></wbr>_delegated<wbr></wbr>_execution</a></code></td>
+    <td>Whether delegated execution has been requested for the operation.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#results" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.results">results</a></code></td>
+    <td>A ``dict`` of results for the current operation.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#secrets" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.secrets">secrets</a></code></td>
+    <td>A read-only mapping of keys to their resolved values.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#selected" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.selected">selected</a></code></td>
+    <td>The list of selected sample IDs (if any).</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#selected_labels" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.selected_labels">selected<wbr></wbr>_labels</a></code></td>
+    <td>A list of selected labels (if any).</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#spaces" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.spaces">spaces</a></code></td>
+    <td>The current spaces layout in the FiftyOne App.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#user_id" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.user_id">user<wbr></wbr>_id</a></code></td>
+    <td>The ID of the user executing the operation, if known.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#user_request_token" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.user_request_token">user<wbr></wbr>_request<wbr></wbr>_token</a></code></td>
+    <td>The request token authenticating the user executing the operation, if known.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#view" class="internal-link" title="fiftyone.operators.executor.ExecutionContext.view">view</a></code></td>
+    <td>The :class:`fiftyone.core.view.DatasetView` being operated on.</td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_dataset" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._dataset">_dataset</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_delegated_operation_id" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._delegated_operation_id">_delegated<wbr></wbr>_operation<wbr></wbr>_id</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_operator_uri" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._operator_uri">_operator<wbr></wbr>_uri</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_ops" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._ops">_ops</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_panel" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._panel">_panel</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_panel_state" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._panel_state">_panel<wbr></wbr>_state</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_required_secret_keys" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._required_secret_keys">_required<wbr></wbr>_secret<wbr></wbr>_keys</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_secrets" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._secrets">_secrets</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_secrets_client" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._secrets_client">_secrets<wbr></wbr>_client</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_set_progress" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._set_progress">_set<wbr></wbr>_progress</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_view" class="internal-link" title="fiftyone.operators.executor.ExecutionContext._view">_view</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, request_params=None, executor=None, set_progress=None, delegated_operation_id=None, operator_uri=None, required_secrets=None)</span>:
+    
+    <a class="headerLink" href="#__init__" title="fiftyone.operators.executor.ExecutionContext.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.log">
+    
+  </a>
+  <a name="log">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">log</span><span class="function-signature">(self, message)</span>:
+    
+    <a class="headerLink" href="#log" title="fiftyone.operators.executor.ExecutionContext.log">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Logs a message to the browser console.
+
+.. note::
+
+    This method is only available to non-delegated operators. You can
+    only use this method during the execution of an operator.
+
+Args:
+    message: a message to log
+
+Returns:
+    a :class:`fiftyone.operators.message.GeneratedMessage` containing
+    instructions for the FiftyOne App to invoke the operator</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.prompt">
+    
+  </a>
+  <a name="prompt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">prompt</span><span class="function-signature">(self, operator_uri, params=None, on_success=None, on_error=None, skip_prompt=False)</span>:
+    
+    <a class="headerLink" href="#prompt" title="fiftyone.operators.executor.ExecutionContext.prompt">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Prompts the user to execute the operator with the given URI.
+
+Args:
+    operator_uri: the URI of the operator
+    params (None): a dictionary of parameters for the operator
+    on_success (None): a callback to invoke if the user successfully
+        executes the operator
+    on_error (None): a callback to invoke if the execution fails
+    skip_prompt (False): whether to skip the prompt
+
+Returns:
+    a :class:`fiftyone.operators.message.GeneratedMessage` containing
+    instructions for the FiftyOne App to prompt the user</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.resolve_secret_values">
+    
+  </a>
+  <a name="resolve_secret_values">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">async def</span> <span class="py-defname">resolve_secret_values</span><span class="function-signature">(self, keys, **kwargs)</span>:
+    
+    <a class="headerLink" href="#resolve_secret_values" title="fiftyone.operators.executor.ExecutionContext.resolve_secret_values">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Resolves the values of the given secrets keys.
+
+Args:
+    keys: a list of secret keys
+    **kwargs: additional keyword arguments to pass to the secrets
+        client for authentication if required</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.secret">
+    
+  </a>
+  <a name="secret">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">secret</span><span class="function-signature">(self, key)</span>:
+    
+    <a class="headerLink" href="#secret" title="fiftyone.operators.executor.ExecutionContext.secret">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Retrieves the secret with the given key.
+
+Args:
+    key: a secret key
+
+Returns:
+    the secret value</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.serialize">
+    
+  </a>
+  <a name="serialize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">serialize</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#serialize" title="fiftyone.operators.executor.ExecutionContext.serialize">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Serializes the execution context.
+
+Returns:
+    a JSON dict</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.set_progress">
+    
+  </a>
+  <a name="set_progress">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_progress</span><span class="function-signature">(self, progress=None, label=None)</span>:
+    
+    <a class="headerLink" href="#set_progress" title="fiftyone.operators.executor.ExecutionContext.set_progress">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Sets the progress of the current operation.
+
+Args:
+    progress (None): an optional float between 0 and 1 (0% to 100%)
+    label (None): an optional label to display</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.store">
+    
+  </a>
+  <a name="store">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">store</span><span class="function-signature">(self, store_name)</span>:
+    
+    <a class="headerLink" href="#store" title="fiftyone.operators.executor.ExecutionContext.store">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Create (if not previously created) and use a store with the specified name.
+
+Args:
+    store_name: the name of the store
+
+Returns:
+    a :class:`fiftyone.operators.store.ExecutionStore`</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.target_view">
+    
+  </a>
+  <a name="target_view">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">target_view</span><span class="function-signature">(self, param_name=<span class="rst-variable-quote">'</span><span class="rst-variable-string">view_target</span><span class="rst-variable-quote">'</span>)</span>:
+    
+    <a class="headerLink" href="#target_view" title="fiftyone.operators.executor.ExecutionContext.target_view">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">The target :class:`fiftyone.core.view.DatasetView` for the operator
+being executed.
+
+Args:
+    param_name ("view_target"): the name of the enum parameter defining
+        the target view choice
+
+Returns:
+    a :class:`fiftyone.core.collections.SampleCollection`</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.to_dict">
+    
+  </a>
+  <a name="to_dict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">to_dict</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#to_dict" title="fiftyone.operators.executor.ExecutionContext.to_dict">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the properties of the execution context as a dict.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.trigger">
+    
+  </a>
+  <a name="trigger">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">trigger</span><span class="function-signature">(self, operator_name, params=None)</span>:
+    
+    <a class="headerLink" href="#trigger" title="fiftyone.operators.executor.ExecutionContext.trigger">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Triggers an invocation of the operator with the given name.
+
+This method is only available when the operator is invoked via the
+FiftyOne App. You can check this via ``ctx.executor``.
+
+Example::
+
+    def execute(self, ctx):
+        # Trigger the `reload_dataset` operator after this operator
+        # finishes executing
+        ctx.trigger("reload_dataset")
+
+        # Immediately trigger the `reload_dataset` operator while a
+        # generator operator is executing
+        yield ctx.trigger("reload_dataset")
+
+Args:
+    operator_name: the name of the operator
+    params (None): a dictionary of parameters for the operator
+
+Returns:
+    a :class:`fiftyone.operators.message.GeneratedMessage` containing
+    instructions for the FiftyOne App to invoke the operator</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.executor">
+    
+  </a>
+  <a name="executor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">executor</span> =
+    
+    <a class="headerLink" href="#executor" title="fiftyone.operators.executor.ExecutionContext.executor">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.params">
+    
+  </a>
+  <a name="params">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">params</span> =
+    
+    <a class="headerLink" href="#params" title="fiftyone.operators.executor.ExecutionContext.params">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.request_params">
+    
+  </a>
+  <a name="request_params">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">request_params</span> =
+    
+    <a class="headerLink" href="#request_params" title="fiftyone.operators.executor.ExecutionContext.request_params">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.user">
+    
+  </a>
+  <a name="user">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">user</span> =
+    
+    <a class="headerLink" href="#user" title="fiftyone.operators.executor.ExecutionContext.user">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.current_sample">
+    
+  </a>
+  <a name="current_sample">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">current_sample</span> =
+    
+    <a class="headerLink" href="#current_sample" title="fiftyone.operators.executor.ExecutionContext.current_sample">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The ID of the current sample being processed (if any).</p>
+<p>When executed via the FiftyOne App, this is set when the user opens a sample in the modal.</p>
+</div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.dataset">
+    
+  </a>
+  <a name="dataset">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">dataset</span> =
+    
+    <a class="headerLink" href="#dataset" title="fiftyone.operators.executor.ExecutionContext.dataset">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The :class:`fiftyone.core.dataset.Dataset` being operated on.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.dataset_id">
+    
+  </a>
+  <a name="dataset_id">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">dataset_id</span> =
+    
+    <a class="headerLink" href="#dataset_id" title="fiftyone.operators.executor.ExecutionContext.dataset_id">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The ID of the :class:`fiftyone.core.dataset.Dataset` being operated on.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.dataset_name">
+    
+  </a>
+  <a name="dataset_name">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">dataset_name</span> =
+    
+    <a class="headerLink" href="#dataset_name" title="fiftyone.operators.executor.ExecutionContext.dataset_name">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The name of the :class:`fiftyone.core.dataset.Dataset` being operated on.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.delegated">
+    
+  </a>
+  <a name="delegated">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">delegated</span> =
+    
+    <a class="headerLink" href="#delegated" title="fiftyone.operators.executor.ExecutionContext.delegated">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Whether delegated execution has been forced for the operation.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.delegation_target">
+    
+  </a>
+  <a name="delegation_target">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">delegation_target</span> =
+    
+    <a class="headerLink" href="#delegation_target" title="fiftyone.operators.executor.ExecutionContext.delegation_target">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The orchestrator to which the operation was delegated (if any).</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.extended_selection">
+    
+  </a>
+  <a name="extended_selection">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">extended_selection</span> =
+    
+    <a class="headerLink" href="#extended_selection" title="fiftyone.operators.executor.ExecutionContext.extended_selection">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The extended selection of the view (if any).</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.group_slice">
+    
+  </a>
+  <a name="group_slice">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">group_slice</span> =
+    
+    <a class="headerLink" href="#group_slice" title="fiftyone.operators.executor.ExecutionContext.group_slice">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The current group slice of the view (if any).</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.has_custom_view">
+    
+  </a>
+  <a name="has_custom_view">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">has_custom_view</span> =
+    
+    <a class="headerLink" href="#has_custom_view" title="fiftyone.operators.executor.ExecutionContext.has_custom_view">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Whether the operator has a custom view.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.ops">
+    
+  </a>
+  <a name="ops">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">ops</span> =
+    
+    <a class="headerLink" href="#ops" title="fiftyone.operators.executor.ExecutionContext.ops">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>A :class:`fiftyone.operators.operations.Operations` instance that you can use to trigger builtin operations on the current context.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.panel">
+    
+  </a>
+  <a name="panel">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">panel</span> =
+    
+    <a class="headerLink" href="#panel" title="fiftyone.operators.executor.ExecutionContext.panel">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>A :class:`fiftyone.operators.panel.PanelRef` instance that you can use to read and write the state and data of the current panel.</p>
+<p>Only available when the operator is invoked from a panel.</p>
+</div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.panel_id">
+    
+  </a>
+  <a name="panel_id">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">panel_id</span> =
+    
+    <a class="headerLink" href="#panel_id" title="fiftyone.operators.executor.ExecutionContext.panel_id">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The ID of the panel that invoked the operator, if any.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.panel_state">
+    
+  </a>
+  <a name="panel_state">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">panel_state</span> =
+    
+    <a class="headerLink" href="#panel_state" title="fiftyone.operators.executor.ExecutionContext.panel_state">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The current panel state.</p>
+<p>Only available when the operator is invoked from a panel.</p>
+</div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.query_performance">
+    
+  </a>
+  <a name="query_performance">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">query_performance</span> =
+    
+    <a class="headerLink" href="#query_performance" title="fiftyone.operators.executor.ExecutionContext.query_performance">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Whether query performance is enabled.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.requesting_delegated_execution">
+    
+  </a>
+  <a name="requesting_delegated_execution">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">requesting_delegated_execution</span> =
+    
+    <a class="headerLink" href="#requesting_delegated_execution" title="fiftyone.operators.executor.ExecutionContext.requesting_delegated_execution">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Whether delegated execution has been requested for the operation.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.results">
+    
+  </a>
+  <a name="results">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">results</span> =
+    
+    <a class="headerLink" href="#results" title="fiftyone.operators.executor.ExecutionContext.results">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>A ``dict`` of results for the current operation.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.secrets">
+    
+  </a>
+  <a name="secrets">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">secrets</span> =
+    
+    <a class="headerLink" href="#secrets" title="fiftyone.operators.executor.ExecutionContext.secrets">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>A read-only mapping of keys to their resolved values.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.selected">
+    
+  </a>
+  <a name="selected">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">selected</span> =
+    
+    <a class="headerLink" href="#selected" title="fiftyone.operators.executor.ExecutionContext.selected">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The list of selected sample IDs (if any).</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.selected_labels">
+    
+  </a>
+  <a name="selected_labels">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">selected_labels</span> =
+    
+    <a class="headerLink" href="#selected_labels" title="fiftyone.operators.executor.ExecutionContext.selected_labels">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">A list of selected labels (if any).
+
+Items are dictionaries with the following keys:
+
+-   ``label_id``: the ID of the label
+-   ``sample_id``: the ID of the sample containing the label
+-   ``field``: the field name containing the label
+-   ``frame_number``: the frame number containing the label (only
+    applicable to video samples)</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.spaces">
+    
+  </a>
+  <a name="spaces">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">spaces</span> =
+    
+    <a class="headerLink" href="#spaces" title="fiftyone.operators.executor.ExecutionContext.spaces">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The current spaces layout in the FiftyOne App.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.user_id">
+    
+  </a>
+  <a name="user_id">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">user_id</span> =
+    
+    <a class="headerLink" href="#user_id" title="fiftyone.operators.executor.ExecutionContext.user_id">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The ID of the user executing the operation, if known.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.user_request_token">
+    
+  </a>
+  <a name="user_request_token">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">user_request_token</span> =
+    
+    <a class="headerLink" href="#user_request_token" title="fiftyone.operators.executor.ExecutionContext.user_request_token">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The request token authenticating the user executing the operation, if known.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext.view">
+    
+  </a>
+  <a name="view">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">view</span> =
+    
+    <a class="headerLink" href="#view" title="fiftyone.operators.executor.ExecutionContext.view">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The :class:`fiftyone.core.view.DatasetView` being operated on.</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext._dataset">
+    
+  </a>
+  <a name="_dataset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_dataset</span> =
+    
+    <a class="headerLink" href="#_dataset" title="fiftyone.operators.executor.ExecutionContext._dataset">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext._delegated_operation_id">
+    
+  </a>
+  <a name="_delegated_operation_id">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_delegated_operation_id</span> =
+    
+    <a class="headerLink" href="#_delegated_operation_id" title="fiftyone.operators.executor.ExecutionContext._delegated_operation_id">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext._operator_uri">
+    
+  </a>
+  <a name="_operator_uri">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_operator_uri</span> =
+    
+    <a class="headerLink" href="#_operator_uri" title="fiftyone.operators.executor.ExecutionContext._operator_uri">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext._ops">
+    
+  </a>
+  <a name="_ops">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_ops</span> =
+    
+    <a class="headerLink" href="#_ops" title="fiftyone.operators.executor.ExecutionContext._ops">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext._panel">
+    
+  </a>
+  <a name="_panel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_panel</span> =
+    
+    <a class="headerLink" href="#_panel" title="fiftyone.operators.executor.ExecutionContext._panel">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext._panel_state">
+    
+  </a>
+  <a name="_panel_state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_panel_state</span> =
+    
+    <a class="headerLink" href="#_panel_state" title="fiftyone.operators.executor.ExecutionContext._panel_state">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext._required_secret_keys">
+    
+  </a>
+  <a name="_required_secret_keys">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_required_secret_keys</span> =
+    
+    <a class="headerLink" href="#_required_secret_keys" title="fiftyone.operators.executor.ExecutionContext._required_secret_keys">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext._secrets">
+    
+  </a>
+  <a name="_secrets">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_secrets</span>: <code>dict</code> =
+    
+    <a class="headerLink" href="#_secrets" title="fiftyone.operators.executor.ExecutionContext._secrets">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext._secrets_client">
+    
+  </a>
+  <a name="_secrets_client">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_secrets_client</span> =
+    
+    <a class="headerLink" href="#_secrets_client" title="fiftyone.operators.executor.ExecutionContext._secrets_client">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext._set_progress">
+    
+  </a>
+  <a name="_set_progress">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_set_progress</span> =
+    
+    <a class="headerLink" href="#_set_progress" title="fiftyone.operators.executor.ExecutionContext._set_progress">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.operators.executor.ExecutionContext._view">
+    
+  </a>
+  <a name="_view">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_view</span> =
+    
+    <a class="headerLink" href="#_view" title="fiftyone.operators.executor.ExecutionContext._view">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for fiftyone,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-11-17 20:16:35.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

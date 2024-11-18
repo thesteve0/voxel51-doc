@@ -1,0 +1,1541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fiftyone.utils.cvat.CVATTrack</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          fiftyone <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="fiftyone.utils.cvat.CVATTrack.html" class="internal-link" title="This class"><wbr></wbr>CVATTrack</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#from_labels" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.from_labels">from<wbr></wbr>_labels</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#from_track_dict" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.from_track_dict">from<wbr></wbr>_track<wbr></wbr>_dict</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#iter_annos" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.iter_annos">iter<wbr></wbr>_annos</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#to_labels" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.to_labels">to<wbr></wbr>_labels</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_add_outside_shapes" class="internal-link" title="fiftyone.utils.cvat.CVATTrack._add_outside_shapes">_add<wbr></wbr>_outside<wbr></wbr>_shapes</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#boxes" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.boxes">boxes</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#height" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.height">height</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#id" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.id">id</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#label" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.label">label</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#points" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.points">points</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#polygons" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.polygons">polygons</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#polylines" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.polylines">polylines</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#width" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.width">width</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#has_boxes" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.has_boxes">has<wbr></wbr>_boxes</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#has_points" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.has_points">has<wbr></wbr>_points</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#has_polylines" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.has_polylines">has<wbr></wbr>_polylines</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="fiftyone.utils.cvat.html" class="internal-link" title="The parent of this class">cvat</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATAnnotationAPI.html" class="internal-link" title="fiftyone.utils.cvat.CVATAnnotationAPI"><wbr></wbr>CVATAnnotation<wbr></wbr>API</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATAnnotationResults.html" class="internal-link" title="fiftyone.utils.cvat.CVATAnnotationResults"><wbr></wbr>CVATAnnotation<wbr></wbr>Results</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATAttribute.html" class="internal-link" title="fiftyone.utils.cvat.CVATAttribute"><wbr></wbr>CVATAttribute</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATBackend.html" class="internal-link" title="fiftyone.utils.cvat.CVATBackend"><wbr></wbr>CVATBackend</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATBackendConfig.html" class="internal-link" title="fiftyone.utils.cvat.CVATBackendConfig"><wbr></wbr>CVATBackend<wbr></wbr>Config</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATImage.html" class="internal-link" title="fiftyone.utils.cvat.CVATImage"><wbr></wbr>CVATImage</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATImageAnno.html" class="internal-link" title="fiftyone.utils.cvat.CVATImageAnno"><wbr></wbr>CVATImage<wbr></wbr>Anno</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATImageAnnotationWriter.html" class="internal-link" title="fiftyone.utils.cvat.CVATImageAnnotationWriter"><wbr></wbr>CVATImage<wbr></wbr>Annotation<wbr></wbr>Writer</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATImageBox.html" class="internal-link" title="fiftyone.utils.cvat.CVATImageBox"><wbr></wbr>CVATImage<wbr></wbr>Box</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATImageDatasetExporter.html" class="internal-link" title="fiftyone.utils.cvat.CVATImageDatasetExporter"><wbr></wbr>CVATImage<wbr></wbr>Dataset<wbr></wbr>Exporter</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATImageDatasetImporter.html" class="internal-link" title="fiftyone.utils.cvat.CVATImageDatasetImporter"><wbr></wbr>CVATImage<wbr></wbr>Dataset<wbr></wbr>Importer</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATImagePoints.html" class="internal-link" title="fiftyone.utils.cvat.CVATImagePoints"><wbr></wbr>CVATImage<wbr></wbr>Points</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATImagePolygon.html" class="internal-link" title="fiftyone.utils.cvat.CVATImagePolygon"><wbr></wbr>CVATImage<wbr></wbr>Polygon</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATImagePolyline.html" class="internal-link" title="fiftyone.utils.cvat.CVATImagePolyline"><wbr></wbr>CVATImage<wbr></wbr>Polyline</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATImageTag.html" class="internal-link" title="fiftyone.utils.cvat.CVATImageTag"><wbr></wbr>CVATImage<wbr></wbr>Tag</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATLabel.html" class="internal-link" title="fiftyone.utils.cvat.CVATLabel"><wbr></wbr>CVATLabel</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATShape.html" class="internal-link" title="fiftyone.utils.cvat.CVATShape"><wbr></wbr>CVATShape</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATTag.html" class="internal-link" title="fiftyone.utils.cvat.CVATTag"><wbr></wbr>CVATTag</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATTaskLabels.html" class="internal-link" title="fiftyone.utils.cvat.CVATTaskLabels"><wbr></wbr>CVATTask<wbr></wbr>Labels</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATTrack.html" class="internal-link" title="fiftyone.utils.cvat.CVATTrack"><wbr></wbr>CVATTrack</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATVideoAnno.html" class="internal-link" title="fiftyone.utils.cvat.CVATVideoAnno"><wbr></wbr>CVATVideo<wbr></wbr>Anno</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATVideoAnnotationWriter.html" class="internal-link" title="fiftyone.utils.cvat.CVATVideoAnnotationWriter"><wbr></wbr>CVATVideo<wbr></wbr>Annotation<wbr></wbr>Writer</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATVideoBox.html" class="internal-link" title="fiftyone.utils.cvat.CVATVideoBox"><wbr></wbr>CVATVideo<wbr></wbr>Box</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATVideoDatasetExporter.html" class="internal-link" title="fiftyone.utils.cvat.CVATVideoDatasetExporter"><wbr></wbr>CVATVideo<wbr></wbr>Dataset<wbr></wbr>Exporter</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATVideoDatasetImporter.html" class="internal-link" title="fiftyone.utils.cvat.CVATVideoDatasetImporter"><wbr></wbr>CVATVideo<wbr></wbr>Dataset<wbr></wbr>Importer</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATVideoPoints.html" class="internal-link" title="fiftyone.utils.cvat.CVATVideoPoints"><wbr></wbr>CVATVideo<wbr></wbr>Points</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATVideoPolygon.html" class="internal-link" title="fiftyone.utils.cvat.CVATVideoPolygon"><wbr></wbr>CVATVideo<wbr></wbr>Polygon</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.CVATVideoPolyline.html" class="internal-link" title="fiftyone.utils.cvat.CVATVideoPolyline"><wbr></wbr>CVATVideo<wbr></wbr>Polyline</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.HasCVATPoints.html" class="internal-link" title="fiftyone.utils.cvat.HasCVATPoints"><wbr></wbr>Has<wbr></wbr>CVATPoints</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#import_annotations" class="internal-link" title="fiftyone.utils.cvat.import_annotations">import<wbr></wbr>_annotations</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#load_cvat_image_annotations" class="internal-link" title="fiftyone.utils.cvat.load_cvat_image_annotations">load<wbr></wbr>_cvat<wbr></wbr>_image<wbr></wbr>_annotations</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#load_cvat_video_annotations" class="internal-link" title="fiftyone.utils.cvat.load_cvat_video_annotations">load<wbr></wbr>_cvat<wbr></wbr>_video<wbr></wbr>_annotations</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_build_sparse_frame_id_map" class="internal-link" title="fiftyone.utils.cvat._build_sparse_frame_id_map">_build<wbr></wbr>_sparse<wbr></wbr>_frame<wbr></wbr>_id<wbr></wbr>_map</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_cvat_tracks_to_frames_dict" class="internal-link" title="fiftyone.utils.cvat._cvat_tracks_to_frames_dict">_cvat<wbr></wbr>_tracks<wbr></wbr>_to<wbr></wbr>_frames<wbr></wbr>_dict</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_do_download_media" class="internal-link" title="fiftyone.utils.cvat._do_download_media">_do<wbr></wbr>_download<wbr></wbr>_media</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_download_annotations" class="internal-link" title="fiftyone.utils.cvat._download_annotations">_download<wbr></wbr>_annotations</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_download_media" class="internal-link" title="fiftyone.utils.cvat._download_media">_download<wbr></wbr>_media</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_ensure_list" class="internal-link" title="fiftyone.utils.cvat._ensure_list">_ensure<wbr></wbr>_list</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_frames_to_cvat_tracks" class="internal-link" title="fiftyone.utils.cvat._frames_to_cvat_tracks">_frames<wbr></wbr>_to<wbr></wbr>_cvat<wbr></wbr>_tracks</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_from_int_bool" class="internal-link" title="fiftyone.utils.cvat._from_int_bool">_from<wbr></wbr>_int<wbr></wbr>_bool</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_get_interpolated_shapes" class="internal-link" title="fiftyone.utils.cvat._get_interpolated_shapes">_get<wbr></wbr>_interpolated<wbr></wbr>_shapes</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_get_next_frame" class="internal-link" title="fiftyone.utils.cvat._get_next_frame">_get<wbr></wbr>_next<wbr></wbr>_frame</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_get_single_polyline_points" class="internal-link" title="fiftyone.utils.cvat._get_single_polyline_points">_get<wbr></wbr>_single<wbr></wbr>_polyline<wbr></wbr>_points</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_is_supported_attribute_type" class="internal-link" title="fiftyone.utils.cvat._is_supported_attribute_type">_is<wbr></wbr>_supported<wbr></wbr>_attribute<wbr></wbr>_type</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_parse_frame_step" class="internal-link" title="fiftyone.utils.cvat._parse_frame_step">_parse<wbr></wbr>_frame<wbr></wbr>_step</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_parse_occlusion_value" class="internal-link" title="fiftyone.utils.cvat._parse_occlusion_value">_parse<wbr></wbr>_occlusion<wbr></wbr>_value</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_parse_task_metadata" class="internal-link" title="fiftyone.utils.cvat._parse_task_metadata">_parse<wbr></wbr>_task<wbr></wbr>_metadata</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_parse_value" class="internal-link" title="fiftyone.utils.cvat._parse_value">_parse<wbr></wbr>_value</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_remap_annotation_frame" class="internal-link" title="fiftyone.utils.cvat._remap_annotation_frame">_remap<wbr></wbr>_annotation<wbr></wbr>_frame</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_remap_annotation_frames" class="internal-link" title="fiftyone.utils.cvat._remap_annotation_frames">_remap<wbr></wbr>_annotation<wbr></wbr>_frames</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_render_frame_arg" class="internal-link" title="fiftyone.utils.cvat._render_frame_arg">_render<wbr></wbr>_frame<wbr></wbr>_arg</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_stringify_value" class="internal-link" title="fiftyone.utils.cvat._stringify_value">_stringify<wbr></wbr>_value</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_to_int_bool" class="internal-link" title="fiftyone.utils.cvat._to_int_bool">_to<wbr></wbr>_int<wbr></wbr>_bool</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#_validate_frame_arg" class="internal-link" title="fiftyone.utils.cvat._validate_frame_arg">_validate<wbr></wbr>_frame<wbr></wbr>_arg</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.utils.cvat.html#logger" class="internal-link" title="fiftyone.utils.cvat.logger">logger</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">fiftyone</a></code><wbr></wbr>.<code><a href="fiftyone.utils.html" class="internal-link" title="fiftyone.utils">utils</a></code><wbr></wbr>.<code><a href="fiftyone.utils.cvat.html" class="internal-link" title="fiftyone.utils.cvat">cvat</a></code><wbr></wbr>.<code><a href="fiftyone.utils.cvat.CVATTrack.html" class="internal-link" title="fiftyone.utils.cvat.CVATTrack">CVATTrack</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">CVATTrack</span>(object):</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.__init__">CVATTrack(id, label, width, height, ...)</a></code></p>
+          <p><a href="classIndex.html#fiftyone.utils.cvat.CVATTrack">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="pre">An annotation track in CVAT video format.
+
+Args:
+    id: the ID of the track
+    label: the label for the track
+    width: the width of the video frames, in pixels
+    height: the height of the video frames, in pixels
+    boxes (None): a dict mapping frame numbers to :class:`CVATVideoBox`
+        instances
+    polygons (None): a dict mapping frame numbers to
+        :class:`CVATVideoPolygon` instances
+    polylines (None): a dict mapping frame numbers to
+        :class:`CVATVideoPolyline` instances
+    points (None): a dict mapping frame numbers to :class:`CVATVideoPoints`
+        instances</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id1639">
+  
+  
+  <tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><code><a href="#from_labels" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.from_labels">from<wbr></wbr>_labels</a></code></td>
+    <td>Creates a :class:`CVATTrack` from a dictionary of labels.</td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><code><a href="#from_track_dict" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.from_track_dict">from<wbr></wbr>_track<wbr></wbr>_dict</a></code></td>
+    <td>Creates a :class:`CVATTrack` from a ``&lt;track&gt;`` tag of a CVAT video annotation XML file.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#iter_annos" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.iter_annos">iter<wbr></wbr>_annos</a></code></td>
+    <td>Returns an iterator over the annotations in the track.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#to_labels" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.to_labels">to<wbr></wbr>_labels</a></code></td>
+    <td>Returns :class:`fiftyone.core.labels.Label` representations of the annotations.</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#boxes" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.boxes">boxes</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#height" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.height">height</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#id" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.id">id</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#label" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.label">label</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#points" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.points">points</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#polygons" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.polygons">polygons</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#polylines" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.polylines">polylines</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#width" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.width">width</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#has_boxes" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.has_boxes">has<wbr></wbr>_boxes</a></code></td>
+    <td>Whether this track has 2D boxes.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#has_points" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.has_points">has<wbr></wbr>_points</a></code></td>
+    <td>Whether this track has keypoints.</td>
+  </tr><tr class="property">
+    
+    <td>Property</td>
+    <td><code><a href="#has_polylines" class="internal-link" title="fiftyone.utils.cvat.CVATTrack.has_polylines">has<wbr></wbr>_polylines</a></code></td>
+    <td>Whether this track has polygons or polylines.</td>
+  </tr><tr class="staticmethod private">
+    
+    <td>Static Method</td>
+    <td><code><a href="#_add_outside_shapes" class="internal-link" title="fiftyone.utils.cvat.CVATTrack._add_outside_shapes">_add<wbr></wbr>_outside<wbr></wbr>_shapes</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="baseclassmethod">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.from_labels">
+    
+  </a>
+  <a name="from_labels">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @classmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">from_labels</span><span class="function-signature">(cls, id, labels, frame_size)</span>:
+    
+    <a class="headerLink" href="#from_labels" title="fiftyone.utils.cvat.CVATTrack.from_labels">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Creates a :class:`CVATTrack` from a dictionary of labels.
+
+Args:
+    id: the ID of the track
+    labels: a dict mapping frame numbers to
+        :class:`fiftyone.core.labels.Label` instances
+    frame_size: the ``(width, height)`` of the video frames
+
+Returns:
+    a :class:`CVATTrack`</p></div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.from_track_dict">
+    
+  </a>
+  <a name="from_track_dict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @classmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">from_track_dict</span><span class="function-signature">(cls, d, frame_size)</span>:
+    
+    <a class="headerLink" href="#from_track_dict" title="fiftyone.utils.cvat.CVATTrack.from_track_dict">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Creates a :class:`CVATTrack` from a ``&lt;track&gt;`` tag of a CVAT video
+annotation XML file.
+
+Args:
+    d: a dict representation of an ``&lt;track&gt;`` tag
+    frame_size: the ``(width, height)`` of the video frames
+
+Returns:
+    a :class:`CVATTrack`</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, id, label, width, height, boxes=None, polygons=None, polylines=None, points=None)</span>:
+    
+    <a class="headerLink" href="#__init__" title="fiftyone.utils.cvat.CVATTrack.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.iter_annos">
+    
+  </a>
+  <a name="iter_annos">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">iter_annos</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#iter_annos" title="fiftyone.utils.cvat.CVATTrack.iter_annos">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Returns an iterator over the annotations in the track.
+
+Returns:
+    an iterator that emits :class:`CVATVideoAnno` instances</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.to_labels">
+    
+  </a>
+  <a name="to_labels">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">to_labels</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#to_labels" title="fiftyone.utils.cvat.CVATTrack.to_labels">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Returns :class:`fiftyone.core.labels.Label` representations of the
+annotations.
+
+Returns:
+    a dict mapping frame numbers to
+    :class:`fiftyone.core.labels.Label` instances</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.boxes">
+    
+  </a>
+  <a name="boxes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">boxes</span> =
+    
+    <a class="headerLink" href="#boxes" title="fiftyone.utils.cvat.CVATTrack.boxes">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.height">
+    
+  </a>
+  <a name="height">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">height</span> =
+    
+    <a class="headerLink" href="#height" title="fiftyone.utils.cvat.CVATTrack.height">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.id">
+    
+  </a>
+  <a name="id">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">id</span> =
+    
+    <a class="headerLink" href="#id" title="fiftyone.utils.cvat.CVATTrack.id">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.label">
+    
+  </a>
+  <a name="label">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">label</span> =
+    
+    <a class="headerLink" href="#label" title="fiftyone.utils.cvat.CVATTrack.label">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.points">
+    
+  </a>
+  <a name="points">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">points</span> =
+    
+    <a class="headerLink" href="#points" title="fiftyone.utils.cvat.CVATTrack.points">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.polygons">
+    
+  </a>
+  <a name="polygons">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">polygons</span> =
+    
+    <a class="headerLink" href="#polygons" title="fiftyone.utils.cvat.CVATTrack.polygons">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.polylines">
+    
+  </a>
+  <a name="polylines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">polylines</span> =
+    
+    <a class="headerLink" href="#polylines" title="fiftyone.utils.cvat.CVATTrack.polylines">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.width">
+    
+  </a>
+  <a name="width">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">width</span> =
+    
+    <a class="headerLink" href="#width" title="fiftyone.utils.cvat.CVATTrack.width">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.has_boxes">
+    
+  </a>
+  <a name="has_boxes">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">has_boxes</span> =
+    
+    <a class="headerLink" href="#has_boxes" title="fiftyone.utils.cvat.CVATTrack.has_boxes">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Whether this track has 2D boxes.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.has_points">
+    
+  </a>
+  <a name="has_points">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">has_points</span> =
+    
+    <a class="headerLink" href="#has_points" title="fiftyone.utils.cvat.CVATTrack.has_points">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Whether this track has keypoints.</p></div>
+    
+  </div>
+</div><div class="baseproperty">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack.has_polylines">
+    
+  </a>
+  <a name="has_polylines">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    <span class="py-defname">has_polylines</span> =
+    
+    <a class="headerLink" href="#has_polylines" title="fiftyone.utils.cvat.CVATTrack.has_polylines">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Whether this track has polygons or polylines.</p></div>
+    
+  </div>
+</div><div class="basestaticmethod private">
+  
+  
+  <a name="fiftyone.utils.cvat.CVATTrack._add_outside_shapes">
+    
+  </a>
+  <a name="_add_outside_shapes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_add_outside_shapes</span><span class="function-signature">(shapes)</span>:
+    
+    <a class="headerLink" href="#_add_outside_shapes" title="fiftyone.utils.cvat.CVATTrack._add_outside_shapes">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for fiftyone,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-11-17 20:16:35.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

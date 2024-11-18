@@ -1,0 +1,4050 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fiftyone.core.utils</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          fiftyone <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code class="thisobject"><a href="fiftyone.core.utils.html" class="internal-link" title="This module">utils</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.add_sys_path.html" class="internal-link" title="fiftyone.core.utils.add_sys_path">add<wbr></wbr>_sys<wbr></wbr>_path</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.BaseDynamicBatcher.html" class="internal-link" title="fiftyone.core.utils.BaseDynamicBatcher"><wbr></wbr>Base<wbr></wbr>Dynamic<wbr></wbr>Batcher</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.Batcher.html" class="internal-link" title="fiftyone.core.utils.Batcher"><wbr></wbr>Batcher</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.ContentSizeDynamicBatcher.html" class="internal-link" title="fiftyone.core.utils.ContentSizeDynamicBatcher"><wbr></wbr>Content<wbr></wbr>Size<wbr></wbr>Dynamic<wbr></wbr>Batcher</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.LatencyDynamicBatcher.html" class="internal-link" title="fiftyone.core.utils.LatencyDynamicBatcher"><wbr></wbr>Latency<wbr></wbr>Dynamic<wbr></wbr>Batcher</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.LazyModule.html" class="internal-link" title="fiftyone.core.utils.LazyModule"><wbr></wbr>Lazy<wbr></wbr>Module</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.LoggingLevel.html" class="internal-link" title="fiftyone.core.utils.LoggingLevel"><wbr></wbr>Logging<wbr></wbr>Level</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.MonkeyPatchFunction.html" class="internal-link" title="fiftyone.core.utils.MonkeyPatchFunction"><wbr></wbr>Monkey<wbr></wbr>Patch<wbr></wbr>Function</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.ProgressBar.html" class="internal-link" title="fiftyone.core.utils.ProgressBar"><wbr></wbr>Progress<wbr></wbr>Bar</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.ResourceLimit.html" class="internal-link" title="fiftyone.core.utils.ResourceLimit"><wbr></wbr>Resource<wbr></wbr>Limit</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.ResponseStream.html" class="internal-link" title="fiftyone.core.utils.ResponseStream"><wbr></wbr>Response<wbr></wbr>Stream</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.SetAttributes.html" class="internal-link" title="fiftyone.core.utils.SetAttributes"><wbr></wbr>Set<wbr></wbr>Attributes</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.StaticBatcher.html" class="internal-link" title="fiftyone.core.utils.StaticBatcher"><wbr></wbr>Static<wbr></wbr>Batcher</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.SuppressLogging.html" class="internal-link" title="fiftyone.core.utils.SuppressLogging"><wbr></wbr>Suppress<wbr></wbr>Logging</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.UniqueFilenameMaker.html" class="internal-link" title="fiftyone.core.utils.UniqueFilenameMaker"><wbr></wbr>Unique<wbr></wbr>Filename<wbr></wbr>Maker</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#available_patterns" class="internal-link" title="fiftyone.core.utils.available_patterns">available<wbr></wbr>_patterns</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#call_on_exit" class="internal-link" title="fiftyone.core.utils.call_on_exit">call<wbr></wbr>_on<wbr></wbr>_exit</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#compute_filehash" class="internal-link" title="fiftyone.core.utils.compute_filehash">compute<wbr></wbr>_filehash</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#datetime_to_timestamp" class="internal-link" title="fiftyone.core.utils.datetime_to_timestamp">datetime<wbr></wbr>_to<wbr></wbr>_timestamp</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#deserialize_numpy_array" class="internal-link" title="fiftyone.core.utils.deserialize_numpy_array">deserialize<wbr></wbr>_numpy<wbr></wbr>_array</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#disable_progress_bars" class="internal-link" title="fiftyone.core.utils.disable_progress_bars">disable<wbr></wbr>_progress<wbr></wbr>_bars</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ensure_import" class="internal-link" title="fiftyone.core.utils.ensure_import">ensure<wbr></wbr>_import</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ensure_package" class="internal-link" title="fiftyone.core.utils.ensure_package">ensure<wbr></wbr>_package</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ensure_requirements" class="internal-link" title="fiftyone.core.utils.ensure_requirements">ensure<wbr></wbr>_requirements</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ensure_tf" class="internal-link" title="fiftyone.core.utils.ensure_tf">ensure<wbr></wbr>_tf</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ensure_tfds" class="internal-link" title="fiftyone.core.utils.ensure_tfds">ensure<wbr></wbr>_tfds</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ensure_torch" class="internal-link" title="fiftyone.core.utils.ensure_torch">ensure<wbr></wbr>_torch</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#extract_kwargs_for_class" class="internal-link" title="fiftyone.core.utils.extract_kwargs_for_class">extract<wbr></wbr>_kwargs<wbr></wbr>_for<wbr></wbr>_class</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#extract_kwargs_for_function" class="internal-link" title="fiftyone.core.utils.extract_kwargs_for_function">extract<wbr></wbr>_kwargs<wbr></wbr>_for<wbr></wbr>_function</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#fill_patterns" class="internal-link" title="fiftyone.core.utils.fill_patterns">fill<wbr></wbr>_patterns</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#find_files" class="internal-link" title="fiftyone.core.utils.find_files">find<wbr></wbr>_files</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_default_batcher" class="internal-link" title="fiftyone.core.utils.get_default_batcher">get<wbr></wbr>_default<wbr></wbr>_batcher</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_multiprocessing_context" class="internal-link" title="fiftyone.core.utils.get_multiprocessing_context">get<wbr></wbr>_multiprocessing<wbr></wbr>_context</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#handle_error" class="internal-link" title="fiftyone.core.utils.handle_error">handle<wbr></wbr>_error</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#indent_lines" class="internal-link" title="fiftyone.core.utils.indent_lines">indent<wbr></wbr>_lines</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#install_package" class="internal-link" title="fiftyone.core.utils.install_package">install<wbr></wbr>_package</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#install_requirements" class="internal-link" title="fiftyone.core.utils.install_requirements">install<wbr></wbr>_requirements</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#is_32_bit" class="internal-link" title="fiftyone.core.utils.is_32_bit">is<wbr></wbr>_32<wbr></wbr>_bit</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#is_arm_mac" class="internal-link" title="fiftyone.core.utils.is_arm_mac">is<wbr></wbr>_arm<wbr></wbr>_mac</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#is_container" class="internal-link" title="fiftyone.core.utils.is_container">is<wbr></wbr>_container</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#iter_batches" class="internal-link" title="fiftyone.core.utils.iter_batches">iter<wbr></wbr>_batches</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#iter_slices" class="internal-link" title="fiftyone.core.utils.iter_slices">iter<wbr></wbr>_slices</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#justify_headings" class="internal-link" title="fiftyone.core.utils.justify_headings">justify<wbr></wbr>_headings</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#lazy_import" class="internal-link" title="fiftyone.core.utils.lazy_import">lazy<wbr></wbr>_import</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#load_requirements" class="internal-link" title="fiftyone.core.utils.load_requirements">load<wbr></wbr>_requirements</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#load_xml_as_json_dict" class="internal-link" title="fiftyone.core.utils.load_xml_as_json_dict">load<wbr></wbr>_xml<wbr></wbr>_as<wbr></wbr>_json<wbr></wbr>_dict</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#parse_batching_strategy" class="internal-link" title="fiftyone.core.utils.parse_batching_strategy">parse<wbr></wbr>_batching<wbr></wbr>_strategy</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#parse_serializable" class="internal-link" title="fiftyone.core.utils.parse_serializable">parse<wbr></wbr>_serializable</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pformat" class="internal-link" title="fiftyone.core.utils.pformat">pformat</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pprint" class="internal-link" title="fiftyone.core.utils.pprint">pprint</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#recommend_batch_size_for_value" class="internal-link" title="fiftyone.core.utils.recommend_batch_size_for_value">recommend<wbr></wbr>_batch<wbr></wbr>_size<wbr></wbr>_for<wbr></wbr>_value</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#recommend_process_pool_workers" class="internal-link" title="fiftyone.core.utils.recommend_process_pool_workers">recommend<wbr></wbr>_process<wbr></wbr>_pool<wbr></wbr>_workers</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#recommend_thread_pool_workers" class="internal-link" title="fiftyone.core.utils.recommend_thread_pool_workers">recommend<wbr></wbr>_thread<wbr></wbr>_pool<wbr></wbr>_workers</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#report_progress" class="internal-link" title="fiftyone.core.utils.report_progress">report<wbr></wbr>_progress</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#run_sync_task" class="internal-link" title="fiftyone.core.utils.run_sync_task">run<wbr></wbr>_sync<wbr></wbr>_task</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#safe_relpath" class="internal-link" title="fiftyone.core.utils.safe_relpath">safe<wbr></wbr>_relpath</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#serialize_numpy_array" class="internal-link" title="fiftyone.core.utils.serialize_numpy_array">serialize<wbr></wbr>_numpy<wbr></wbr>_array</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_resource_limit" class="internal-link" title="fiftyone.core.utils.set_resource_limit">set<wbr></wbr>_resource<wbr></wbr>_limit</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#split_frame_fields" class="internal-link" title="fiftyone.core.utils.split_frame_fields">split<wbr></wbr>_frame<wbr></wbr>_fields</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#stream_objects" class="internal-link" title="fiftyone.core.utils.stream_objects">stream<wbr></wbr>_objects</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#timedelta_to_ms" class="internal-link" title="fiftyone.core.utils.timedelta_to_ms">timedelta<wbr></wbr>_to<wbr></wbr>_ms</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#timestamp_to_datetime" class="internal-link" title="fiftyone.core.utils.timestamp_to_datetime">timestamp<wbr></wbr>_to<wbr></wbr>_datetime</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#to_slug" class="internal-link" title="fiftyone.core.utils.to_slug">to<wbr></wbr>_slug</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#validate_color" class="internal-link" title="fiftyone.core.utils.validate_color">validate<wbr></wbr>_color</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#validate_hex_color" class="internal-link" title="fiftyone.core.utils.validate_hex_color">validate<wbr></wbr>_hex<wbr></wbr>_color</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_extract_kwargs" class="internal-link" title="fiftyone.core.utils._extract_kwargs">_extract<wbr></wbr>_kwargs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_get_sync_task_executor" class="internal-link" title="fiftyone.core.utils._get_sync_task_executor">_get<wbr></wbr>_sync<wbr></wbr>_task<wbr></wbr>_executor</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_is_docker" class="internal-link" title="fiftyone.core.utils._is_docker">_is<wbr></wbr>_docker</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_is_podman" class="internal-link" title="fiftyone.core.utils._is_podman">_is<wbr></wbr>_podman</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_report_progress_dt" class="internal-link" title="fiftyone.core.utils._report_progress_dt">_report<wbr></wbr>_progress<wbr></wbr>_dt</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_report_progress_n" class="internal-link" title="fiftyone.core.utils._report_progress_n">_report<wbr></wbr>_progress<wbr></wbr>_n</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_sanitize_char" class="internal-link" title="fiftyone.core.utils._sanitize_char">_sanitize<wbr></wbr>_char</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_split_frame_fields_dict" class="internal-link" title="fiftyone.core.utils._split_frame_fields_dict">_split<wbr></wbr>_frame<wbr></wbr>_fields<wbr></wbr>_dict</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_strip_comments" class="internal-link" title="fiftyone.core.utils._strip_comments">_strip<wbr></wbr>_comments</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#fos" class="internal-link" title="fiftyone.core.utils.fos">fos</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#logger" class="internal-link" title="fiftyone.core.utils.logger">logger</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#sync_task_executor" class="internal-link" title="fiftyone.core.utils.sync_task_executor">sync<wbr></wbr>_task<wbr></wbr>_executor</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_HYPHEN_CHARS" class="internal-link" title="fiftyone.core.utils._HYPHEN_CHARS">_HYPHEN<wbr></wbr>_CHARS</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_NAME_LENGTH_RANGE" class="internal-link" title="fiftyone.core.utils._NAME_LENGTH_RANGE">_NAME<wbr></wbr>_LENGTH<wbr></wbr>_RANGE</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_REQUIREMENT_ERROR_SUFFIX" class="internal-link" title="fiftyone.core.utils._REQUIREMENT_ERROR_SUFFIX">_REQUIREMENT<wbr></wbr>_ERROR<wbr></wbr>_SUFFIX</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_SAFE_CHARS" class="internal-link" title="fiftyone.core.utils._SAFE_CHARS">_SAFE<wbr></wbr>_CHARS</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="fiftyone.core.html" class="internal-link" title="The parent of this module">core</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.aggregations.html" class="internal-link" title="fiftyone.core.aggregations">aggregations</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.annotation.html" class="internal-link" title="fiftyone.core.annotation">annotation</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.brain.html" class="internal-link" title="fiftyone.core.brain">brain</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.cli.html" class="internal-link" title="fiftyone.core.cli">cli</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.clips.html" class="internal-link" title="fiftyone.core.clips">clips</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.collections.html" class="internal-link" title="fiftyone.core.collections">collections</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.config.html" class="internal-link" title="fiftyone.core.config">config</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.context.html" class="internal-link" title="fiftyone.core.context">context</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.dataset.html" class="internal-link" title="fiftyone.core.dataset">dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.document.html" class="internal-link" title="fiftyone.core.document">document</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.evaluation.html" class="internal-link" title="fiftyone.core.evaluation">evaluation</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.expressions.html" class="internal-link" title="fiftyone.core.expressions">expressions</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.html" class="internal-link" title="fiftyone.core.fields">fields</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.frame.html" class="internal-link" title="fiftyone.core.frame">frame</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.frame_utils.html" class="internal-link" title="fiftyone.core.frame_utils">frame<wbr></wbr>_utils</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.groups.html" class="internal-link" title="fiftyone.core.groups">groups</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.json.html" class="internal-link" title="fiftyone.core.json">json</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.labels.html" class="internal-link" title="fiftyone.core.labels">labels</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.logging.html" class="internal-link" title="fiftyone.core.logging">logging</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.media.html" class="internal-link" title="fiftyone.core.media">media</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.metadata.html" class="internal-link" title="fiftyone.core.metadata">metadata</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.models.html" class="internal-link" title="fiftyone.core.models">models</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.odm.html" class="internal-link" title="fiftyone.core.odm">odm</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.patches.html" class="internal-link" title="fiftyone.core.patches">patches</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.plots.html" class="internal-link" title="fiftyone.core.plots">plots</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.runs.html" class="internal-link" title="fiftyone.core.runs">runs</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.sample.html" class="internal-link" title="fiftyone.core.sample">sample</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.service.html" class="internal-link" title="fiftyone.core.service">service</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.session.html" class="internal-link" title="fiftyone.core.session">session</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.singletons.html" class="internal-link" title="fiftyone.core.singletons">singletons</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.stages.html" class="internal-link" title="fiftyone.core.stages">stages</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.state.html" class="internal-link" title="fiftyone.core.state">state</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.storage.html" class="internal-link" title="fiftyone.core.storage">storage</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.threed.html" class="internal-link" title="fiftyone.core.threed">threed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.uid.html" class="internal-link" title="fiftyone.core.uid">uid</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.html" class="internal-link" title="fiftyone.core.utils">utils</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.validation.html" class="internal-link" title="fiftyone.core.validation">validation</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.video.html" class="internal-link" title="fiftyone.core.video">video</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.view.html" class="internal-link" title="fiftyone.core.view">view</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+        
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">fiftyone</a></code><wbr></wbr>.<code><a href="fiftyone.core.html" class="internal-link" title="fiftyone.core">core</a></code><wbr></wbr>.<code><a href="fiftyone.core.utils.html" class="internal-link" title="fiftyone.core.utils">utils</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          module documentation
+        </div>
+
+        <div class="extrasDocstring">
+          
+          <p></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>Core utilities.</p>
+<p>| Copyright 2017-2024, Voxel51, Inc. | `voxel51.com &lt;https://voxel51.com/&gt;`_ |</p>
+</div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id859">
+  
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.utils.add_sys_path.html" class="internal-link" title="fiftyone.core.utils.add_sys_path">add<wbr></wbr>_sys<wbr></wbr>_path</a></code></td>
+    <td>Context manager that temporarily inserts a path to ``sys.path``.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.utils.BaseDynamicBatcher.html" class="internal-link" title="fiftyone.core.utils.BaseDynamicBatcher"><wbr></wbr>Base<wbr></wbr>Dynamic<wbr></wbr>Batcher</a></code></td>
+    <td>Class for iterating over the elements of an iterable with a dynamic batch size to achieve a desired target measurement.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.utils.Batcher.html" class="internal-link" title="fiftyone.core.utils.Batcher"><wbr></wbr>Batcher</a></code></td>
+    <td>Base class for iterating over the elements of an iterable in batches.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.utils.ContentSizeDynamicBatcher.html" class="internal-link" title="fiftyone.core.utils.ContentSizeDynamicBatcher"><wbr></wbr>Content<wbr></wbr>Size<wbr></wbr>Dynamic<wbr></wbr>Batcher</a></code></td>
+    <td>Class for iterating over the elements of an iterable with a dynamic batch size to achieve a desired content size.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.utils.LatencyDynamicBatcher.html" class="internal-link" title="fiftyone.core.utils.LatencyDynamicBatcher"><wbr></wbr>Latency<wbr></wbr>Dynamic<wbr></wbr>Batcher</a></code></td>
+    <td>Class for iterating over the elements of an iterable with a dynamic batch size to achieve a desired latency.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.utils.LazyModule.html" class="internal-link" title="fiftyone.core.utils.LazyModule"><wbr></wbr>Lazy<wbr></wbr>Module</a></code></td>
+    <td>Proxy module that lazily imports the underlying module the first time it is actually used.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.utils.LoggingLevel.html" class="internal-link" title="fiftyone.core.utils.LoggingLevel"><wbr></wbr>Logging<wbr></wbr>Level</a></code></td>
+    <td>Context manager that allows for a temporary change to the level of a ``logging.Logger``.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.utils.MonkeyPatchFunction.html" class="internal-link" title="fiftyone.core.utils.MonkeyPatchFunction"><wbr></wbr>Monkey<wbr></wbr>Patch<wbr></wbr>Function</a></code></td>
+    <td>Context manager that temporarily monkey patches the given function.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.utils.ProgressBar.html" class="internal-link" title="fiftyone.core.utils.ProgressBar"><wbr></wbr>Progress<wbr></wbr>Bar</a></code></td>
+    <td>.. autoclass:: eta.core.utils.ProgressBar</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.utils.ResourceLimit.html" class="internal-link" title="fiftyone.core.utils.ResourceLimit"><wbr></wbr>Resource<wbr></wbr>Limit</a></code></td>
+    <td>Context manager that allows for a temporary change to a resource limit exposed by the ``resource`` package.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.utils.ResponseStream.html" class="internal-link" title="fiftyone.core.utils.ResponseStream"><wbr></wbr>Response<wbr></wbr>Stream</a></code></td>
+    <td>Wrapper around a ``requests.Response`` that provides a file-like object interface with ``read()``, ``seek()``, and ``tell()`` methods.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.utils.SetAttributes.html" class="internal-link" title="fiftyone.core.utils.SetAttributes"><wbr></wbr>Set<wbr></wbr>Attributes</a></code></td>
+    <td>Context manager that temporarily sets the attributes of a class to new values.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.utils.StaticBatcher.html" class="internal-link" title="fiftyone.core.utils.StaticBatcher"><wbr></wbr>Static<wbr></wbr>Batcher</a></code></td>
+    <td>Class for iterating over the elements of an iterable with a static batch size.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.utils.SuppressLogging.html" class="internal-link" title="fiftyone.core.utils.SuppressLogging"><wbr></wbr>Suppress<wbr></wbr>Logging</a></code></td>
+    <td>Context manager that temporarily disables system-wide logging.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.utils.UniqueFilenameMaker.html" class="internal-link" title="fiftyone.core.utils.UniqueFilenameMaker"><wbr></wbr>Unique<wbr></wbr>Filename<wbr></wbr>Maker</a></code></td>
+    <td>A class that generates unique output paths in a directory.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#available_patterns" class="internal-link" title="fiftyone.core.utils.available_patterns">available<wbr></wbr>_patterns</a></code></td>
+    <td>Returns the available patterns that can be used by :meth:`fill_patterns`.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#call_on_exit" class="internal-link" title="fiftyone.core.utils.call_on_exit">call<wbr></wbr>_on<wbr></wbr>_exit</a></code></td>
+    <td>Registers the given callback function so that it will be called when the process exits for (almost) any reason</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#compute_filehash" class="internal-link" title="fiftyone.core.utils.compute_filehash">compute<wbr></wbr>_filehash</a></code></td>
+    <td>Computes the hash of the given file.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#datetime_to_timestamp" class="internal-link" title="fiftyone.core.utils.datetime_to_timestamp">datetime<wbr></wbr>_to<wbr></wbr>_timestamp</a></code></td>
+    <td>Converts a `datetime.date` or `datetime.datetime` to milliseconds since epoch.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#deserialize_numpy_array" class="internal-link" title="fiftyone.core.utils.deserialize_numpy_array">deserialize<wbr></wbr>_numpy<wbr></wbr>_array</a></code></td>
+    <td>Loads a serialized numpy array generated by :func:`serialize_numpy_array`.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#disable_progress_bars" class="internal-link" title="fiftyone.core.utils.disable_progress_bars">disable<wbr></wbr>_progress<wbr></wbr>_bars</a></code></td>
+    <td>Context manager that temporarily disables all progress bars.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#ensure_import" class="internal-link" title="fiftyone.core.utils.ensure_import">ensure<wbr></wbr>_import</a></code></td>
+    <td>Verifies that the given requirement is installed and importable.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#ensure_package" class="internal-link" title="fiftyone.core.utils.ensure_package">ensure<wbr></wbr>_package</a></code></td>
+    <td>Verifies that the given package is installed.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#ensure_requirements" class="internal-link" title="fiftyone.core.utils.ensure_requirements">ensure<wbr></wbr>_requirements</a></code></td>
+    <td>Verifies that the package requirements from a ``requirements.txt`` file on disk are installed.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#ensure_tf" class="internal-link" title="fiftyone.core.utils.ensure_tf">ensure<wbr></wbr>_tf</a></code></td>
+    <td>Verifies that ``tensorflow`` is installed and importable.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#ensure_tfds" class="internal-link" title="fiftyone.core.utils.ensure_tfds">ensure<wbr></wbr>_tfds</a></code></td>
+    <td>Verifies that ``tensorflow_datasets`` is installed and importable.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#ensure_torch" class="internal-link" title="fiftyone.core.utils.ensure_torch">ensure<wbr></wbr>_torch</a></code></td>
+    <td>Verifies that ``torch`` and ``torchvision`` are installed and importable.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#extract_kwargs_for_class" class="internal-link" title="fiftyone.core.utils.extract_kwargs_for_class">extract<wbr></wbr>_kwargs<wbr></wbr>_for<wbr></wbr>_class</a></code></td>
+    <td>Extracts keyword arguments for the given class's constructor from the given kwargs.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#extract_kwargs_for_function" class="internal-link" title="fiftyone.core.utils.extract_kwargs_for_function">extract<wbr></wbr>_kwargs<wbr></wbr>_for<wbr></wbr>_function</a></code></td>
+    <td>Extracts keyword arguments for the given function from the given kwargs.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#fill_patterns" class="internal-link" title="fiftyone.core.utils.fill_patterns">fill<wbr></wbr>_patterns</a></code></td>
+    <td>Fills the patterns in in the given string.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#find_files" class="internal-link" title="fiftyone.core.utils.find_files">find<wbr></wbr>_files</a></code></td>
+    <td>Finds all files in the given root directory whose filename matches the given glob pattern(s).</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#get_default_batcher" class="internal-link" title="fiftyone.core.utils.get_default_batcher">get<wbr></wbr>_default<wbr></wbr>_batcher</a></code></td>
+    <td>Returns a :class:`Batcher` over ``iterable`` using defaults from your FiftyOne config.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#get_multiprocessing_context" class="internal-link" title="fiftyone.core.utils.get_multiprocessing_context">get<wbr></wbr>_multiprocessing<wbr></wbr>_context</a></code></td>
+    <td>Returns the preferred ``multiprocessing`` context for the current OS.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#handle_error" class="internal-link" title="fiftyone.core.utils.handle_error">handle<wbr></wbr>_error</a></code></td>
+    <td>Handles the error at the specified error level.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#indent_lines" class="internal-link" title="fiftyone.core.utils.indent_lines">indent<wbr></wbr>_lines</a></code></td>
+    <td>Indents the lines in the given string.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#install_package" class="internal-link" title="fiftyone.core.utils.install_package">install<wbr></wbr>_package</a></code></td>
+    <td>Installs the given package via ``pip``.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#install_requirements" class="internal-link" title="fiftyone.core.utils.install_requirements">install<wbr></wbr>_requirements</a></code></td>
+    <td>Installs the package requirements from a ``requirements.txt`` file on disk.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#is_32_bit" class="internal-link" title="fiftyone.core.utils.is_32_bit">is<wbr></wbr>_32<wbr></wbr>_bit</a></code></td>
+    <td>Determines whether the system is 32-bit.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#is_arm_mac" class="internal-link" title="fiftyone.core.utils.is_arm_mac">is<wbr></wbr>_arm<wbr></wbr>_mac</a></code></td>
+    <td>Determines whether the system is an ARM-based Mac (Apple Silicon).</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#is_container" class="internal-link" title="fiftyone.core.utils.is_container">is<wbr></wbr>_container</a></code></td>
+    <td>Determines if we're currently running as a container.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#iter_batches" class="internal-link" title="fiftyone.core.utils.iter_batches">iter<wbr></wbr>_batches</a></code></td>
+    <td>Iterates over the given iterable in batches.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#iter_slices" class="internal-link" title="fiftyone.core.utils.iter_slices">iter<wbr></wbr>_slices</a></code></td>
+    <td>Iterates over batches of the given object via slicing.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#justify_headings" class="internal-link" title="fiftyone.core.utils.justify_headings">justify<wbr></wbr>_headings</a></code></td>
+    <td>Justifies the headings in a list of ``(heading, content)`` string tuples by appending whitespace as necessary to each ``heading``.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#lazy_import" class="internal-link" title="fiftyone.core.utils.lazy_import">lazy<wbr></wbr>_import</a></code></td>
+    <td>Returns a proxy module object that will lazily import the given module the first time it is used.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#load_requirements" class="internal-link" title="fiftyone.core.utils.load_requirements">load<wbr></wbr>_requirements</a></code></td>
+    <td>Loads the package requirements from a ``requirements.txt`` file on disk.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#load_xml_as_json_dict" class="internal-link" title="fiftyone.core.utils.load_xml_as_json_dict">load<wbr></wbr>_xml<wbr></wbr>_as<wbr></wbr>_json<wbr></wbr>_dict</a></code></td>
+    <td>Loads the XML file as a JSON dictionary.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#parse_batching_strategy" class="internal-link" title="fiftyone.core.utils.parse_batching_strategy">parse<wbr></wbr>_batching<wbr></wbr>_strategy</a></code></td>
+    <td>Parses the given batching strategy configuration, applying any default config settings as necessary.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#parse_serializable" class="internal-link" title="fiftyone.core.utils.parse_serializable">parse<wbr></wbr>_serializable</a></code></td>
+    <td>Parses the given object as an instance of the given ``eta.core.serial.Serializable`` class.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#pformat" class="internal-link" title="fiftyone.core.utils.pformat">pformat</a></code></td>
+    <td>Returns a pretty string representation of the Python object.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#pprint" class="internal-link" title="fiftyone.core.utils.pprint">pprint</a></code></td>
+    <td>Pretty-prints the Python object.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#recommend_batch_size_for_value" class="internal-link" title="fiftyone.core.utils.recommend_batch_size_for_value">recommend<wbr></wbr>_batch<wbr></wbr>_size<wbr></wbr>_for<wbr></wbr>_value</a></code></td>
+    <td>Computes a recommended batch size for the given value type such that a request involving a list of values of this size will be less than ``alpha * fo.config.batcher_target_size_bytes`` bytes.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#recommend_process_pool_workers" class="internal-link" title="fiftyone.core.utils.recommend_process_pool_workers">recommend<wbr></wbr>_process<wbr></wbr>_pool<wbr></wbr>_workers</a></code></td>
+    <td>Recommends a number of workers for a process pool.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#recommend_thread_pool_workers" class="internal-link" title="fiftyone.core.utils.recommend_thread_pool_workers">recommend<wbr></wbr>_thread<wbr></wbr>_pool<wbr></wbr>_workers</a></code></td>
+    <td>Recommends a number of workers for a thread pool.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#report_progress" class="internal-link" title="fiftyone.core.utils.report_progress">report<wbr></wbr>_progress</a></code></td>
+    <td>Wraps the provided progress function such that it will only be called at the specified increments or time intervals.</td>
+  </tr><tr class="function">
+    
+    <td>Async Function</td>
+    <td><code><a href="#run_sync_task" class="internal-link" title="fiftyone.core.utils.run_sync_task">run<wbr></wbr>_sync<wbr></wbr>_task</a></code></td>
+    <td>Run a synchronous function as an async background task.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#safe_relpath" class="internal-link" title="fiftyone.core.utils.safe_relpath">safe<wbr></wbr>_relpath</a></code></td>
+    <td>A safe version of ``os.path.relpath`` that returns a configurable default value if the given path if it does not lie within the given relative start.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#serialize_numpy_array" class="internal-link" title="fiftyone.core.utils.serialize_numpy_array">serialize<wbr></wbr>_numpy<wbr></wbr>_array</a></code></td>
+    <td>Serializes a numpy array.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#set_resource_limit" class="internal-link" title="fiftyone.core.utils.set_resource_limit">set<wbr></wbr>_resource<wbr></wbr>_limit</a></code></td>
+    <td>Uses the ``resource`` package to change a resource limit for the current process.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#split_frame_fields" class="internal-link" title="fiftyone.core.utils.split_frame_fields">split<wbr></wbr>_frame<wbr></wbr>_fields</a></code></td>
+    <td>Splits the given fields into sample and frame fields.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#stream_objects" class="internal-link" title="fiftyone.core.utils.stream_objects">stream<wbr></wbr>_objects</a></code></td>
+    <td>Streams the iterable of objects to stdout via ``less``.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#timedelta_to_ms" class="internal-link" title="fiftyone.core.utils.timedelta_to_ms">timedelta<wbr></wbr>_to<wbr></wbr>_ms</a></code></td>
+    <td>Converts a `datetime.timedelta` to milliseconds.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#timestamp_to_datetime" class="internal-link" title="fiftyone.core.utils.timestamp_to_datetime">timestamp<wbr></wbr>_to<wbr></wbr>_datetime</a></code></td>
+    <td>Converts a timestamp (number of milliseconds since epoch) to a `datetime.datetime`.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#to_slug" class="internal-link" title="fiftyone.core.utils.to_slug">to<wbr></wbr>_slug</a></code></td>
+    <td>Returns the URL-friendly slug for the given string.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#validate_color" class="internal-link" title="fiftyone.core.utils.validate_color">validate<wbr></wbr>_color</a></code></td>
+    <td>Validates that the given value is a valid css color name.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#validate_hex_color" class="internal-link" title="fiftyone.core.utils.validate_hex_color">validate<wbr></wbr>_hex<wbr></wbr>_color</a></code></td>
+    <td>Validates that the given value is a hex color string or css name.</td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#fos" class="internal-link" title="fiftyone.core.utils.fos">fos</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#logger" class="internal-link" title="fiftyone.core.utils.logger">logger</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#sync_task_executor" class="internal-link" title="fiftyone.core.utils.sync_task_executor">sync<wbr></wbr>_task<wbr></wbr>_executor</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_extract_kwargs" class="internal-link" title="fiftyone.core.utils._extract_kwargs">_extract<wbr></wbr>_kwargs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_get_sync_task_executor" class="internal-link" title="fiftyone.core.utils._get_sync_task_executor">_get<wbr></wbr>_sync<wbr></wbr>_task<wbr></wbr>_executor</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_is_docker" class="internal-link" title="fiftyone.core.utils._is_docker">_is<wbr></wbr>_docker</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_is_podman" class="internal-link" title="fiftyone.core.utils._is_podman">_is<wbr></wbr>_podman</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_report_progress_dt" class="internal-link" title="fiftyone.core.utils._report_progress_dt">_report<wbr></wbr>_progress<wbr></wbr>_dt</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_report_progress_n" class="internal-link" title="fiftyone.core.utils._report_progress_n">_report<wbr></wbr>_progress<wbr></wbr>_n</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_sanitize_char" class="internal-link" title="fiftyone.core.utils._sanitize_char">_sanitize<wbr></wbr>_char</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_split_frame_fields_dict" class="internal-link" title="fiftyone.core.utils._split_frame_fields_dict">_split<wbr></wbr>_frame<wbr></wbr>_fields<wbr></wbr>_dict</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_strip_comments" class="internal-link" title="fiftyone.core.utils._strip_comments">_strip<wbr></wbr>_comments</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant private">
+    
+    <td>Constant</td>
+    <td><code><a href="#_HYPHEN_CHARS" class="internal-link" title="fiftyone.core.utils._HYPHEN_CHARS">_HYPHEN<wbr></wbr>_CHARS</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant private">
+    
+    <td>Constant</td>
+    <td><code><a href="#_NAME_LENGTH_RANGE" class="internal-link" title="fiftyone.core.utils._NAME_LENGTH_RANGE">_NAME<wbr></wbr>_LENGTH<wbr></wbr>_RANGE</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant private">
+    
+    <td>Constant</td>
+    <td><code><a href="#_REQUIREMENT_ERROR_SUFFIX" class="internal-link" title="fiftyone.core.utils._REQUIREMENT_ERROR_SUFFIX">_REQUIREMENT<wbr></wbr>_ERROR<wbr></wbr>_SUFFIX</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant private">
+    
+    <td>Constant</td>
+    <td><code><a href="#_SAFE_CHARS" class="internal-link" title="fiftyone.core.utils._SAFE_CHARS">_SAFE<wbr></wbr>_CHARS</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.available_patterns">
+    
+  </a>
+  <a name="available_patterns">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">available_patterns</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#available_patterns" title="fiftyone.core.utils.available_patterns">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Returns the available patterns that can be used by
+:meth:`fill_patterns`.
+
+Returns:
+    a dict mapping patterns to their replacements</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.call_on_exit">
+    
+  </a>
+  <a name="call_on_exit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">call_on_exit</span><span class="function-signature">(callback)</span>:
+    
+    <a class="headerLink" href="#call_on_exit" title="fiftyone.core.utils.call_on_exit">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Registers the given callback function so that it will be called when the
+process exits for (almost) any reason
+
+Note that this should only be used from non-interactive scripts because it
+intercepts ctrl + c.
+
+Covers the following cases:
+-   normal program termination
+-   a Python exception is raised
+-   a SIGTERM signal is received
+
+Args:
+    callback: the function to execute upon termination</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.compute_filehash">
+    
+  </a>
+  <a name="compute_filehash">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">compute_filehash</span><span class="function-signature">(filepath, method=None, chunk_size=None)</span>:
+    
+    <a class="headerLink" href="#compute_filehash" title="fiftyone.core.utils.compute_filehash">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Computes the hash of the given file.
+
+Args:
+    filepath: the path to the file
+    method (None): an optional ``hashlib`` method to use. If not specified,
+        the builtin ``str.__hash__`` will be used
+    chunk_size (None): an optional chunk size to use to read the file, in
+        bytes. Only applicable when a ``method`` is provided. The default
+        is 64kB. If negative, the entire file is read at once
+
+Returns:
+    the hash</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.datetime_to_timestamp">
+    
+  </a>
+  <a name="datetime_to_timestamp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">datetime_to_timestamp</span><span class="function-signature">(dt)</span>:
+    
+    <a class="headerLink" href="#datetime_to_timestamp" title="fiftyone.core.utils.datetime_to_timestamp">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Converts a `datetime.date` or `datetime.datetime` to milliseconds since
+epoch.
+
+Args:
+    dt: a `datetime.date` or `datetime.datetime`
+
+Returns:
+    the float number of milliseconds since epoch</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.deserialize_numpy_array">
+    
+  </a>
+  <a name="deserialize_numpy_array">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">deserialize_numpy_array</span><span class="function-signature">(numpy_bytes, ascii=False)</span>:
+    
+    <a class="headerLink" href="#deserialize_numpy_array" title="fiftyone.core.utils.deserialize_numpy_array">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Loads a serialized numpy array generated by
+:func:`serialize_numpy_array`.
+
+Args:
+    numpy_bytes: the serialized numpy array bytes
+    ascii (False): whether the bytes were generated with the
+        ``ascii == True`` parameter of :func:`serialize_numpy_array`
+
+Returns:
+    the numpy array</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.disable_progress_bars">
+    
+  </a>
+  <a name="disable_progress_bars">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @contextmanager<br />
+    <span class="py-keyword">def</span> <span class="py-defname">disable_progress_bars</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#disable_progress_bars" title="fiftyone.core.utils.disable_progress_bars">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Context manager that temporarily disables all progress bars.</p>
+<p>Example usage:</p>
+<pre class="rst-literal-block">
+    import fiftyone as fo
+    import fiftyone.zoo as foz
+
+    with fo.disable_progress_bars():
+        dataset = foz.load_zoo_dataset("quickstart")
+</pre>
+</div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.ensure_import">
+    
+  </a>
+  <a name="ensure_import">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">ensure_import</span><span class="function-signature">(requirement_str, error_level=None, error_msg=None, log_success=False)</span>:
+    
+    <a class="headerLink" href="#ensure_import" title="fiftyone.core.utils.ensure_import">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Verifies that the given requirement is installed and importable.
+
+This function imports the specified module and optionally enforces any
+version requirements included in ``requirement_str``.
+
+Therefore, unlike :meth:`ensure_package`, ``requirement_str`` should refer
+to the module name (e.g., "tensorflow"), not the package name (e.g.,
+"tensorflow-gpu").
+
+Args:
+    requirement_str: a PEP 440-like module requirement, like "tensorflow",
+        "tensorflow&lt;2", "tensorflow==2.3.0", or "tensorflow&gt;=1.13,&lt;1.15".
+        This can also be an iterable of multiple requirements, all of which
+        must be installed, or this can be a single "|"-delimited string
+        specifying multiple requirements, at least one of which must be
+        installed
+    error_level (None): the error level to use, defined as:
+
+        -   0: raise error if requirement is not satisfied
+        -   1: log warning if requirement is not satisfied
+        -   2: ignore unsatisifed requirements
+
+        By default, ``fiftyone.config.requirement_error_level`` is used
+    error_msg (None): an optional custom error message to use
+    log_success (False): whether to generate a log message if the
+        requirement is satisfied
+
+Returns:
+    True/False whether the requirement is satisfied</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.ensure_package">
+    
+  </a>
+  <a name="ensure_package">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">ensure_package</span><span class="function-signature">(requirement_str, error_level=None, error_msg=None, log_success=False)</span>:
+    
+    <a class="headerLink" href="#ensure_package" title="fiftyone.core.utils.ensure_package">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Verifies that the given package is installed.
+
+This function uses ``importlib.metadata`` to locate the package
+by its pip name and does not actually import the module.
+
+Therefore, unlike :meth:`ensure_import`, ``requirement_str`` should refer
+to the package name (e.g., "tensorflow-gpu"), not the module name
+(e.g., "tensorflow").
+
+Args:
+    requirement_str: a PEP 440 compliant package requirement, like
+        "tensorflow", "tensorflow&lt;2", "tensorflow==2.3.0", or
+        "tensorflow&gt;=1.13,&lt;1.15". This can also be an iterable of multiple
+        requirements, all of which must be installed, or this can be a
+        single "|"-delimited string specifying multiple requirements, at
+        least one of which must be installed
+    error_level (None): the error level to use, defined as:
+
+        -   0: raise error if requirement is not satisfied
+        -   1: log warning if requirement is not satisfied
+        -   2: ignore unsatisifed requirements
+
+        By default, ``fiftyone.config.requirement_error_level`` is used
+    error_msg (None): an optional custom error message to use
+    log_success (False): whether to generate a log message if the
+        requirement is satisfied
+
+Returns:
+    True/False whether the requirement is satisfied</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.ensure_requirements">
+    
+  </a>
+  <a name="ensure_requirements">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">ensure_requirements</span><span class="function-signature">(requirements_path, error_level=None, log_success=False)</span>:
+    
+    <a class="headerLink" href="#ensure_requirements" title="fiftyone.core.utils.ensure_requirements">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Verifies that the package requirements from a ``requirements.txt`` file
+on disk are installed.
+
+Args:
+    requirements_path: the path to a requirements file
+    error_level (None): the error level to use, defined as:
+
+        -   0: raise error if requirement is not satisfied
+        -   1: log warning if requirement is not satisfied
+        -   2: ignore unsatisifed requirements
+
+        By default, ``fiftyone.config.requirement_error_level`` is used
+    log_success (False): whether to generate a log message if a requirement
+        is satisfied</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.ensure_tf">
+    
+  </a>
+  <a name="ensure_tf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">ensure_tf</span><span class="function-signature">(eager=False, error_level=None, error_msg=None)</span>:
+    
+    <a class="headerLink" href="#ensure_tf" title="fiftyone.core.utils.ensure_tf">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Verifies that ``tensorflow`` is installed and importable.
+
+Args:
+    eager (False): whether to require that TF is executing eagerly. If
+        True and TF is not currently executing eagerly, this method will
+        attempt to enable it
+    error_level (None): the error level to use, defined as:
+
+        -   0: raise error if requirement is not satisfied
+        -   1: log warning if requirement is not satisfied
+        -   2: ignore unsatisifed requirements
+
+        By default, ``fiftyone.config.requirement_error_level`` is used
+    error_msg (None): an optional custom error message to print
+
+Returns:
+    True/False whether the requirement is satisfied</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.ensure_tfds">
+    
+  </a>
+  <a name="ensure_tfds">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">ensure_tfds</span><span class="function-signature">(error_level=None, error_msg=None)</span>:
+    
+    <a class="headerLink" href="#ensure_tfds" title="fiftyone.core.utils.ensure_tfds">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Verifies that ``tensorflow_datasets`` is installed and importable.
+
+Args:
+    error_level (None): the error level to use, defined as:
+
+        -   0: raise error if requirement is not satisfied
+        -   1: log warning if requirement is not satisfied
+        -   2: ignore unsatisifed requirements
+
+        By default, ``fiftyone.config.requirement_error_level`` is used
+    error_msg (None): an optional custom error message to print
+
+Returns:
+    True/False whether the requirement is satisfied</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.ensure_torch">
+    
+  </a>
+  <a name="ensure_torch">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">ensure_torch</span><span class="function-signature">(error_level=None, error_msg=None)</span>:
+    
+    <a class="headerLink" href="#ensure_torch" title="fiftyone.core.utils.ensure_torch">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Verifies that ``torch`` and ``torchvision`` are installed and
+importable.
+
+Args:
+    error_level (None): the error level to use, defined as:
+
+        -   0: raise error if requirement is not satisfied
+        -   1: log warning if requirement is not satisfied
+        -   2: ignore unsatisifed requirements
+
+        By default, ``fiftyone.config.requirement_error_level`` is used
+    error_msg (None): an optional custom error message to print
+
+Returns:
+    True/False whether the requirement is satisfied</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.extract_kwargs_for_class">
+    
+  </a>
+  <a name="extract_kwargs_for_class">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">extract_kwargs_for_class</span><span class="function-signature">(cls, kwargs)</span>:
+    
+    <a class="headerLink" href="#extract_kwargs_for_class" title="fiftyone.core.utils.extract_kwargs_for_class">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Extracts keyword arguments for the given class's constructor from the
+given kwargs.
+
+Args:
+    cls: a class
+    kwargs: a dictionary of keyword arguments
+
+Returns:
+    a tuple of
+
+    -   **class_kwargs**: a dictionary of keyword arguments for ``cls``
+    -   **other_kwargs**: a dictionary containing the remaining ``kwargs``</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.extract_kwargs_for_function">
+    
+  </a>
+  <a name="extract_kwargs_for_function">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">extract_kwargs_for_function</span><span class="function-signature">(fcn, kwargs)</span>:
+    
+    <a class="headerLink" href="#extract_kwargs_for_function" title="fiftyone.core.utils.extract_kwargs_for_function">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Extracts keyword arguments for the given function from the given kwargs.
+
+Args:
+    fcn: a function
+    kwargs: a dictionary of keyword arguments
+
+Returns:
+    a tuple of
+
+    -   **fcn_kwargs**: a dictionary of keyword arguments for ``fcn``
+    -   **other_kwargs**: a dictionary containing the remaining ``kwargs``</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.fill_patterns">
+    
+  </a>
+  <a name="fill_patterns">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">fill_patterns</span><span class="function-signature">(string)</span>:
+    
+    <a class="headerLink" href="#fill_patterns" title="fiftyone.core.utils.fill_patterns">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Fills the patterns in in the given string.
+
+Use :meth:`available_patterns` to see the available patterns that can be
+used.
+
+Args:
+    string: a string
+
+Returns:
+    a copy of string with any patterns replaced</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.find_files">
+    
+  </a>
+  <a name="find_files">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">find_files</span><span class="function-signature">(root_dir, patt, max_depth=1)</span>:
+    
+    <a class="headerLink" href="#find_files" title="fiftyone.core.utils.find_files">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Finds all files in the given root directory whose filename matches the
+given glob pattern(s).
+
+Both ``root_dir`` and ``patt`` may contain glob patterns.
+
+Exammples::
+
+    import fiftyone.core.utils as fou
+
+    # Find .txt files in `/tmp`
+    fou.find_files("/tmp", "*.txt")
+
+    # Find .txt files in subdirectories of `/tmp` that begin with `foo-`
+    fou.find_files("/tmp/foo-*", "*.txt")
+
+    # Find .txt files in `/tmp` or its subdirectories
+    fou.find_files("/tmp", "*.txt", max_depth=2)
+
+Args:
+    root_dir: the root directory
+    patt: a glob pattern or list of patterns
+    max_depth (1): a maximum depth to search. 1 means ``root_dir`` only,
+        2 means ``root_dir`` and its immediate subdirectories, etc
+
+Returns:
+    a list of matching paths</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.get_default_batcher">
+    
+  </a>
+  <a name="get_default_batcher">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_default_batcher</span><span class="function-signature">(iterable, progress=False, total=None)</span>:
+    
+    <a class="headerLink" href="#get_default_batcher" title="fiftyone.core.utils.get_default_batcher">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Returns a :class:`Batcher` over ``iterable`` using defaults from your
+FiftyOne config.
+
+Uses ``fiftyone.config.default_batcher`` to determine the implementation
+to use, and related configuration values as needed for each.
+
+Args:
+    iterable: an iterable to batch over. If ``None``, the result of
+        ``next()`` will be a batch size instead of a batch, and is an
+        infinite iterator.
+    progress (False): whether to render a progress bar tracking the
+        consumption of the batches (True/False), use the default value
+        ``fiftyone.config.show_progress_bars`` (None), or a progress
+        callback function to invoke instead
+    total (None): the length of ``iterable``. Only applicable when
+        ``progress=True``. If not provided, it is computed via
+        ``len(iterable)``, if possible
+
+Returns:
+    a :class:`Batcher`</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.get_multiprocessing_context">
+    
+  </a>
+  <a name="get_multiprocessing_context">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_multiprocessing_context</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#get_multiprocessing_context" title="fiftyone.core.utils.get_multiprocessing_context">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Returns the preferred ``multiprocessing`` context for the current OS.
+
+Returns:
+    a ``multiprocessing`` context</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.handle_error">
+    
+  </a>
+  <a name="handle_error">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">handle_error</span><span class="function-signature">(error, error_level, base_error=None)</span>:
+    
+    <a class="headerLink" href="#handle_error" title="fiftyone.core.utils.handle_error">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Handles the error at the specified error level.
+
+Args:
+    error: an Exception instance
+    error_level: the error level to use, defined as:
+
+    -   0: raise the error
+    -   1: log the error as a warning
+    -   2: ignore the error
+
+    base_error: (optional) a base Exception from which to raise ``error``</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.indent_lines">
+    
+  </a>
+  <a name="indent_lines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">indent_lines</span><span class="function-signature">(s, indent=4, skip=0)</span>:
+    
+    <a class="headerLink" href="#indent_lines" title="fiftyone.core.utils.indent_lines">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Indents the lines in the given string.
+
+Args:
+    s: the string
+    indent (4): the number of spaces to indent
+    skip (0): the number of lines to skip before indenting
+
+Returns:
+    the indented string</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.install_package">
+    
+  </a>
+  <a name="install_package">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">install_package</span><span class="function-signature">(requirement_str, error_level=None, error_msg=None)</span>:
+    
+    <a class="headerLink" href="#install_package" title="fiftyone.core.utils.install_package">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Installs the given package via ``pip``.
+
+Installation is performed via::
+
+    python -m pip install &lt;requirement_str&gt;
+
+Args:
+    requirement_str: a PEP 440 compliant package requirement, like
+        "tensorflow", "tensorflow&lt;2", "tensorflow==2.3.0", or
+        "tensorflow&gt;=1.13,&lt;1.15"
+    error_level (None): the error level to use, defined as:
+
+        -   0: raise error if the install fails
+        -   1: log warning if the install fails
+        -   2: ignore install fails
+
+    error_msg (None): an optional custom error message to use</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.install_requirements">
+    
+  </a>
+  <a name="install_requirements">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">install_requirements</span><span class="function-signature">(requirements_path, error_level=None)</span>:
+    
+    <a class="headerLink" href="#install_requirements" title="fiftyone.core.utils.install_requirements">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Installs the package requirements from a ``requirements.txt`` file on
+disk.
+
+Args:
+    requirements_path: the path to a requirements file
+    error_level (None): the error level to use, defined as:
+
+        -   0: raise error if the install fails
+        -   1: log warning if the install fails
+        -   2: ignore install fails
+
+        By default, ``fiftyone.config.requirement_error_level`` is used</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.is_32_bit">
+    
+  </a>
+  <a name="is_32_bit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">is_32_bit</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#is_32_bit" title="fiftyone.core.utils.is_32_bit">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Determines whether the system is 32-bit.
+
+Returns:
+    True/False</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.is_arm_mac">
+    
+  </a>
+  <a name="is_arm_mac">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">is_arm_mac</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#is_arm_mac" title="fiftyone.core.utils.is_arm_mac">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Determines whether the system is an ARM-based Mac (Apple Silicon).
+
+Returns:
+    True/False</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.is_container">
+    
+  </a>
+  <a name="is_container">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">is_container</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#is_container" title="fiftyone.core.utils.is_container">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Determines if we're currently running as a container.
+
+Returns:
+    True/False</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.iter_batches">
+    
+  </a>
+  <a name="iter_batches">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">iter_batches</span><span class="function-signature">(iterable, batch_size)</span>:
+    
+    <a class="headerLink" href="#iter_batches" title="fiftyone.core.utils.iter_batches">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Iterates over the given iterable in batches.
+
+Args:
+    iterable: an iterable
+    batch_size: the desired batch size, or None to return the contents in
+        a single batch
+
+Returns:
+    a generator that emits tuples of elements of the requested batch size
+    from the input</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.iter_slices">
+    
+  </a>
+  <a name="iter_slices">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">iter_slices</span><span class="function-signature">(sliceable, batch_size)</span>:
+    
+    <a class="headerLink" href="#iter_slices" title="fiftyone.core.utils.iter_slices">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Iterates over batches of the given object via slicing.
+
+Args:
+    sliceable: an object that supports slicing
+    batch_size: the desired batch size, or None to return the contents in
+        a single batch
+
+Returns:
+    a generator that emits batches of elements of the requested batch size
+    from the input</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.justify_headings">
+    
+  </a>
+  <a name="justify_headings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">justify_headings</span><span class="function-signature">(elements, width=None)</span>:
+    
+    <a class="headerLink" href="#justify_headings" title="fiftyone.core.utils.justify_headings">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Justifies the headings in a list of ``(heading, content)`` string tuples
+by appending whitespace as necessary to each ``heading``.
+
+Args:
+    elements: a list of ``(heading, content)`` tuples
+    width (None): an optional justification width. By default, the maximum
+        heading length is used
+
+Returns:
+    a list of justified ``(heading, content)`` tuples</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.lazy_import">
+    
+  </a>
+  <a name="lazy_import">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">lazy_import</span><span class="function-signature">(module_name, callback=None)</span>:
+    
+    <a class="headerLink" href="#lazy_import" title="fiftyone.core.utils.lazy_import">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Returns a proxy module object that will lazily import the given module
+the first time it is used.
+
+Example usage::
+
+    # Lazy version of `import tensorflow as tf`
+    tf = lazy_import("tensorflow")
+
+    # Other commands
+
+    # Now the module is loaded
+    tf.__version__
+
+Args:
+    module_name: the fully-qualified module name to import
+    callback (None): a callback function to call before importing the
+        module
+
+Returns:
+    a proxy module object that will be lazily imported when first used</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.load_requirements">
+    
+  </a>
+  <a name="load_requirements">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">load_requirements</span><span class="function-signature">(requirements_path)</span>:
+    
+    <a class="headerLink" href="#load_requirements" title="fiftyone.core.utils.load_requirements">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Loads the package requirements from a ``requirements.txt`` file on disk.
+
+Comments and extra whitespace are automatically stripped.
+
+Args:
+    requirements_path: the path to a requirements file
+
+Returns:
+    a list of requirement strings</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.load_xml_as_json_dict">
+    
+  </a>
+  <a name="load_xml_as_json_dict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">load_xml_as_json_dict</span><span class="function-signature">(xml_path)</span>:
+    
+    <a class="headerLink" href="#load_xml_as_json_dict" title="fiftyone.core.utils.load_xml_as_json_dict">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Loads the XML file as a JSON dictionary.
+
+Args:
+    xml_path: the path to the XML file
+
+Returns:
+    a JSON dict</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.parse_batching_strategy">
+    
+  </a>
+  <a name="parse_batching_strategy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">parse_batching_strategy</span><span class="function-signature">(batch_size=None, batching_strategy=None)</span>:
+    
+    <a class="headerLink" href="#parse_batching_strategy" title="fiftyone.core.utils.parse_batching_strategy">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Parses the given batching strategy configuration, applying any default
+config settings as necessary.
+
+Args:
+    batch_size (None): the batch size to use. If a ``batching_strategy`` is
+        provided, this parameter configures that strategy as described
+        below. If no ``batching_strategy`` is provided, this can either be
+        an integer specifying the number of samples to save in a batch (in
+        which case ``batching_strategy`` is implicitly set to ``"static"``)
+        or a float number of seconds between batched saves (in which case
+        ``batching_strategy`` is implicitly set to ``"latency"``)
+    batching_strategy (None): the batching strategy to use for each save
+        operation. Supported values are:
+
+        -   ``"static"``: a fixed sample batch size for each save
+        -   ``"size"``: a target batch size, in bytes, for each save
+        -   ``"latency"``: a target latency, in seconds, between saves
+
+        By default, ``fo.config.default_batcher`` is used
+
+Returns:
+    a tuple of ``(batch_size, batching_strategy)``</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.parse_serializable">
+    
+  </a>
+  <a name="parse_serializable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">parse_serializable</span><span class="function-signature">(obj, cls)</span>:
+    
+    <a class="headerLink" href="#parse_serializable" title="fiftyone.core.utils.parse_serializable">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Parses the given object as an instance of the given
+``eta.core.serial.Serializable`` class.
+
+Args:
+    obj: an instance of ``cls``, or a serialized string or dictionary
+        representation of one
+    cls: a ``eta.core.serial.Serializable`` class
+
+Returns:
+    an instance of ``cls``</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.pformat">
+    
+  </a>
+  <a name="pformat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">pformat</span><span class="function-signature">(obj, indent=4, width=80, depth=None)</span>:
+    
+    <a class="headerLink" href="#pformat" title="fiftyone.core.utils.pformat">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Returns a pretty string representation of the Python object.
+
+Args:
+    obj: the Python object
+    indent (4): the number of spaces to use when indenting
+    width (80): the max width of each line in the pretty representation
+    depth (None): the maximum depth at which to pretty render nested dicts
+
+Returns:
+    the pretty-formatted string</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.pprint">
+    
+  </a>
+  <a name="pprint">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">pprint</span><span class="function-signature">(obj, stream=None, indent=4, width=80, depth=None)</span>:
+    
+    <a class="headerLink" href="#pprint" title="fiftyone.core.utils.pprint">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Pretty-prints the Python object.
+
+Args:
+    obj: the Python object
+    stream (None): the stream to write to. The default is ``sys.stdout``
+    indent (4): the number of spaces to use when indenting
+    width (80): the max width of each line in the pretty representation
+    depth (None): the maximum depth at which to pretty render nested dicts</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.recommend_batch_size_for_value">
+    
+  </a>
+  <a name="recommend_batch_size_for_value">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">recommend_batch_size_for_value</span><span class="function-signature">(value, alpha=0.9, max_size=None)</span>:
+    
+    <a class="headerLink" href="#recommend_batch_size_for_value" title="fiftyone.core.utils.recommend_batch_size_for_value">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Computes a recommended batch size for the given value type such that a
+request involving a list of values of this size will be less than
+``alpha * fo.config.batcher_target_size_bytes`` bytes.
+
+Args:
+    value: a value
+    alpha (0.9): a safety factor
+    max_size (None): an optional max batch size
+
+Returns:
+     a recommended batch size</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.recommend_process_pool_workers">
+    
+  </a>
+  <a name="recommend_process_pool_workers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">recommend_process_pool_workers</span><span class="function-signature">(num_workers=None)</span>:
+    
+    <a class="headerLink" href="#recommend_process_pool_workers" title="fiftyone.core.utils.recommend_process_pool_workers">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Recommends a number of workers for a process pool.
+
+If a ``fo.config.max_process_pool_workers`` is set, this limit is applied.
+
+Args:
+    num_workers (None): a suggested number of workers
+
+Returns:
+    a number of workers</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.recommend_thread_pool_workers">
+    
+  </a>
+  <a name="recommend_thread_pool_workers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">recommend_thread_pool_workers</span><span class="function-signature">(num_workers=None)</span>:
+    
+    <a class="headerLink" href="#recommend_thread_pool_workers" title="fiftyone.core.utils.recommend_thread_pool_workers">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Recommends a number of workers for a thread pool.
+
+If a ``fo.config.max_thread_pool_workers`` is set, this limit is applied.
+
+Args:
+    num_workers (None): a suggested number of workers
+
+Returns:
+    a number of workers</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.report_progress">
+    
+  </a>
+  <a name="report_progress">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">report_progress</span><span class="function-signature">(progress, n=None, dt=None)</span>:
+    
+    <a class="headerLink" href="#report_progress" title="fiftyone.core.utils.report_progress">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Wraps the provided progress function such that it will only be called
+at the specified increments or time intervals.
+
+Example usage::
+
+    import fiftyone as fo
+    import fiftyone.zoo as foz
+
+    def print_progress(pb):
+        if pb.complete:
+            print("COMPLETE")
+        else:
+            print("PROGRESS: %0.3f" % pb.progress)
+
+    dataset = foz.load_zoo_dataset("cifar10", split="test")
+
+    # Print progress at 10 equally-spaced increments
+    progress = fo.report_progress(print_progress, n=10)
+    dataset.compute_metadata(progress=progress)
+
+    # Print progress every 0.5 seconds
+    progress = fo.report_progress(print_progress, dt=0.5)
+    dataset.compute_metadata(progress=progress, overwrite=True)
+
+Args:
+    progress: a function that accepts a :class:`ProgressBar` as input
+    n (None): a number of equally-spaced increments to invoke ``progress``
+    dt (None): a number of seconds between ``progress`` calls
+
+Returns:
+    a function that accepts a :class:`ProgressBar` as input</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.run_sync_task">
+    
+  </a>
+  <a name="run_sync_task">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">async def</span> <span class="py-defname">run_sync_task</span><span class="function-signature">(func, *args)</span>:
+    
+    <a class="headerLink" href="#run_sync_task" title="fiftyone.core.utils.run_sync_task">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Run a synchronous function as an async background task.
+
+Args:
+    func: a synchronous callable
+    *args: function arguments
+
+Returns:
+    the function's return value(s)</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.safe_relpath">
+    
+  </a>
+  <a name="safe_relpath">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">safe_relpath</span><span class="function-signature">(path, start=None, default=None)</span>:
+    
+    <a class="headerLink" href="#safe_relpath" title="fiftyone.core.utils.safe_relpath">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">A safe version of ``os.path.relpath`` that returns a configurable
+default value if the given path if it does not lie within the given
+relative start.
+
+Args:
+    path: a path
+    start (None): the relative prefix to strip from ``path``
+    default (None): a default value to return if ``path`` does not lie
+        within ``start``. By default, the basename of the path is returned
+
+Returns:
+    the relative path</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.serialize_numpy_array">
+    
+  </a>
+  <a name="serialize_numpy_array">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">serialize_numpy_array</span><span class="function-signature">(array, ascii=False)</span>:
+    
+    <a class="headerLink" href="#serialize_numpy_array" title="fiftyone.core.utils.serialize_numpy_array">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Serializes a numpy array.
+
+Args:
+    array: a numpy array-like
+    ascii (False): whether to return a base64-encoded ASCII string instead
+        of raw bytes
+
+Returns:
+    the serialized bytes</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.set_resource_limit">
+    
+  </a>
+  <a name="set_resource_limit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_resource_limit</span><span class="function-signature">(limit, soft=None, hard=None, warn_on_failure=False)</span>:
+    
+    <a class="headerLink" href="#set_resource_limit" title="fiftyone.core.utils.set_resource_limit">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Uses the ``resource`` package to change a resource limit for the current
+process.
+
+If the ``resource`` package cannot be imported, this command does nothing.
+
+Args:
+    limit: the name of the resource to limit. Must be the name of a
+        constant in the ``resource`` module starting with ``RLIMIT``. See
+        the documentation of the ``resource`` module for supported values
+    soft (None): a new soft limit to apply, which cannot exceed the hard
+        limit. If omitted, the current soft limit is maintained
+    hard (None): a new hard limit to apply. If omitted, the current hard
+        limit is maintained
+    warn_on_failure (False): whether to issue a warning rather than an
+        error if the resource limit change is not successful</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.split_frame_fields">
+    
+  </a>
+  <a name="split_frame_fields">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">split_frame_fields</span><span class="function-signature">(fields)</span>:
+    
+    <a class="headerLink" href="#split_frame_fields" title="fiftyone.core.utils.split_frame_fields">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Splits the given fields into sample and frame fields.
+
+Frame fields are those prefixed by ``"frames."``, and this prefix is
+removed from the returned frame fields.
+
+Args:
+    fields: a field, iterable of fields, or dict mapping field names to new
+        field names
+
+Returns:
+    a tuple of
+
+    -   **sample_fields**: a list or dict of sample fields
+    -   **frame_fields**: a list or dict of frame fields</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.stream_objects">
+    
+  </a>
+  <a name="stream_objects">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">stream_objects</span><span class="function-signature">(objects)</span>:
+    
+    <a class="headerLink" href="#stream_objects" title="fiftyone.core.utils.stream_objects">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Streams the iterable of objects to stdout via ``less``.
+
+The output can be interactively traversed via scrolling and can be
+terminated via keyboard interrupt.
+
+Args:
+    objects: an iterable of objects that can be printed via ``str(obj)``</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.timedelta_to_ms">
+    
+  </a>
+  <a name="timedelta_to_ms">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">timedelta_to_ms</span><span class="function-signature">(td)</span>:
+    
+    <a class="headerLink" href="#timedelta_to_ms" title="fiftyone.core.utils.timedelta_to_ms">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Converts a `datetime.timedelta` to milliseconds.
+
+Args:
+    td: a `datetime.timedelta`
+
+Returns:
+    the float number of milliseconds</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.timestamp_to_datetime">
+    
+  </a>
+  <a name="timestamp_to_datetime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">timestamp_to_datetime</span><span class="function-signature">(ts)</span>:
+    
+    <a class="headerLink" href="#timestamp_to_datetime" title="fiftyone.core.utils.timestamp_to_datetime">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Converts a timestamp (number of milliseconds since epoch) to a
+`datetime.datetime`.
+
+Args:
+    ts: a number of milliseconds since epoch
+
+Returns:
+    a `datetime.datetime`</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.to_slug">
+    
+  </a>
+  <a name="to_slug">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">to_slug</span><span class="function-signature">(name)</span>:
+    
+    <a class="headerLink" href="#to_slug" title="fiftyone.core.utils.to_slug">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Returns the URL-friendly slug for the given string.
+
+The following strategy is used to generate slugs:
+
+    -   The characters ``A-Za-z0-9`` are converted to lowercase
+    -   Whitespace and ``+_.-`` are converted to ``-``
+    -   All other characters are omitted
+    -   All consecutive ``-`` characters are reduced to a single ``-``
+    -   All leading and trailing ``-`` are stripped
+    -   Both the input name and the resulting string must be ``[1, 100]``
+        characters in length
+
+Examples::
+
+    name                             | slug
+    ---------------------------------+-----------------------
+    coco_2017                        | coco-2017
+    c+o+c+o 2-0-1-7                  | c-o-c-o-2-0-1-7
+    cat.DOG                          | cat-dog
+    ---name----                      | name
+    Brian's #$&amp;@ (Awesome?) Dataset! | brians-awesome-dataset
+    sPaM     aNd  EgGs               | spam-and-eggs
+
+Args:
+    name: a string
+
+Returns:
+    the slug string
+
+Raises:
+    ValueError: if the name is invalid</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.validate_color">
+    
+  </a>
+  <a name="validate_color">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">validate_color</span><span class="function-signature">(value)</span>:
+    
+    <a class="headerLink" href="#validate_color" title="fiftyone.core.utils.validate_color">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Validates that the given value is a valid css color name.
+
+Args:
+    value: a value
+
+Raises:
+    ValueError: if ``value`` is not a valid css color name.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.utils.validate_hex_color">
+    
+  </a>
+  <a name="validate_hex_color">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">validate_hex_color</span><span class="function-signature">(value)</span>:
+    
+    <a class="headerLink" href="#validate_hex_color" title="fiftyone.core.utils.validate_hex_color">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Validates that the given value is a hex color string or css name.
+
+Args:
+    value: a value
+
+Raises:
+    ValueError: if ``value`` is not a hex color string</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="fiftyone.core.utils.fos">
+    
+  </a>
+  <a name="fos">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">fos</span> =
+    
+    <a class="headerLink" href="#fos" title="fiftyone.core.utils.fos">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="fiftyone.core.utils.logger">
+    
+  </a>
+  <a name="logger">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">logger</span> =
+    
+    <a class="headerLink" href="#logger" title="fiftyone.core.utils.logger">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="fiftyone.core.utils.sync_task_executor">
+    
+  </a>
+  <a name="sync_task_executor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">sync_task_executor</span> =
+    
+    <a class="headerLink" href="#sync_task_executor" title="fiftyone.core.utils.sync_task_executor">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.utils._extract_kwargs">
+    
+  </a>
+  <a name="_extract_kwargs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_extract_kwargs</span><span class="function-signature">(cls_or_fcn, kwargs)</span>:
+    
+    <a class="headerLink" href="#_extract_kwargs" title="fiftyone.core.utils._extract_kwargs">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.utils._get_sync_task_executor">
+    
+  </a>
+  <a name="_get_sync_task_executor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_get_sync_task_executor</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#_get_sync_task_executor" title="fiftyone.core.utils._get_sync_task_executor">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.utils._is_docker">
+    
+  </a>
+  <a name="_is_docker">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_is_docker</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#_is_docker" title="fiftyone.core.utils._is_docker">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.utils._is_podman">
+    
+  </a>
+  <a name="_is_podman">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_is_podman</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#_is_podman" title="fiftyone.core.utils._is_podman">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.utils._report_progress_dt">
+    
+  </a>
+  <a name="_report_progress_dt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_report_progress_dt</span><span class="function-signature">(progress, dt)</span>:
+    
+    <a class="headerLink" href="#_report_progress_dt" title="fiftyone.core.utils._report_progress_dt">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.utils._report_progress_n">
+    
+  </a>
+  <a name="_report_progress_n">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_report_progress_n</span><span class="function-signature">(progress, n)</span>:
+    
+    <a class="headerLink" href="#_report_progress_n" title="fiftyone.core.utils._report_progress_n">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.utils._sanitize_char">
+    
+  </a>
+  <a name="_sanitize_char">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_sanitize_char</span><span class="function-signature">(c)</span>:
+    
+    <a class="headerLink" href="#_sanitize_char" title="fiftyone.core.utils._sanitize_char">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.utils._split_frame_fields_dict">
+    
+  </a>
+  <a name="_split_frame_fields_dict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_split_frame_fields_dict</span><span class="function-signature">(fields)</span>:
+    
+    <a class="headerLink" href="#_split_frame_fields_dict" title="fiftyone.core.utils._split_frame_fields_dict">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.utils._strip_comments">
+    
+  </a>
+  <a name="_strip_comments">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_strip_comments</span><span class="function-signature">(requirement_str)</span>:
+    
+    <a class="headerLink" href="#_strip_comments" title="fiftyone.core.utils._strip_comments">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseconstant private">
+  
+  
+  <a name="fiftyone.core.utils._HYPHEN_CHARS">
+    
+  </a>
+  <a name="_HYPHEN_CHARS">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_HYPHEN_CHARS</span> =
+    
+    <a class="headerLink" href="#_HYPHEN_CHARS" title="fiftyone.core.utils._HYPHEN_CHARS">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>set(<wbr></wbr>string.whitespace) | set(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">+_.-</span><span class="rst-variable-quote">'</span>)</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant private">
+  
+  
+  <a name="fiftyone.core.utils._NAME_LENGTH_RANGE">
+    
+  </a>
+  <a name="_NAME_LENGTH_RANGE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_NAME_LENGTH_RANGE</span>: <code>tuple[<wbr></wbr>int, <wbr></wbr><span class="rst-variable-ellipsis">...</span>]</code> =
+    
+    <a class="headerLink" href="#_NAME_LENGTH_RANGE" title="fiftyone.core.utils._NAME_LENGTH_RANGE">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>(<wbr></wbr>1, <wbr></wbr>100)</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant private">
+  
+  
+  <a name="fiftyone.core.utils._REQUIREMENT_ERROR_SUFFIX">
+    
+  </a>
+  <a name="_REQUIREMENT_ERROR_SUFFIX">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_REQUIREMENT_ERROR_SUFFIX</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#_REQUIREMENT_ERROR_SUFFIX" title="fiftyone.core.utils._REQUIREMENT_ERROR_SUFFIX">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'''</span><span class="rst-variable-string">If you think this error is inaccurate, you can set `fiftyone.config.requireme</span><span class="rst-variable-linewrap">↵</span>
+<span class="rst-variable-string">nt_error_level` to 1 (warning) or 2 (ignore).</span>
+<span class="rst-variable-string">See https://docs.voxel51.com/user_guide/config.html for details.</span><span class="rst-variable-quote">'''</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant private">
+  
+  
+  <a name="fiftyone.core.utils._SAFE_CHARS">
+    
+  </a>
+  <a name="_SAFE_CHARS">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_SAFE_CHARS</span> =
+    
+    <a class="headerLink" href="#_SAFE_CHARS" title="fiftyone.core.utils._SAFE_CHARS">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>set(<wbr></wbr>string.ascii_letters) | set(<wbr></wbr>string.digits)</code></pre></td></tr></table>
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for fiftyone,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-11-17 20:16:35.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

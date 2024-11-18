@@ -1,0 +1,2648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fiftyone.operators.operations.Operations</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          fiftyone <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="fiftyone.operators.operations.Operations.html" class="internal-link" title="This class"><wbr></wbr>Operations</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="fiftyone.operators.operations.Operations.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#apply_panel_state_path" class="internal-link" title="fiftyone.operators.operations.Operations.apply_panel_state_path">apply<wbr></wbr>_panel<wbr></wbr>_state<wbr></wbr>_path</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clear_all_stages" class="internal-link" title="fiftyone.operators.operations.Operations.clear_all_stages">clear<wbr></wbr>_all<wbr></wbr>_stages</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clear_panel_data" class="internal-link" title="fiftyone.operators.operations.Operations.clear_panel_data">clear<wbr></wbr>_panel<wbr></wbr>_data</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clear_panel_state" class="internal-link" title="fiftyone.operators.operations.Operations.clear_panel_state">clear<wbr></wbr>_panel<wbr></wbr>_state</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clear_sample_field" class="internal-link" title="fiftyone.operators.operations.Operations.clear_sample_field">clear<wbr></wbr>_sample<wbr></wbr>_field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clear_selected_labels" class="internal-link" title="fiftyone.operators.operations.Operations.clear_selected_labels">clear<wbr></wbr>_selected<wbr></wbr>_labels</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clear_selected_samples" class="internal-link" title="fiftyone.operators.operations.Operations.clear_selected_samples">clear<wbr></wbr>_selected<wbr></wbr>_samples</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clear_sidebar_filters" class="internal-link" title="fiftyone.operators.operations.Operations.clear_sidebar_filters">clear<wbr></wbr>_sidebar<wbr></wbr>_filters</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clear_view" class="internal-link" title="fiftyone.operators.operations.Operations.clear_view">clear<wbr></wbr>_view</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clone_sample_field" class="internal-link" title="fiftyone.operators.operations.Operations.clone_sample_field">clone<wbr></wbr>_sample<wbr></wbr>_field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clone_selected_samples" class="internal-link" title="fiftyone.operators.operations.Operations.clone_selected_samples">clone<wbr></wbr>_selected<wbr></wbr>_samples</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#close_all_panels" class="internal-link" title="fiftyone.operators.operations.Operations.close_all_panels">close<wbr></wbr>_all<wbr></wbr>_panels</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#close_panel" class="internal-link" title="fiftyone.operators.operations.Operations.close_panel">close<wbr></wbr>_panel</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#console_log" class="internal-link" title="fiftyone.operators.operations.Operations.console_log">console<wbr></wbr>_log</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#convert_extended_selection_to_selected_samples" class="internal-link" title="fiftyone.operators.operations.Operations.convert_extended_selection_to_selected_samples">convert<wbr></wbr>_extended<wbr></wbr>_selection<wbr></wbr>_to<wbr></wbr>_selected<wbr></wbr>_samples</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#copy_view_as_json" class="internal-link" title="fiftyone.operators.operations.Operations.copy_view_as_json">copy<wbr></wbr>_view<wbr></wbr>_as<wbr></wbr>_json</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#delete_sample_field" class="internal-link" title="fiftyone.operators.operations.Operations.delete_sample_field">delete<wbr></wbr>_sample<wbr></wbr>_field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#delete_selected_labels" class="internal-link" title="fiftyone.operators.operations.Operations.delete_selected_labels">delete<wbr></wbr>_selected<wbr></wbr>_labels</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#delete_selected_samples" class="internal-link" title="fiftyone.operators.operations.Operations.delete_selected_samples">delete<wbr></wbr>_selected<wbr></wbr>_samples</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#list_files" class="internal-link" title="fiftyone.operators.operations.Operations.list_files">list<wbr></wbr>_files</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#notify" class="internal-link" title="fiftyone.operators.operations.Operations.notify">notify</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#open_all_panels" class="internal-link" title="fiftyone.operators.operations.Operations.open_all_panels">open<wbr></wbr>_all<wbr></wbr>_panels</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#open_dataset" class="internal-link" title="fiftyone.operators.operations.Operations.open_dataset">open<wbr></wbr>_dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#open_panel" class="internal-link" title="fiftyone.operators.operations.Operations.open_panel">open<wbr></wbr>_panel</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#patch_panel_data" class="internal-link" title="fiftyone.operators.operations.Operations.patch_panel_data">patch<wbr></wbr>_panel<wbr></wbr>_data</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#patch_panel_state" class="internal-link" title="fiftyone.operators.operations.Operations.patch_panel_state">patch<wbr></wbr>_panel<wbr></wbr>_state</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#print_stdout" class="internal-link" title="fiftyone.operators.operations.Operations.print_stdout">print<wbr></wbr>_stdout</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#reduce_panel_state" class="internal-link" title="fiftyone.operators.operations.Operations.reduce_panel_state">reduce<wbr></wbr>_panel<wbr></wbr>_state</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#refresh_colors" class="internal-link" title="fiftyone.operators.operations.Operations.refresh_colors">refresh<wbr></wbr>_colors</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#register_panel" class="internal-link" title="fiftyone.operators.operations.Operations.register_panel">register<wbr></wbr>_panel</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#reload_dataset" class="internal-link" title="fiftyone.operators.operations.Operations.reload_dataset">reload<wbr></wbr>_dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#reload_samples" class="internal-link" title="fiftyone.operators.operations.Operations.reload_samples">reload<wbr></wbr>_samples</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#rename_sample_field" class="internal-link" title="fiftyone.operators.operations.Operations.rename_sample_field">rename<wbr></wbr>_sample<wbr></wbr>_field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_active_fields" class="internal-link" title="fiftyone.operators.operations.Operations.set_active_fields">set<wbr></wbr>_active<wbr></wbr>_fields</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_extended_selection" class="internal-link" title="fiftyone.operators.operations.Operations.set_extended_selection">set<wbr></wbr>_extended<wbr></wbr>_selection</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_group_slice" class="internal-link" title="fiftyone.operators.operations.Operations.set_group_slice">set<wbr></wbr>_group<wbr></wbr>_slice</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_panel_data" class="internal-link" title="fiftyone.operators.operations.Operations.set_panel_data">set<wbr></wbr>_panel<wbr></wbr>_data</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_panel_state" class="internal-link" title="fiftyone.operators.operations.Operations.set_panel_state">set<wbr></wbr>_panel<wbr></wbr>_state</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_panel_title" class="internal-link" title="fiftyone.operators.operations.Operations.set_panel_title">set<wbr></wbr>_panel<wbr></wbr>_title</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_progress" class="internal-link" title="fiftyone.operators.operations.Operations.set_progress">set<wbr></wbr>_progress</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_selected_labels" class="internal-link" title="fiftyone.operators.operations.Operations.set_selected_labels">set<wbr></wbr>_selected<wbr></wbr>_labels</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_selected_samples" class="internal-link" title="fiftyone.operators.operations.Operations.set_selected_samples">set<wbr></wbr>_selected<wbr></wbr>_samples</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_spaces" class="internal-link" title="fiftyone.operators.operations.Operations.set_spaces">set<wbr></wbr>_spaces</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_view" class="internal-link" title="fiftyone.operators.operations.Operations.set_view">set<wbr></wbr>_view</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#show_output" class="internal-link" title="fiftyone.operators.operations.Operations.show_output">show<wbr></wbr>_output</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#show_panel_output" class="internal-link" title="fiftyone.operators.operations.Operations.show_panel_output">show<wbr></wbr>_panel<wbr></wbr>_output</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#show_samples" class="internal-link" title="fiftyone.operators.operations.Operations.show_samples">show<wbr></wbr>_samples</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#show_selected_samples" class="internal-link" title="fiftyone.operators.operations.Operations.show_selected_samples">show<wbr></wbr>_selected<wbr></wbr>_samples</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#split_panel" class="internal-link" title="fiftyone.operators.operations.Operations.split_panel">split<wbr></wbr>_panel</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#test_operator" class="internal-link" title="fiftyone.operators.operations.Operations.test_operator">test<wbr></wbr>_operator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#track_event" class="internal-link" title="fiftyone.operators.operations.Operations.track_event">track<wbr></wbr>_event</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#view_from_json" class="internal-link" title="fiftyone.operators.operations.Operations.view_from_json">view<wbr></wbr>_from<wbr></wbr>_json</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_create_panel_params" class="internal-link" title="fiftyone.operators.operations.Operations._create_panel_params">_create<wbr></wbr>_panel<wbr></wbr>_params</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_ctx" class="internal-link" title="fiftyone.operators.operations.Operations._ctx">_ctx</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="fiftyone.operators.operations.html" class="internal-link" title="The parent of this class">operations</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operations.Operations.html" class="internal-link" title="fiftyone.operators.operations.Operations"><wbr></wbr>Operations</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.operators.operations.html#_serialize_view" class="internal-link" title="fiftyone.operators.operations._serialize_view">_serialize<wbr></wbr>_view</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">fiftyone</a></code><wbr></wbr>.<code><a href="fiftyone.operators.html" class="internal-link" title="fiftyone.operators">operators</a></code><wbr></wbr>.<code><a href="fiftyone.operators.operations.html" class="internal-link" title="fiftyone.operators.operations">operations</a></code><wbr></wbr>.<code><a href="fiftyone.operators.operations.Operations.html" class="internal-link" title="fiftyone.operators.operations.Operations">Operations</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Operations</span>(object):</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fiftyone.operators.operations.Operations.__init__">Operations(ctx)</a></code></p>
+          <p><a href="classIndex.html#fiftyone.operators.operations.Operations">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="pre">Interface to trigger builtin operations on an execution context.
+
+Args:
+    ctx: an :class:`fiftyone.operators.executor.ExecutionContext`</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id1012">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="fiftyone.operators.operations.Operations.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#apply_panel_state_path" class="internal-link" title="fiftyone.operators.operations.Operations.apply_panel_state_path">apply<wbr></wbr>_panel<wbr></wbr>_state<wbr></wbr>_path</a></code></td>
+    <td>Force update the state for path in the specified panel in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clear_all_stages" class="internal-link" title="fiftyone.operators.operations.Operations.clear_all_stages">clear<wbr></wbr>_all<wbr></wbr>_stages</a></code></td>
+    <td>Clear all selections, filters, and view stages from the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clear_panel_data" class="internal-link" title="fiftyone.operators.operations.Operations.clear_panel_data">clear<wbr></wbr>_panel<wbr></wbr>_data</a></code></td>
+    <td>Clear the data of the specified panel in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clear_panel_state" class="internal-link" title="fiftyone.operators.operations.Operations.clear_panel_state">clear<wbr></wbr>_panel<wbr></wbr>_state</a></code></td>
+    <td>Clear the state of the specified panel in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clear_sample_field" class="internal-link" title="fiftyone.operators.operations.Operations.clear_sample_field">clear<wbr></wbr>_sample<wbr></wbr>_field</a></code></td>
+    <td>Clear the contents of a sample field.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clear_selected_labels" class="internal-link" title="fiftyone.operators.operations.Operations.clear_selected_labels">clear<wbr></wbr>_selected<wbr></wbr>_labels</a></code></td>
+    <td>Clear the selected labels in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clear_selected_samples" class="internal-link" title="fiftyone.operators.operations.Operations.clear_selected_samples">clear<wbr></wbr>_selected<wbr></wbr>_samples</a></code></td>
+    <td>Clear selected samples in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clear_sidebar_filters" class="internal-link" title="fiftyone.operators.operations.Operations.clear_sidebar_filters">clear<wbr></wbr>_sidebar<wbr></wbr>_filters</a></code></td>
+    <td>Clear all filters in the App's sidebar.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clear_view" class="internal-link" title="fiftyone.operators.operations.Operations.clear_view">clear<wbr></wbr>_view</a></code></td>
+    <td>Clear the view bar in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clone_sample_field" class="internal-link" title="fiftyone.operators.operations.Operations.clone_sample_field">clone<wbr></wbr>_sample<wbr></wbr>_field</a></code></td>
+    <td>Clone a sample field to a new field name.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clone_selected_samples" class="internal-link" title="fiftyone.operators.operations.Operations.clone_selected_samples">clone<wbr></wbr>_selected<wbr></wbr>_samples</a></code></td>
+    <td>Clone the selected samples in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#close_all_panels" class="internal-link" title="fiftyone.operators.operations.Operations.close_all_panels">close<wbr></wbr>_all<wbr></wbr>_panels</a></code></td>
+    <td>Close all open panels in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#close_panel" class="internal-link" title="fiftyone.operators.operations.Operations.close_panel">close<wbr></wbr>_panel</a></code></td>
+    <td>Close the given panel in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#console_log" class="internal-link" title="fiftyone.operators.operations.Operations.console_log">console<wbr></wbr>_log</a></code></td>
+    <td>Log a message to the console.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#convert_extended_selection_to_selected_samples" class="internal-link" title="fiftyone.operators.operations.Operations.convert_extended_selection_to_selected_samples">convert<wbr></wbr>_extended<wbr></wbr>_selection<wbr></wbr>_to<wbr></wbr>_selected<wbr></wbr>_samples</a></code></td>
+    <td>Convert the extended selection to selected samples in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#copy_view_as_json" class="internal-link" title="fiftyone.operators.operations.Operations.copy_view_as_json">copy<wbr></wbr>_view<wbr></wbr>_as<wbr></wbr>_json</a></code></td>
+    <td>Copy the current view in the App as JSON.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#delete_sample_field" class="internal-link" title="fiftyone.operators.operations.Operations.delete_sample_field">delete<wbr></wbr>_sample<wbr></wbr>_field</a></code></td>
+    <td>Delete a sample field.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#delete_selected_labels" class="internal-link" title="fiftyone.operators.operations.Operations.delete_selected_labels">delete<wbr></wbr>_selected<wbr></wbr>_labels</a></code></td>
+    <td>Delete the selected labels in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#delete_selected_samples" class="internal-link" title="fiftyone.operators.operations.Operations.delete_selected_samples">delete<wbr></wbr>_selected<wbr></wbr>_samples</a></code></td>
+    <td>Delete the selected samples in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#list_files" class="internal-link" title="fiftyone.operators.operations.Operations.list_files">list<wbr></wbr>_files</a></code></td>
+    <td>List files in a directory or list filesystems.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#notify" class="internal-link" title="fiftyone.operators.operations.Operations.notify">notify</a></code></td>
+    <td>Show a notification in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#open_all_panels" class="internal-link" title="fiftyone.operators.operations.Operations.open_all_panels">open<wbr></wbr>_all<wbr></wbr>_panels</a></code></td>
+    <td>Open all available panels in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#open_dataset" class="internal-link" title="fiftyone.operators.operations.Operations.open_dataset">open<wbr></wbr>_dataset</a></code></td>
+    <td>Open the specified dataset in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#open_panel" class="internal-link" title="fiftyone.operators.operations.Operations.open_panel">open<wbr></wbr>_panel</a></code></td>
+    <td>Open a panel with the given name and layout options in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#patch_panel_data" class="internal-link" title="fiftyone.operators.operations.Operations.patch_panel_data">patch<wbr></wbr>_panel<wbr></wbr>_data</a></code></td>
+    <td>Patch the state of the specified panel in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#patch_panel_state" class="internal-link" title="fiftyone.operators.operations.Operations.patch_panel_state">patch<wbr></wbr>_panel<wbr></wbr>_state</a></code></td>
+    <td>Patch the state of the specified panel in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#print_stdout" class="internal-link" title="fiftyone.operators.operations.Operations.print_stdout">print<wbr></wbr>_stdout</a></code></td>
+    <td>Print a message to the standard output.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#reduce_panel_state" class="internal-link" title="fiftyone.operators.operations.Operations.reduce_panel_state">reduce<wbr></wbr>_panel<wbr></wbr>_state</a></code></td>
+    <td>Reduce the state of the specified panel in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#refresh_colors" class="internal-link" title="fiftyone.operators.operations.Operations.refresh_colors">refresh<wbr></wbr>_colors</a></code></td>
+    <td>Refresh the colors used in the App's UI.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#register_panel" class="internal-link" title="fiftyone.operators.operations.Operations.register_panel">register<wbr></wbr>_panel</a></code></td>
+    <td>Registers a panel with the given name and lifecycle callbacks.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#reload_dataset" class="internal-link" title="fiftyone.operators.operations.Operations.reload_dataset">reload<wbr></wbr>_dataset</a></code></td>
+    <td>Reload the dataset in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#reload_samples" class="internal-link" title="fiftyone.operators.operations.Operations.reload_samples">reload<wbr></wbr>_samples</a></code></td>
+    <td>Reload the sample grid in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#rename_sample_field" class="internal-link" title="fiftyone.operators.operations.Operations.rename_sample_field">rename<wbr></wbr>_sample<wbr></wbr>_field</a></code></td>
+    <td>Rename a sample field to a new field name.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_active_fields" class="internal-link" title="fiftyone.operators.operations.Operations.set_active_fields">set<wbr></wbr>_active<wbr></wbr>_fields</a></code></td>
+    <td>Set the active fields in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_extended_selection" class="internal-link" title="fiftyone.operators.operations.Operations.set_extended_selection">set<wbr></wbr>_extended<wbr></wbr>_selection</a></code></td>
+    <td>Sets the extended selection in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_group_slice" class="internal-link" title="fiftyone.operators.operations.Operations.set_group_slice">set<wbr></wbr>_group<wbr></wbr>_slice</a></code></td>
+    <td>Set the active group slice in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_panel_data" class="internal-link" title="fiftyone.operators.operations.Operations.set_panel_data">set<wbr></wbr>_panel<wbr></wbr>_data</a></code></td>
+    <td>Set the entire data of the specified panel in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_panel_state" class="internal-link" title="fiftyone.operators.operations.Operations.set_panel_state">set<wbr></wbr>_panel<wbr></wbr>_state</a></code></td>
+    <td>Set the entire state of the specified panel in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_panel_title" class="internal-link" title="fiftyone.operators.operations.Operations.set_panel_title">set<wbr></wbr>_panel<wbr></wbr>_title</a></code></td>
+    <td>Set the title of the specified panel in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_progress" class="internal-link" title="fiftyone.operators.operations.Operations.set_progress">set<wbr></wbr>_progress</a></code></td>
+    <td>Set the progress indicator in the App's UI.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_selected_labels" class="internal-link" title="fiftyone.operators.operations.Operations.set_selected_labels">set<wbr></wbr>_selected<wbr></wbr>_labels</a></code></td>
+    <td>Set the selected labels in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_selected_samples" class="internal-link" title="fiftyone.operators.operations.Operations.set_selected_samples">set<wbr></wbr>_selected<wbr></wbr>_samples</a></code></td>
+    <td>Select the specified samples in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_spaces" class="internal-link" title="fiftyone.operators.operations.Operations.set_spaces">set<wbr></wbr>_spaces</a></code></td>
+    <td>Sets the current spaces in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_view" class="internal-link" title="fiftyone.operators.operations.Operations.set_view">set<wbr></wbr>_view</a></code></td>
+    <td>Set the current view in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#show_output" class="internal-link" title="fiftyone.operators.operations.Operations.show_output">show<wbr></wbr>_output</a></code></td>
+    <td>Show output in the App's UI.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#show_panel_output" class="internal-link" title="fiftyone.operators.operations.Operations.show_panel_output">show<wbr></wbr>_panel<wbr></wbr>_output</a></code></td>
+    <td>Show output in the specified panel in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#show_samples" class="internal-link" title="fiftyone.operators.operations.Operations.show_samples">show<wbr></wbr>_samples</a></code></td>
+    <td>Show specific samples, optionally using extended selection in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#show_selected_samples" class="internal-link" title="fiftyone.operators.operations.Operations.show_selected_samples">show<wbr></wbr>_selected<wbr></wbr>_samples</a></code></td>
+    <td>Show the samples that are currently selected in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#split_panel" class="internal-link" title="fiftyone.operators.operations.Operations.split_panel">split<wbr></wbr>_panel</a></code></td>
+    <td>Split the panel with the given layout in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#test_operator" class="internal-link" title="fiftyone.operators.operations.Operations.test_operator">test<wbr></wbr>_operator</a></code></td>
+    <td>Test the operator with given parameters.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#track_event" class="internal-link" title="fiftyone.operators.operations.Operations.track_event">track<wbr></wbr>_event</a></code></td>
+    <td>Track an event in the App.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#view_from_json" class="internal-link" title="fiftyone.operators.operations.Operations.view_from_json">view<wbr></wbr>_from<wbr></wbr>_json</a></code></td>
+    <td>Set the view in the App from JSON present in clipboard.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_create_panel_params" class="internal-link" title="fiftyone.operators.operations.Operations._create_panel_params">_create<wbr></wbr>_panel<wbr></wbr>_params</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_ctx" class="internal-link" title="fiftyone.operators.operations.Operations._ctx">_ctx</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, ctx)</span>:
+    
+    <a class="headerLink" href="#__init__" title="fiftyone.operators.operations.Operations.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.apply_panel_state_path">
+    
+  </a>
+  <a name="apply_panel_state_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">apply_panel_state_path</span><span class="function-signature">(self, path, panel_id=None)</span>:
+    
+    <a class="headerLink" href="#apply_panel_state_path" title="fiftyone.operators.operations.Operations.apply_panel_state_path">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Force update the state for path in the specified panel in the App.
+
+Args:
+
+    path (str): the path to force update</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.clear_all_stages">
+    
+  </a>
+  <a name="clear_all_stages">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clear_all_stages</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#clear_all_stages" title="fiftyone.operators.operations.Operations.clear_all_stages">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Clear all selections, filters, and view stages from the App.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.clear_panel_data">
+    
+  </a>
+  <a name="clear_panel_data">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clear_panel_data</span><span class="function-signature">(self, panel_id=None)</span>:
+    
+    <a class="headerLink" href="#clear_panel_data" title="fiftyone.operators.operations.Operations.clear_panel_data">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Clear the data of the specified panel in the App.
+
+Args:
+    panel_id (None): the optional ID of the panel to clear.
+        If not provided, the ``ctx.panel_id`` will be used</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.clear_panel_state">
+    
+  </a>
+  <a name="clear_panel_state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clear_panel_state</span><span class="function-signature">(self, panel_id=None)</span>:
+    
+    <a class="headerLink" href="#clear_panel_state" title="fiftyone.operators.operations.Operations.clear_panel_state">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Clear the state of the specified panel in the App.
+
+Args:
+    panel_id (None): the optional ID of the panel to clear.
+        If not provided, the ``ctx.panel_id`` will be used</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.clear_sample_field">
+    
+  </a>
+  <a name="clear_sample_field">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clear_sample_field</span><span class="function-signature">(self, field_name)</span>:
+    
+    <a class="headerLink" href="#clear_sample_field" title="fiftyone.operators.operations.Operations.clear_sample_field">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Clear the contents of a sample field.
+
+Args:
+    field_name: the name of the field to clear</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.clear_selected_labels">
+    
+  </a>
+  <a name="clear_selected_labels">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clear_selected_labels</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#clear_selected_labels" title="fiftyone.operators.operations.Operations.clear_selected_labels">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Clear the selected labels in the App.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.clear_selected_samples">
+    
+  </a>
+  <a name="clear_selected_samples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clear_selected_samples</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#clear_selected_samples" title="fiftyone.operators.operations.Operations.clear_selected_samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Clear selected samples in the App.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.clear_sidebar_filters">
+    
+  </a>
+  <a name="clear_sidebar_filters">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clear_sidebar_filters</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#clear_sidebar_filters" title="fiftyone.operators.operations.Operations.clear_sidebar_filters">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Clear all filters in the App's sidebar.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.clear_view">
+    
+  </a>
+  <a name="clear_view">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clear_view</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#clear_view" title="fiftyone.operators.operations.Operations.clear_view">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Clear the view bar in the App.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.clone_sample_field">
+    
+  </a>
+  <a name="clone_sample_field">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clone_sample_field</span><span class="function-signature">(self, field_name, new_field_name)</span>:
+    
+    <a class="headerLink" href="#clone_sample_field" title="fiftyone.operators.operations.Operations.clone_sample_field">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Clone a sample field to a new field name.
+
+Args:
+    field_name: the name of the field to clone
+    new_field_name: the name for the new field</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.clone_selected_samples">
+    
+  </a>
+  <a name="clone_selected_samples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clone_selected_samples</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#clone_selected_samples" title="fiftyone.operators.operations.Operations.clone_selected_samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Clone the selected samples in the App.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.close_all_panels">
+    
+  </a>
+  <a name="close_all_panels">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">close_all_panels</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#close_all_panels" title="fiftyone.operators.operations.Operations.close_all_panels">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Close all open panels in the App.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.close_panel">
+    
+  </a>
+  <a name="close_panel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">close_panel</span><span class="function-signature">(self, name=None, id=None)</span>:
+    
+    <a class="headerLink" href="#close_panel" title="fiftyone.operators.operations.Operations.close_panel">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Close the given panel in the App.
+
+Args:
+    name (None): the name of the panel to close
+    id (None): the ID of the panel to close</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.console_log">
+    
+  </a>
+  <a name="console_log">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">console_log</span><span class="function-signature">(self, message)</span>:
+    
+    <a class="headerLink" href="#console_log" title="fiftyone.operators.operations.Operations.console_log">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Log a message to the console.
+
+Args:
+    message: the message to log</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.convert_extended_selection_to_selected_samples">
+    
+  </a>
+  <a name="convert_extended_selection_to_selected_samples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">convert_extended_selection_to_selected_samples</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#convert_extended_selection_to_selected_samples" title="fiftyone.operators.operations.Operations.convert_extended_selection_to_selected_samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Convert the extended selection to selected samples in the App.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.copy_view_as_json">
+    
+  </a>
+  <a name="copy_view_as_json">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">copy_view_as_json</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#copy_view_as_json" title="fiftyone.operators.operations.Operations.copy_view_as_json">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Copy the current view in the App as JSON.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.delete_sample_field">
+    
+  </a>
+  <a name="delete_sample_field">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">delete_sample_field</span><span class="function-signature">(self, field_name)</span>:
+    
+    <a class="headerLink" href="#delete_sample_field" title="fiftyone.operators.operations.Operations.delete_sample_field">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Delete a sample field.
+
+Args:
+    field_name: the name of the field to delete</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.delete_selected_labels">
+    
+  </a>
+  <a name="delete_selected_labels">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">delete_selected_labels</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#delete_selected_labels" title="fiftyone.operators.operations.Operations.delete_selected_labels">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Delete the selected labels in the App.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.delete_selected_samples">
+    
+  </a>
+  <a name="delete_selected_samples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">delete_selected_samples</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#delete_selected_samples" title="fiftyone.operators.operations.Operations.delete_selected_samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Delete the selected samples in the App.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.list_files">
+    
+  </a>
+  <a name="list_files">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">list_files</span><span class="function-signature">(self, path=None, list_filesystems=False)</span>:
+    
+    <a class="headerLink" href="#list_files" title="fiftyone.operators.operations.Operations.list_files">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">List files in a directory or list filesystems.
+
+Args:
+    path (None): the path to list files from, or None to list
+        filesystems
+    list_filesystems (False): whether to list filesystems instead of
+        files</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.notify">
+    
+  </a>
+  <a name="notify">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">notify</span><span class="function-signature">(self, message, variant=<span class="rst-variable-quote">'</span><span class="rst-variable-string">info</span><span class="rst-variable-quote">'</span>)</span>:
+    
+    <a class="headerLink" href="#notify" title="fiftyone.operators.operations.Operations.notify">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Show a notification in the App.
+
+Variants are "info", "success", "warning", and "error".
+
+Args:
+    message: the message to show
+    variant ("info"): the type of notification</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.open_all_panels">
+    
+  </a>
+  <a name="open_all_panels">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">open_all_panels</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#open_all_panels" title="fiftyone.operators.operations.Operations.open_all_panels">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Open all available panels in the App.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.open_dataset">
+    
+  </a>
+  <a name="open_dataset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">open_dataset</span><span class="function-signature">(self, dataset_name)</span>:
+    
+    <a class="headerLink" href="#open_dataset" title="fiftyone.operators.operations.Operations.open_dataset">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Open the specified dataset in the App.
+
+Args:
+    dataset_name: the name of the dataset to open</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.open_panel">
+    
+  </a>
+  <a name="open_panel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">open_panel</span><span class="function-signature">(self, name, is_active=True, layout=None, force=False, force_duplicate=False)</span>:
+    
+    <a class="headerLink" href="#open_panel" title="fiftyone.operators.operations.Operations.open_panel">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Open a panel with the given name and layout options in the App.
+
+Args:
+    name: the name of the panel to open
+    is_active (True): whether to activate the panel immediately
+    layout (None): the layout orientation
+        ``("horizontal", "vertical")``, if applicable
+    force (False): whether to force open the panel. Skips the check to
+        see if a panel with the same name exists or whether the panel
+        declares ``allow_multiple=False``
+    force_duplicate (False): whether to force open the panel even if it
+        is already open. Only applicable if force is ``True``</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.patch_panel_data">
+    
+  </a>
+  <a name="patch_panel_data">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">patch_panel_data</span><span class="function-signature">(self, data, panel_id=None)</span>:
+    
+    <a class="headerLink" href="#patch_panel_data" title="fiftyone.operators.operations.Operations.patch_panel_data">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Patch the state of the specified panel in the App.
+
+Args:
+    data: the data to set
+    panel_id (None): the optional ID of the panel to clear.
+        If not provided, the ``ctx.panel_id`` will be used</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.patch_panel_state">
+    
+  </a>
+  <a name="patch_panel_state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">patch_panel_state</span><span class="function-signature">(self, state, panel_id=None)</span>:
+    
+    <a class="headerLink" href="#patch_panel_state" title="fiftyone.operators.operations.Operations.patch_panel_state">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Patch the state of the specified panel in the App.
+
+Args:
+    state: the state to set
+    panel_id (None): the optional ID of the panel to clear.
+        If not provided, the ``ctx.panel_id`` will be used</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.print_stdout">
+    
+  </a>
+  <a name="print_stdout">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">print_stdout</span><span class="function-signature">(self, message)</span>:
+    
+    <a class="headerLink" href="#print_stdout" title="fiftyone.operators.operations.Operations.print_stdout">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Print a message to the standard output.
+
+Args:
+    message: the message to print</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.reduce_panel_state">
+    
+  </a>
+  <a name="reduce_panel_state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">reduce_panel_state</span><span class="function-signature">(self, reducer, panel_id=None)</span>:
+    
+    <a class="headerLink" href="#reduce_panel_state" title="fiftyone.operators.operations.Operations.reduce_panel_state">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Reduce the state of the specified panel in the App.
+
+Args:
+    reducer: the reducer to apply
+    panel_id (None): the optional ID of the panel to clear.
+        If not provided, the ``ctx.panel_id`` will be used</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.refresh_colors">
+    
+  </a>
+  <a name="refresh_colors">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">refresh_colors</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#refresh_colors" title="fiftyone.operators.operations.Operations.refresh_colors">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Refresh the colors used in the App's UI.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.register_panel">
+    
+  </a>
+  <a name="register_panel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">register_panel</span><span class="function-signature">(self, name, label, help_markdown=None, category=<a href="fiftyone.operators.categories.Categories.html#CUSTOM" class="internal-link" title="fiftyone.operators.categories.Categories.CUSTOM">Categories.CUSTOM</a>, beta=False, is_new=False, icon=None, light_icon=None, dark_icon=None, surfaces=<span class="rst-variable-quote">'</span><span class="rst-variable-string">grid</span><span class="rst-variable-quote">'</span>, on_load=None, on_unload=None, on_change=None, on_change_ctx=None, on_change_dataset=None, on_change_view=None, on_change_spaces=None, on_change_current_sample=None, on_change_selected=None, on_change_selected_labels=None, on_change_extended_selection=None, on_change_group_slice=None, on_change_query_performance=None, allow_duplicates=False, priority=None, _builtin=False)</span>:
+    
+    <a class="headerLink" href="#register_panel" title="fiftyone.operators.operations.Operations.register_panel">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Registers a panel with the given name and lifecycle callbacks.
+
+Args:
+    name: the name of the panel
+    help_markdown (None): help text associated with the panel in
+        markdown format
+    label: the display name of the panel
+    icon (None): the icon to show in the panel's tab
+    light_icon (None): the icon to show in the panel's tab when the App
+        is in light mode
+    dark_icon (None): the icon to show in the panel's tab when the App
+        is in dark mode
+    surfaces ('grid'): surfaces in which to show the panel. Must be
+        one of 'grid', 'modal', or 'grid modal'
+    beta (False): whether the panel is in beta
+    is_new (False): whether the panel is new
+    category (Categories.CUSTOM): the category of the panel
+    on_load (None): an operator to invoke when the panel is loaded
+    on_unload (None): an operator to invoke when the panel is unloaded
+    on_change (None): an operator to invoke when the panel state
+        changes
+    on_change_ctx (None): an operator to invoke when the panel
+        execution context changes
+    on_change_dataset (None): an operator to invoke when the current
+        dataset changes
+    on_change_view (None): an operator to invoke when the current view
+        changes
+    on_change_spaces (None): an operator to invoke when the current
+        spaces layout changes
+    on_change_current_sample (None): an operator to invoke when the
+        current sample changes
+    on_change_selected (None): an operator to invoke when the current
+        selected samples changes
+    on_change_selected_labels (None): an operator to invoke when the
+        current selected labels changes
+    on_change_extended_selection (None): an operator to invoke when the
+        current extended selection changes
+    on_change_group_slice (None): an operator to invoke when the group
+        slice changes
+    on_change_query_performance (None): an operator to invoke when the
+        query performance changes
+    allow_duplicates (False): whether to allow multiple instances of
+        the panel to the opened
+    priority (None): the priority of the panel, used for sort order
+    _builtin (False): whether the panel is a builtin panel</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.reload_dataset">
+    
+  </a>
+  <a name="reload_dataset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">reload_dataset</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#reload_dataset" title="fiftyone.operators.operations.Operations.reload_dataset">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Reload the dataset in the App.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.reload_samples">
+    
+  </a>
+  <a name="reload_samples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">reload_samples</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#reload_samples" title="fiftyone.operators.operations.Operations.reload_samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Reload the sample grid in the App.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.rename_sample_field">
+    
+  </a>
+  <a name="rename_sample_field">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">rename_sample_field</span><span class="function-signature">(self, field_name, new_field_name)</span>:
+    
+    <a class="headerLink" href="#rename_sample_field" title="fiftyone.operators.operations.Operations.rename_sample_field">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Rename a sample field to a new field name.
+
+Args:
+    field_name: the name of the field to rename
+    new_field_name: the new name for the field</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.set_active_fields">
+    
+  </a>
+  <a name="set_active_fields">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_active_fields</span><span class="function-signature">(self, fields=None)</span>:
+    
+    <a class="headerLink" href="#set_active_fields" title="fiftyone.operators.operations.Operations.set_active_fields">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Set the active fields in the App.
+
+Args:
+    fields (None): the possibly-empty list of fields or
+        ``embedded.fields`` to set</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.set_extended_selection">
+    
+  </a>
+  <a name="set_extended_selection">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_extended_selection</span><span class="function-signature">(self, selection=None, scope=None, clear=False, reset=False)</span>:
+    
+    <a class="headerLink" href="#set_extended_selection" title="fiftyone.operators.operations.Operations.set_extended_selection">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Sets the extended selection in the App.
+
+Args:
+    selection (None): the selection to set
+    scope (None): the scope of the selection
+    clear (None): whether to clear the selection
+    reset (None): whether to reset the selection</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.set_group_slice">
+    
+  </a>
+  <a name="set_group_slice">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_group_slice</span><span class="function-signature">(self, slice)</span>:
+    
+    <a class="headerLink" href="#set_group_slice" title="fiftyone.operators.operations.Operations.set_group_slice">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Set the active group slice in the App.
+
+Args:
+    slice: the group slice to activate</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.set_panel_data">
+    
+  </a>
+  <a name="set_panel_data">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_panel_data</span><span class="function-signature">(self, data, panel_id=None)</span>:
+    
+    <a class="headerLink" href="#set_panel_data" title="fiftyone.operators.operations.Operations.set_panel_data">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Set the entire data of the specified panel in the App.
+
+Args:
+    data: the data to set
+    panel_id (None): the optional ID of the panel to clear.
+        If not provided, the ``ctx.panel_id`` will be used</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.set_panel_state">
+    
+  </a>
+  <a name="set_panel_state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_panel_state</span><span class="function-signature">(self, state, panel_id=None)</span>:
+    
+    <a class="headerLink" href="#set_panel_state" title="fiftyone.operators.operations.Operations.set_panel_state">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Set the entire state of the specified panel in the App.
+
+Args:
+    state: the state to set
+    panel_id (None): the optional ID of the panel to clear.
+        If not provided, the ``ctx.panel_id`` will be used</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.set_panel_title">
+    
+  </a>
+  <a name="set_panel_title">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_panel_title</span><span class="function-signature">(self, id=None, title=None)</span>:
+    
+    <a class="headerLink" href="#set_panel_title" title="fiftyone.operators.operations.Operations.set_panel_title">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Set the title of the specified panel in the App.
+
+Args:
+    id (None): the ID of the panel to set the title
+    title (None): the title to set</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.set_progress">
+    
+  </a>
+  <a name="set_progress">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_progress</span><span class="function-signature">(self, label=None, progress=None, variant=None)</span>:
+    
+    <a class="headerLink" href="#set_progress" title="fiftyone.operators.operations.Operations.set_progress">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Set the progress indicator in the App's UI.
+
+Args:
+    label (None): a label for the progress indicator
+    progress (None): a progress value to set
+    variant (None): the type of indicator ``("linear", "circular")``</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.set_selected_labels">
+    
+  </a>
+  <a name="set_selected_labels">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_selected_labels</span><span class="function-signature">(self, labels)</span>:
+    
+    <a class="headerLink" href="#set_selected_labels" title="fiftyone.operators.operations.Operations.set_selected_labels">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Set the selected labels in the App.
+
+Args:
+    labels: the labels to select</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.set_selected_samples">
+    
+  </a>
+  <a name="set_selected_samples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_selected_samples</span><span class="function-signature">(self, samples)</span>:
+    
+    <a class="headerLink" href="#set_selected_samples" title="fiftyone.operators.operations.Operations.set_selected_samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Select the specified samples in the App.
+
+Args:
+    samples: a list of sample IDs to select</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.set_spaces">
+    
+  </a>
+  <a name="set_spaces">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_spaces</span><span class="function-signature">(self, spaces=None, name=None)</span>:
+    
+    <a class="headerLink" href="#set_spaces" title="fiftyone.operators.operations.Operations.set_spaces">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Sets the current spaces in the App.
+
+Args:
+    spaces (None): a :class:`fiftyone.core.odm.workspace.Space` to load
+    name (None): the name of the workspace to load</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.set_view">
+    
+  </a>
+  <a name="set_view">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_view</span><span class="function-signature">(self, view=None, name=None)</span>:
+    
+    <a class="headerLink" href="#set_view" title="fiftyone.operators.operations.Operations.set_view">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Set the current view in the App.
+
+Args:
+    view (None): a :class:`fiftyone.core.view.DatasetView` to load
+    name (None): the name of a saved view to load</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.show_output">
+    
+  </a>
+  <a name="show_output">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">show_output</span><span class="function-signature">(self, outputs, results)</span>:
+    
+    <a class="headerLink" href="#show_output" title="fiftyone.operators.operations.Operations.show_output">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Show output in the App's UI.
+
+Args:
+    outputs: outputs to show
+    results: results to display</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.show_panel_output">
+    
+  </a>
+  <a name="show_panel_output">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">show_panel_output</span><span class="function-signature">(self, output, panel_id=None)</span>:
+    
+    <a class="headerLink" href="#show_panel_output" title="fiftyone.operators.operations.Operations.show_panel_output">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Show output in the specified panel in the App.
+
+Args:
+    output: the output to show
+    panel_id (None): the optional ID of the panel to clear.
+        If not provided, the ``ctx.panel_id`` will be used</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.show_samples">
+    
+  </a>
+  <a name="show_samples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">show_samples</span><span class="function-signature">(self, samples, use_extended_selection=False)</span>:
+    
+    <a class="headerLink" href="#show_samples" title="fiftyone.operators.operations.Operations.show_samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Show specific samples, optionally using extended selection in the
+App.
+
+Args:
+    samples: a list of sample IDs to show
+    use_extended_selection (False): whether to use the extended
+        selection feature</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.show_selected_samples">
+    
+  </a>
+  <a name="show_selected_samples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">show_selected_samples</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#show_selected_samples" title="fiftyone.operators.operations.Operations.show_selected_samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Show the samples that are currently selected in the App.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.split_panel">
+    
+  </a>
+  <a name="split_panel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">split_panel</span><span class="function-signature">(self, name, layout)</span>:
+    
+    <a class="headerLink" href="#split_panel" title="fiftyone.operators.operations.Operations.split_panel">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Split the panel with the given layout in the App.
+
+Args:
+    name: the name of the panel to split
+    layout: the layout orientation ``("horizontal", "vertical")``</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.test_operator">
+    
+  </a>
+  <a name="test_operator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">test_operator</span><span class="function-signature">(self, operator, raw_params)</span>:
+    
+    <a class="headerLink" href="#test_operator" title="fiftyone.operators.operations.Operations.test_operator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Test the operator with given parameters.
+
+Args:
+    operator: the operator to test
+    raw_params: raw parameters for the operator</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.track_event">
+    
+  </a>
+  <a name="track_event">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">track_event</span><span class="function-signature">(self, event, properties=None)</span>:
+    
+    <a class="headerLink" href="#track_event" title="fiftyone.operators.operations.Operations.track_event">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Track an event in the App.
+
+Args:
+    event: the event to track
+    properties (None): the properties to track</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fiftyone.operators.operations.Operations.view_from_json">
+    
+  </a>
+  <a name="view_from_json">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">view_from_json</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#view_from_json" title="fiftyone.operators.operations.Operations.view_from_json">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Set the view in the App from JSON present in clipboard.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fiftyone.operators.operations.Operations._create_panel_params">
+    
+  </a>
+  <a name="_create_panel_params">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_create_panel_params</span><span class="function-signature">(self, panel_id, state=None, data=None)</span>:
+    
+    <a class="headerLink" href="#_create_panel_params" title="fiftyone.operators.operations.Operations._create_panel_params">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fiftyone.operators.operations.Operations._ctx">
+    
+  </a>
+  <a name="_ctx">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_ctx</span> =
+    
+    <a class="headerLink" href="#_ctx" title="fiftyone.operators.operations.Operations._ctx">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for fiftyone,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-11-17 20:16:35.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

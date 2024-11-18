@@ -1,0 +1,1857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fiftyone.core.fields</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          fiftyone <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code class="thisobject"><a href="fiftyone.core.fields.html" class="internal-link" title="This module">fields</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.ArrayField.html" class="internal-link" title="fiftyone.core.fields.ArrayField"><wbr></wbr>Array<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.BooleanField.html" class="internal-link" title="fiftyone.core.fields.BooleanField"><wbr></wbr>Boolean<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.ClassesField.html" class="internal-link" title="fiftyone.core.fields.ClassesField"><wbr></wbr>Classes<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.ColorField.html" class="internal-link" title="fiftyone.core.fields.ColorField"><wbr></wbr>Color<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.DateField.html" class="internal-link" title="fiftyone.core.fields.DateField"><wbr></wbr>Date<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.DateTimeField.html" class="internal-link" title="fiftyone.core.fields.DateTimeField"><wbr></wbr>Date<wbr></wbr>Time<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.DictField.html" class="internal-link" title="fiftyone.core.fields.DictField"><wbr></wbr>Dict<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.EmbeddedDocumentField.html" class="internal-link" title="fiftyone.core.fields.EmbeddedDocumentField"><wbr></wbr>Embedded<wbr></wbr>Document<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.EmbeddedDocumentListField.html" class="internal-link" title="fiftyone.core.fields.EmbeddedDocumentListField"><wbr></wbr>Embedded<wbr></wbr>Document<wbr></wbr>List<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.Field.html" class="internal-link" title="fiftyone.core.fields.Field"><wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.FloatField.html" class="internal-link" title="fiftyone.core.fields.FloatField"><wbr></wbr>Float<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.FrameNumberField.html" class="internal-link" title="fiftyone.core.fields.FrameNumberField"><wbr></wbr>Frame<wbr></wbr>Number<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.FrameSupportField.html" class="internal-link" title="fiftyone.core.fields.FrameSupportField"><wbr></wbr>Frame<wbr></wbr>Support<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.GeoLineStringField.html" class="internal-link" title="fiftyone.core.fields.GeoLineStringField"><wbr></wbr>Geo<wbr></wbr>Line<wbr></wbr>String<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.GeoMultiLineStringField.html" class="internal-link" title="fiftyone.core.fields.GeoMultiLineStringField"><wbr></wbr>Geo<wbr></wbr>Multi<wbr></wbr>Line<wbr></wbr>String<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.GeoMultiPointField.html" class="internal-link" title="fiftyone.core.fields.GeoMultiPointField"><wbr></wbr>Geo<wbr></wbr>Multi<wbr></wbr>Point<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.GeoMultiPolygonField.html" class="internal-link" title="fiftyone.core.fields.GeoMultiPolygonField"><wbr></wbr>Geo<wbr></wbr>Multi<wbr></wbr>Polygon<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.GeoPointField.html" class="internal-link" title="fiftyone.core.fields.GeoPointField"><wbr></wbr>Geo<wbr></wbr>Point<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.GeoPolygonField.html" class="internal-link" title="fiftyone.core.fields.GeoPolygonField"><wbr></wbr>Geo<wbr></wbr>Polygon<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.HeatmapRangeField.html" class="internal-link" title="fiftyone.core.fields.HeatmapRangeField"><wbr></wbr>Heatmap<wbr></wbr>Range<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.IntField.html" class="internal-link" title="fiftyone.core.fields.IntField"><wbr></wbr>Int<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.KeypointsField.html" class="internal-link" title="fiftyone.core.fields.KeypointsField"><wbr></wbr>Keypoints<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.ListField.html" class="internal-link" title="fiftyone.core.fields.ListField"><wbr></wbr>List<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.MaskTargetsField.html" class="internal-link" title="fiftyone.core.fields.MaskTargetsField"><wbr></wbr>Mask<wbr></wbr>Targets<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.ObjectIdField.html" class="internal-link" title="fiftyone.core.fields.ObjectIdField"><wbr></wbr>Object<wbr></wbr>Id<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.PolylinePointsField.html" class="internal-link" title="fiftyone.core.fields.PolylinePointsField"><wbr></wbr>Polyline<wbr></wbr>Points<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.ReferenceField.html" class="internal-link" title="fiftyone.core.fields.ReferenceField"><wbr></wbr>Reference<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.StringField.html" class="internal-link" title="fiftyone.core.fields.StringField"><wbr></wbr>String<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.UUIDField.html" class="internal-link" title="fiftyone.core.fields.UUIDField"><wbr></wbr>UUIDField</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.VectorField.html" class="internal-link" title="fiftyone.core.fields.VectorField"><wbr></wbr>Vector<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields._GeoField.html" class="internal-link" title="fiftyone.core.fields._GeoField">_<wbr></wbr>Geo<wbr></wbr>Field</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#filter_schema" class="internal-link" title="fiftyone.core.fields.filter_schema">filter<wbr></wbr>_schema</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#flatten_schema" class="internal-link" title="fiftyone.core.fields.flatten_schema">flatten<wbr></wbr>_schema</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_field_metadata" class="internal-link" title="fiftyone.core.fields.get_field_metadata">get<wbr></wbr>_field<wbr></wbr>_metadata</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#is_integer_mask_targets" class="internal-link" title="fiftyone.core.fields.is_integer_mask_targets">is<wbr></wbr>_integer<wbr></wbr>_mask<wbr></wbr>_targets</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#is_integer_target" class="internal-link" title="fiftyone.core.fields.is_integer_target">is<wbr></wbr>_integer<wbr></wbr>_target</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#is_rgb_mask_targets" class="internal-link" title="fiftyone.core.fields.is_rgb_mask_targets">is<wbr></wbr>_rgb<wbr></wbr>_mask<wbr></wbr>_targets</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#is_rgb_target" class="internal-link" title="fiftyone.core.fields.is_rgb_target">is<wbr></wbr>_rgb<wbr></wbr>_target</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#matches_constraints" class="internal-link" title="fiftyone.core.fields.matches_constraints">matches<wbr></wbr>_constraints</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#validate_constraints" class="internal-link" title="fiftyone.core.fields.validate_constraints">validate<wbr></wbr>_constraints</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#validate_field" class="internal-link" title="fiftyone.core.fields.validate_field">validate<wbr></wbr>_field</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_flatten" class="internal-link" title="fiftyone.core.fields._flatten">_flatten</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_make_prefix" class="internal-link" title="fiftyone.core.fields._make_prefix">_make<wbr></wbr>_prefix</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_ARRAY_FIELDS" class="internal-link" title="fiftyone.core.fields._ARRAY_FIELDS">_ARRAY<wbr></wbr>_FIELDS</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_PRIMITIVE_FIELDS" class="internal-link" title="fiftyone.core.fields._PRIMITIVE_FIELDS">_PRIMITIVE<wbr></wbr>_FIELDS</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_SUPPORTED_MODES" class="internal-link" title="fiftyone.core.fields._SUPPORTED_MODES">_SUPPORTED<wbr></wbr>_MODES</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="fiftyone.core.html" class="internal-link" title="The parent of this module">core</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.aggregations.html" class="internal-link" title="fiftyone.core.aggregations">aggregations</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.annotation.html" class="internal-link" title="fiftyone.core.annotation">annotation</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.brain.html" class="internal-link" title="fiftyone.core.brain">brain</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.cli.html" class="internal-link" title="fiftyone.core.cli">cli</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.clips.html" class="internal-link" title="fiftyone.core.clips">clips</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.collections.html" class="internal-link" title="fiftyone.core.collections">collections</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.config.html" class="internal-link" title="fiftyone.core.config">config</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.context.html" class="internal-link" title="fiftyone.core.context">context</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.dataset.html" class="internal-link" title="fiftyone.core.dataset">dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.document.html" class="internal-link" title="fiftyone.core.document">document</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.evaluation.html" class="internal-link" title="fiftyone.core.evaluation">evaluation</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.expressions.html" class="internal-link" title="fiftyone.core.expressions">expressions</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.html" class="internal-link" title="fiftyone.core.fields">fields</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.frame.html" class="internal-link" title="fiftyone.core.frame">frame</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.frame_utils.html" class="internal-link" title="fiftyone.core.frame_utils">frame<wbr></wbr>_utils</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.groups.html" class="internal-link" title="fiftyone.core.groups">groups</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.json.html" class="internal-link" title="fiftyone.core.json">json</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.labels.html" class="internal-link" title="fiftyone.core.labels">labels</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.logging.html" class="internal-link" title="fiftyone.core.logging">logging</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.media.html" class="internal-link" title="fiftyone.core.media">media</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.metadata.html" class="internal-link" title="fiftyone.core.metadata">metadata</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.models.html" class="internal-link" title="fiftyone.core.models">models</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.odm.html" class="internal-link" title="fiftyone.core.odm">odm</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.patches.html" class="internal-link" title="fiftyone.core.patches">patches</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.plots.html" class="internal-link" title="fiftyone.core.plots">plots</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.runs.html" class="internal-link" title="fiftyone.core.runs">runs</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.sample.html" class="internal-link" title="fiftyone.core.sample">sample</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.service.html" class="internal-link" title="fiftyone.core.service">service</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.session.html" class="internal-link" title="fiftyone.core.session">session</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.singletons.html" class="internal-link" title="fiftyone.core.singletons">singletons</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.stages.html" class="internal-link" title="fiftyone.core.stages">stages</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.state.html" class="internal-link" title="fiftyone.core.state">state</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.storage.html" class="internal-link" title="fiftyone.core.storage">storage</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.threed.html" class="internal-link" title="fiftyone.core.threed">threed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.uid.html" class="internal-link" title="fiftyone.core.uid">uid</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.html" class="internal-link" title="fiftyone.core.utils">utils</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.validation.html" class="internal-link" title="fiftyone.core.validation">validation</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.video.html" class="internal-link" title="fiftyone.core.video">video</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.view.html" class="internal-link" title="fiftyone.core.view">view</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+        
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">fiftyone</a></code><wbr></wbr>.<code><a href="fiftyone.core.html" class="internal-link" title="fiftyone.core">core</a></code><wbr></wbr>.<code><a href="fiftyone.core.fields.html" class="internal-link" title="fiftyone.core.fields">fields</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          module documentation
+        </div>
+
+        <div class="extrasDocstring">
+          
+          <p></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>Dataset sample fields.</p>
+<p>| Copyright 2017-2024, Voxel51, Inc. | `voxel51.com &lt;https://voxel51.com/&gt;`_ |</p>
+</div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id195">
+  
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.ArrayField.html" class="internal-link" title="fiftyone.core.fields.ArrayField"><wbr></wbr>Array<wbr></wbr>Field</a></code></td>
+    <td>An n-dimensional array field.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.BooleanField.html" class="internal-link" title="fiftyone.core.fields.BooleanField"><wbr></wbr>Boolean<wbr></wbr>Field</a></code></td>
+    <td>A boolean field.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.ClassesField.html" class="internal-link" title="fiftyone.core.fields.ClassesField"><wbr></wbr>Classes<wbr></wbr>Field</a></code></td>
+    <td>A :class:`ListField` that stores class label strings.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.ColorField.html" class="internal-link" title="fiftyone.core.fields.ColorField"><wbr></wbr>Color<wbr></wbr>Field</a></code></td>
+    <td>A string field that holds a hex color string like '#FF6D04'.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.DateField.html" class="internal-link" title="fiftyone.core.fields.DateField"><wbr></wbr>Date<wbr></wbr>Field</a></code></td>
+    <td>A date field.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.DateTimeField.html" class="internal-link" title="fiftyone.core.fields.DateTimeField"><wbr></wbr>Date<wbr></wbr>Time<wbr></wbr>Field</a></code></td>
+    <td>A datetime field.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.DictField.html" class="internal-link" title="fiftyone.core.fields.DictField"><wbr></wbr>Dict<wbr></wbr>Field</a></code></td>
+    <td>A dictionary field that wraps a standard Python dictionary.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.EmbeddedDocumentField.html" class="internal-link" title="fiftyone.core.fields.EmbeddedDocumentField"><wbr></wbr>Embedded<wbr></wbr>Document<wbr></wbr>Field</a></code></td>
+    <td>A field that stores instances of a given type of :class:`fiftyone.core.odm.BaseEmbeddedDocument` object.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.EmbeddedDocumentListField.html" class="internal-link" title="fiftyone.core.fields.EmbeddedDocumentListField"><wbr></wbr>Embedded<wbr></wbr>Document<wbr></wbr>List<wbr></wbr>Field</a></code></td>
+    <td>A field that stores a list of a given type of :class:`fiftyone.core.odm.BaseEmbeddedDocument` objects.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.Field.html" class="internal-link" title="fiftyone.core.fields.Field"><wbr></wbr>Field</a></code></td>
+    <td>A generic field.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.FloatField.html" class="internal-link" title="fiftyone.core.fields.FloatField"><wbr></wbr>Float<wbr></wbr>Field</a></code></td>
+    <td>A floating point number field.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.FrameNumberField.html" class="internal-link" title="fiftyone.core.fields.FrameNumberField"><wbr></wbr>Frame<wbr></wbr>Number<wbr></wbr>Field</a></code></td>
+    <td>A video frame number field.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.FrameSupportField.html" class="internal-link" title="fiftyone.core.fields.FrameSupportField"><wbr></wbr>Frame<wbr></wbr>Support<wbr></wbr>Field</a></code></td>
+    <td>A ``[first, last]`` frame support in a video.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.GeoLineStringField.html" class="internal-link" title="fiftyone.core.fields.GeoLineStringField"><wbr></wbr>Geo<wbr></wbr>Line<wbr></wbr>String<wbr></wbr>Field</a></code></td>
+    <td>A GeoJSON field storing a line of longitude and latitude coordinates.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.GeoMultiLineStringField.html" class="internal-link" title="fiftyone.core.fields.GeoMultiLineStringField"><wbr></wbr>Geo<wbr></wbr>Multi<wbr></wbr>Line<wbr></wbr>String<wbr></wbr>Field</a></code></td>
+    <td>A GeoJSON field storing a list of lines.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.GeoMultiPointField.html" class="internal-link" title="fiftyone.core.fields.GeoMultiPointField"><wbr></wbr>Geo<wbr></wbr>Multi<wbr></wbr>Point<wbr></wbr>Field</a></code></td>
+    <td>A GeoJSON field storing a list of points.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.GeoMultiPolygonField.html" class="internal-link" title="fiftyone.core.fields.GeoMultiPolygonField"><wbr></wbr>Geo<wbr></wbr>Multi<wbr></wbr>Polygon<wbr></wbr>Field</a></code></td>
+    <td>A GeoJSON field storing a list of polygons.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.GeoPointField.html" class="internal-link" title="fiftyone.core.fields.GeoPointField"><wbr></wbr>Geo<wbr></wbr>Point<wbr></wbr>Field</a></code></td>
+    <td>A GeoJSON field storing a longitude and latitude coordinate point.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.GeoPolygonField.html" class="internal-link" title="fiftyone.core.fields.GeoPolygonField"><wbr></wbr>Geo<wbr></wbr>Polygon<wbr></wbr>Field</a></code></td>
+    <td>A GeoJSON field storing a polygon of longitude and latitude coordinates.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.HeatmapRangeField.html" class="internal-link" title="fiftyone.core.fields.HeatmapRangeField"><wbr></wbr>Heatmap<wbr></wbr>Range<wbr></wbr>Field</a></code></td>
+    <td>A ``[min, max]`` range of the values in a :class:`fiftyone.core.labels.Heatmap`.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.IntField.html" class="internal-link" title="fiftyone.core.fields.IntField"><wbr></wbr>Int<wbr></wbr>Field</a></code></td>
+    <td>A 32 bit integer field.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.KeypointsField.html" class="internal-link" title="fiftyone.core.fields.KeypointsField"><wbr></wbr>Keypoints<wbr></wbr>Field</a></code></td>
+    <td>A list of ``(x, y)`` coordinate pairs.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.ListField.html" class="internal-link" title="fiftyone.core.fields.ListField"><wbr></wbr>List<wbr></wbr>Field</a></code></td>
+    <td>A list field that wraps a standard :class:`Field`, allowing multiple instances of the field to be stored as a list in the database.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.MaskTargetsField.html" class="internal-link" title="fiftyone.core.fields.MaskTargetsField"><wbr></wbr>Mask<wbr></wbr>Targets<wbr></wbr>Field</a></code></td>
+    <td>A :class:`DictField` that stores mapping between integer keys or RGB string hex keys and string targets.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.ObjectIdField.html" class="internal-link" title="fiftyone.core.fields.ObjectIdField"><wbr></wbr>Object<wbr></wbr>Id<wbr></wbr>Field</a></code></td>
+    <td>An Object ID field.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.PolylinePointsField.html" class="internal-link" title="fiftyone.core.fields.PolylinePointsField"><wbr></wbr>Polyline<wbr></wbr>Points<wbr></wbr>Field</a></code></td>
+    <td>A list of lists of ``(x, y)`` coordinate pairs.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.ReferenceField.html" class="internal-link" title="fiftyone.core.fields.ReferenceField"><wbr></wbr>Reference<wbr></wbr>Field</a></code></td>
+    <td>A reference field.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.StringField.html" class="internal-link" title="fiftyone.core.fields.StringField"><wbr></wbr>String<wbr></wbr>Field</a></code></td>
+    <td>A unicode string field.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.UUIDField.html" class="internal-link" title="fiftyone.core.fields.UUIDField"><wbr></wbr>UUIDField</a></code></td>
+    <td>A UUID field.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields.VectorField.html" class="internal-link" title="fiftyone.core.fields.VectorField"><wbr></wbr>Vector<wbr></wbr>Field</a></code></td>
+    <td>A one-dimensional array field.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#filter_schema" class="internal-link" title="fiftyone.core.fields.filter_schema">filter<wbr></wbr>_schema</a></code></td>
+    <td>Filters the schema according to the given constraints.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#flatten_schema" class="internal-link" title="fiftyone.core.fields.flatten_schema">flatten<wbr></wbr>_schema</a></code></td>
+    <td>Returns a flat version of the given schema where all embedded document fields are included as top-level keys.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#get_field_metadata" class="internal-link" title="fiftyone.core.fields.get_field_metadata">get<wbr></wbr>_field<wbr></wbr>_metadata</a></code></td>
+    <td>Returns a dict of editable metadata for the given field.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#is_integer_mask_targets" class="internal-link" title="fiftyone.core.fields.is_integer_mask_targets">is<wbr></wbr>_integer<wbr></wbr>_mask<wbr></wbr>_targets</a></code></td>
+    <td>Determines whether the provided mask targets use integer keys.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#is_integer_target" class="internal-link" title="fiftyone.core.fields.is_integer_target">is<wbr></wbr>_integer<wbr></wbr>_target</a></code></td>
+    <td>Determines whether the provided target is an integer.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#is_rgb_mask_targets" class="internal-link" title="fiftyone.core.fields.is_rgb_mask_targets">is<wbr></wbr>_rgb<wbr></wbr>_mask<wbr></wbr>_targets</a></code></td>
+    <td>Determines whether the provided mask targets use RGB hex string keys.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#is_rgb_target" class="internal-link" title="fiftyone.core.fields.is_rgb_target">is<wbr></wbr>_rgb<wbr></wbr>_target</a></code></td>
+    <td>Determines whether the provided target is an RGB string.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#matches_constraints" class="internal-link" title="fiftyone.core.fields.matches_constraints">matches<wbr></wbr>_constraints</a></code></td>
+    <td>Determines whether the field matches the given constraints.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#validate_constraints" class="internal-link" title="fiftyone.core.fields.validate_constraints">validate<wbr></wbr>_constraints</a></code></td>
+    <td>Validates the given field constraints.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#validate_field" class="internal-link" title="fiftyone.core.fields.validate_field">validate<wbr></wbr>_field</a></code></td>
+    <td>Validates that the field matches the given constraints.</td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.fields._GeoField.html" class="internal-link" title="fiftyone.core.fields._GeoField">_<wbr></wbr>Geo<wbr></wbr>Field</a></code></td>
+    <td>Base class for GeoJSON fields.</td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_flatten" class="internal-link" title="fiftyone.core.fields._flatten">_flatten</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_make_prefix" class="internal-link" title="fiftyone.core.fields._make_prefix">_make<wbr></wbr>_prefix</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant private">
+    
+    <td>Constant</td>
+    <td><code><a href="#_ARRAY_FIELDS" class="internal-link" title="fiftyone.core.fields._ARRAY_FIELDS">_ARRAY<wbr></wbr>_FIELDS</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant private">
+    
+    <td>Constant</td>
+    <td><code><a href="#_PRIMITIVE_FIELDS" class="internal-link" title="fiftyone.core.fields._PRIMITIVE_FIELDS">_PRIMITIVE<wbr></wbr>_FIELDS</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant private">
+    
+    <td>Constant</td>
+    <td><code><a href="#_SUPPORTED_MODES" class="internal-link" title="fiftyone.core.fields._SUPPORTED_MODES">_SUPPORTED<wbr></wbr>_MODES</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basefunction">
+  
+  
+  <a name="fiftyone.core.fields.filter_schema">
+    
+  </a>
+  <a name="filter_schema">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">filter_schema</span><span class="function-signature">(schema, ftype=None, embedded_doc_type=None, read_only=None, info_keys=None, created_after=None, include_private=False, flat=False, mode=None)</span>:
+    
+    <a class="headerLink" href="#filter_schema" title="fiftyone.core.fields.filter_schema">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Filters the schema according to the given constraints.
+
+Args:
+    schema: a dict mapping field names to :class:`Field` instances
+    ftype (None): an optional field type or iterable of types to which
+        to restrict the returned schema. Must be subclass(es) of
+        :class:`Field`
+    embedded_doc_type (None): an optional embedded document type or
+        iterable of types to which to restrict the returned schema.
+        Must be subclass(es) of
+        :class:`fiftyone.core.odm.BaseEmbeddedDocument`
+    read_only (None): whether to restrict to (True) or exclude (False)
+        read-only fields. By default, all fields are included
+    info_keys (None): an optional key or list of keys that must be in the
+        field's ``info`` dict
+    created_after (None): an optional ``datetime`` specifying a minimum
+        creation date
+    include_private (False): whether to include fields that start with
+        ``_`` in the returned schema
+    flat (False): whether to return a flattened schema where all
+        embedded document fields are included as top-level keys
+    mode (None): whether to apply the above constraints before and/or after
+        flattening the schema. Only applicable when ``flat`` is True.
+        Supported values are ``("before", "after", "both")``. The default
+        is ``"after"``
+
+Returns:
+    a dict mapping field names to :class:`Field` instances</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.fields.flatten_schema">
+    
+  </a>
+  <a name="flatten_schema">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">flatten_schema</span><span class="function-signature">(schema, ftype=None, embedded_doc_type=None, read_only=None, info_keys=None, created_after=None, include_private=False)</span>:
+    
+    <a class="headerLink" href="#flatten_schema" title="fiftyone.core.fields.flatten_schema">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Returns a flat version of the given schema where all embedded document
+fields are included as top-level keys.
+
+Args:
+    schema: a dict mapping field names to :class:`Field` instances
+    ftype (None): an optional field type or iterable of types to which to
+        restrict the returned schema. Must be subclass(es) of
+        :class:`Field`
+    embedded_doc_type (None): an optional embedded document type or
+        iterable of types to which to restrict the returned schema. Must be
+        subclass(es) of :class:`fiftyone.core.odm.BaseEmbeddedDocument`
+    read_only (None): whether to restrict to (True) or exclude (False)
+        read-only fields. By default, all fields are included
+    info_keys (None): an optional key or list of keys that must be in the
+        field's ``info`` dict
+    created_after (None): an optional ``datetime`` specifying a minimum
+        creation date
+    include_private (False): whether to include fields that start with
+        ``_`` in the returned schema
+
+Returns:
+    a dict mapping flattened paths to :class:`Field` instances</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.fields.get_field_metadata">
+    
+  </a>
+  <a name="get_field_metadata">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_field_metadata</span><span class="function-signature">(field)</span>:
+    
+    <a class="headerLink" href="#get_field_metadata" title="fiftyone.core.fields.get_field_metadata">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Returns a dict of editable metadata for the given field.
+
+Args:
+    field: a :class:`Field`
+
+Returns:
+    a dict of field metadata</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.fields.is_integer_mask_targets">
+    
+  </a>
+  <a name="is_integer_mask_targets">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">is_integer_mask_targets</span><span class="function-signature">(mask_targets)</span>:
+    
+    <a class="headerLink" href="#is_integer_mask_targets" title="fiftyone.core.fields.is_integer_mask_targets">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Determines whether the provided mask targets use integer keys.
+
+Args:
+    mask_targets: a mask targets dict
+
+Returns:
+    True/False</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.fields.is_integer_target">
+    
+  </a>
+  <a name="is_integer_target">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">is_integer_target</span><span class="function-signature">(target)</span>:
+    
+    <a class="headerLink" href="#is_integer_target" title="fiftyone.core.fields.is_integer_target">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Determines whether the provided target is an integer.
+
+Args:
+    target: an integer or RGB hex string
+
+Returns:
+    True/False</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.fields.is_rgb_mask_targets">
+    
+  </a>
+  <a name="is_rgb_mask_targets">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">is_rgb_mask_targets</span><span class="function-signature">(mask_targets)</span>:
+    
+    <a class="headerLink" href="#is_rgb_mask_targets" title="fiftyone.core.fields.is_rgb_mask_targets">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Determines whether the provided mask targets use RGB hex string keys.
+
+Args:
+    mask_targets: a mask targets dict
+
+Returns:
+    True/False</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.fields.is_rgb_target">
+    
+  </a>
+  <a name="is_rgb_target">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">is_rgb_target</span><span class="function-signature">(target)</span>:
+    
+    <a class="headerLink" href="#is_rgb_target" title="fiftyone.core.fields.is_rgb_target">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Determines whether the provided target is an RGB string.
+
+Args:
+    target: an integer or RGB hex string
+
+Returns:
+    True/False</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.fields.matches_constraints">
+    
+  </a>
+  <a name="matches_constraints">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">matches_constraints</span><span class="function-signature">(field, ftype=None, embedded_doc_type=None, read_only=None, info_keys=None, created_after=None)</span>:
+    
+    <a class="headerLink" href="#matches_constraints" title="fiftyone.core.fields.matches_constraints">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Determines whether the field matches the given constraints.
+
+Args:
+    field: a :class:`Field`
+    ftype (None): an optional field type or iterable of types to enforce.
+        Must be subclass(es) of :class:`Field`
+    embedded_doc_type (None): an optional embedded document type or
+        iterable of types to enforce. Must be subclass(es) of
+        :class:`fiftyone.core.odm.BaseEmbeddedDocument`
+    read_only (None): whether to optionally enforce that the field is
+        read-only (True) or not read-only (False)
+    info_keys (None): an optional key or list of keys that must be in the
+        field's ``info`` dict
+    created_after (None): an optional ``datetime`` specifying a minimum
+        creation date
+
+Returns:
+    True/False</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.fields.validate_constraints">
+    
+  </a>
+  <a name="validate_constraints">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">validate_constraints</span><span class="function-signature">(ftype=None, embedded_doc_type=None, read_only=None, info_keys=None, created_after=None)</span>:
+    
+    <a class="headerLink" href="#validate_constraints" title="fiftyone.core.fields.validate_constraints">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Validates the given field constraints.
+
+Args:
+    ftype (None): an optional field type or iterable of types to enforce.
+        Must be subclass(es) of :class:`Field`
+    embedded_doc_type (None): an optional embedded document type or
+        iterable of types to enforce. Must be subclass(es) of
+        :class:`fiftyone.core.odm.BaseEmbeddedDocument`
+    read_only (None): whether to optionally enforce that the field is
+        read-only (True) or not read-only (False)
+    info_keys (None): an optional key or list of keys that must be in the
+        field's ``info`` dict
+    created_after (None): an optional ``datetime`` specifying a minimum
+        creation date
+
+Returns:
+    True/False whether any constraints were provided
+
+Raises:
+    ValueError: if the constraints are not valid</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.fields.validate_field">
+    
+  </a>
+  <a name="validate_field">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">validate_field</span><span class="function-signature">(field, path=None, ftype=None, embedded_doc_type=None, read_only=None)</span>:
+    
+    <a class="headerLink" href="#validate_field" title="fiftyone.core.fields.validate_field">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Validates that the field matches the given constraints.
+
+Args:
+    field: a :class:`Field`
+    path (None): the field or ``embedded.field.name``. Only used to
+        generate more informative error messages
+    ftype (None): an optional field type or iterable of types to enforce.
+        Must be subclass(es) of :class:`Field`
+    embedded_doc_type (None): an optional embedded document type or
+        iterable of types to enforce. Must be subclass(es) of
+        :class:`fiftyone.core.odm.BaseEmbeddedDocument`
+    read_only (None): whether to optionally enforce that the field is
+        read-only (True) or not read-only (False)
+
+Raises:
+    ValueError: if the constraints are not valid</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.fields._flatten">
+    
+  </a>
+  <a name="_flatten">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_flatten</span><span class="function-signature">(schema, prefix, name, field, ftype, embedded_doc_type, read_only, info_keys, created_after, include_private)</span>:
+    
+    <a class="headerLink" href="#_flatten" title="fiftyone.core.fields._flatten">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.fields._make_prefix">
+    
+  </a>
+  <a name="_make_prefix">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_make_prefix</span><span class="function-signature">(path)</span>:
+    
+    <a class="headerLink" href="#_make_prefix" title="fiftyone.core.fields._make_prefix">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseconstant private">
+  
+  
+  <a name="fiftyone.core.fields._ARRAY_FIELDS">
+    
+  </a>
+  <a name="_ARRAY_FIELDS">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_ARRAY_FIELDS</span> =
+    
+    <a class="headerLink" href="#_ARRAY_FIELDS" title="fiftyone.core.fields._ARRAY_FIELDS">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>(<wbr></wbr><a href="fiftyone.core.fields.VectorField.html" class="internal-link" title="fiftyone.core.fields.VectorField">VectorField</a>, <wbr></wbr><a href="fiftyone.core.fields.ArrayField.html" class="internal-link" title="fiftyone.core.fields.ArrayField">ArrayField</a>)</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant private">
+  
+  
+  <a name="fiftyone.core.fields._PRIMITIVE_FIELDS">
+    
+  </a>
+  <a name="_PRIMITIVE_FIELDS">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_PRIMITIVE_FIELDS</span> =
+    
+    <a class="headerLink" href="#_PRIMITIVE_FIELDS" title="fiftyone.core.fields._PRIMITIVE_FIELDS">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>(<wbr></wbr><a href="fiftyone.core.fields.BooleanField.html" class="internal-link" title="fiftyone.core.fields.BooleanField">BooleanField</a>, <wbr></wbr><a href="fiftyone.core.fields.DateTimeField.html" class="internal-link" title="fiftyone.core.fields.DateTimeField">DateTimeField</a>, <wbr></wbr><a href="fiftyone.core.fields.FloatField.html" class="internal-link" title="fiftyone.core.fields.FloatField">FloatField</a>, <wbr></wbr><a href="fiftyone.core.fields.IntField.html" class="internal-link" title="fiftyone.core.fields.IntField">IntField</a>, <wbr></wbr><a href="fiftyone.core.fields.ObjectIdField.html" class="internal-link" title="fiftyone.core.fields.ObjectIdField">ObjectIdField</a>, <wbr></wbr><a href="fiftyone.core.fields.StringField.html" class="internal-link" title="fiftyone.core.fields.StringField">StringField</a>)</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant private">
+  
+  
+  <a name="fiftyone.core.fields._SUPPORTED_MODES">
+    
+  </a>
+  <a name="_SUPPORTED_MODES">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_SUPPORTED_MODES</span>: <code>tuple[<wbr></wbr>str, <wbr></wbr><span class="rst-variable-ellipsis">...</span>]</code> =
+    
+    <a class="headerLink" href="#_SUPPORTED_MODES" title="fiftyone.core.fields._SUPPORTED_MODES">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">before</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">after</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">both</span><span class="rst-variable-quote">'</span>)</code></pre></td></tr></table>
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for fiftyone,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-11-17 20:16:35.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

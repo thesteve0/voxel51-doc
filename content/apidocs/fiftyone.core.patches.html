@@ -1,0 +1,1318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fiftyone.core.patches</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          fiftyone <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code class="thisobject"><a href="fiftyone.core.patches.html" class="internal-link" title="This module">patches</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.patches.EvaluationPatchesView.html" class="internal-link" title="fiftyone.core.patches.EvaluationPatchesView"><wbr></wbr>Evaluation<wbr></wbr>Patches<wbr></wbr>View</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.patches.EvaluationPatchView.html" class="internal-link" title="fiftyone.core.patches.EvaluationPatchView"><wbr></wbr>Evaluation<wbr></wbr>Patch<wbr></wbr>View</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.patches.PatchesView.html" class="internal-link" title="fiftyone.core.patches.PatchesView"><wbr></wbr>Patches<wbr></wbr>View</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.patches.PatchView.html" class="internal-link" title="fiftyone.core.patches.PatchView"><wbr></wbr>Patch<wbr></wbr>View</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.patches._PatchesView.html" class="internal-link" title="fiftyone.core.patches._PatchesView">_<wbr></wbr>Patches<wbr></wbr>View</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.patches._PatchView.html" class="internal-link" title="fiftyone.core.patches._PatchView">_<wbr></wbr>Patch<wbr></wbr>View</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#make_evaluation_patches_dataset" class="internal-link" title="fiftyone.core.patches.make_evaluation_patches_dataset">make<wbr></wbr>_evaluation<wbr></wbr>_patches<wbr></wbr>_dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#make_patches_dataset" class="internal-link" title="fiftyone.core.patches.make_patches_dataset">make<wbr></wbr>_patches<wbr></wbr>_dataset</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_add_samples" class="internal-link" title="fiftyone.core.patches._add_samples">_add<wbr></wbr>_samples</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_get_patches_field" class="internal-link" title="fiftyone.core.patches._get_patches_field">_get<wbr></wbr>_patches<wbr></wbr>_field</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_make_eval_view" class="internal-link" title="fiftyone.core.patches._make_eval_view">_make<wbr></wbr>_eval<wbr></wbr>_view</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_make_patches_view" class="internal-link" title="fiftyone.core.patches._make_patches_view">_make<wbr></wbr>_patches<wbr></wbr>_view</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_make_pretty_summary" class="internal-link" title="fiftyone.core.patches._make_pretty_summary">_make<wbr></wbr>_pretty<wbr></wbr>_summary</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_merge_matched_labels" class="internal-link" title="fiftyone.core.patches._merge_matched_labels">_merge<wbr></wbr>_matched<wbr></wbr>_labels</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_upgrade_labels" class="internal-link" title="fiftyone.core.patches._upgrade_labels">_upgrade<wbr></wbr>_labels</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_write_samples" class="internal-link" title="fiftyone.core.patches._write_samples">_write<wbr></wbr>_samples</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_NO_MATCH_ID" class="internal-link" title="fiftyone.core.patches._NO_MATCH_ID">_NO<wbr></wbr>_MATCH<wbr></wbr>_ID</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_PATCHES_TYPES" class="internal-link" title="fiftyone.core.patches._PATCHES_TYPES">_PATCHES<wbr></wbr>_TYPES</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="fiftyone.core.html" class="internal-link" title="The parent of this module">core</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.aggregations.html" class="internal-link" title="fiftyone.core.aggregations">aggregations</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.annotation.html" class="internal-link" title="fiftyone.core.annotation">annotation</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.brain.html" class="internal-link" title="fiftyone.core.brain">brain</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.cli.html" class="internal-link" title="fiftyone.core.cli">cli</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.clips.html" class="internal-link" title="fiftyone.core.clips">clips</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.collections.html" class="internal-link" title="fiftyone.core.collections">collections</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.config.html" class="internal-link" title="fiftyone.core.config">config</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.context.html" class="internal-link" title="fiftyone.core.context">context</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.dataset.html" class="internal-link" title="fiftyone.core.dataset">dataset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.document.html" class="internal-link" title="fiftyone.core.document">document</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.evaluation.html" class="internal-link" title="fiftyone.core.evaluation">evaluation</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.expressions.html" class="internal-link" title="fiftyone.core.expressions">expressions</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.fields.html" class="internal-link" title="fiftyone.core.fields">fields</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.frame.html" class="internal-link" title="fiftyone.core.frame">frame</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.frame_utils.html" class="internal-link" title="fiftyone.core.frame_utils">frame<wbr></wbr>_utils</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.groups.html" class="internal-link" title="fiftyone.core.groups">groups</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.json.html" class="internal-link" title="fiftyone.core.json">json</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.labels.html" class="internal-link" title="fiftyone.core.labels">labels</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.logging.html" class="internal-link" title="fiftyone.core.logging">logging</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.media.html" class="internal-link" title="fiftyone.core.media">media</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.metadata.html" class="internal-link" title="fiftyone.core.metadata">metadata</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.models.html" class="internal-link" title="fiftyone.core.models">models</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.odm.html" class="internal-link" title="fiftyone.core.odm">odm</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.patches.html" class="internal-link" title="fiftyone.core.patches">patches</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.plots.html" class="internal-link" title="fiftyone.core.plots">plots</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.runs.html" class="internal-link" title="fiftyone.core.runs">runs</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.sample.html" class="internal-link" title="fiftyone.core.sample">sample</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.service.html" class="internal-link" title="fiftyone.core.service">service</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.session.html" class="internal-link" title="fiftyone.core.session">session</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.singletons.html" class="internal-link" title="fiftyone.core.singletons">singletons</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.stages.html" class="internal-link" title="fiftyone.core.stages">stages</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.state.html" class="internal-link" title="fiftyone.core.state">state</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.storage.html" class="internal-link" title="fiftyone.core.storage">storage</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.threed.html" class="internal-link" title="fiftyone.core.threed">threed</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.uid.html" class="internal-link" title="fiftyone.core.uid">uid</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.utils.html" class="internal-link" title="fiftyone.core.utils">utils</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.validation.html" class="internal-link" title="fiftyone.core.validation">validation</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.video.html" class="internal-link" title="fiftyone.core.video">video</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fiftyone.core.view.html" class="internal-link" title="fiftyone.core.view">view</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+        
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">fiftyone</a></code><wbr></wbr>.<code><a href="fiftyone.core.html" class="internal-link" title="fiftyone.core">core</a></code><wbr></wbr>.<code><a href="fiftyone.core.patches.html" class="internal-link" title="fiftyone.core.patches">patches</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          module documentation
+        </div>
+
+        <div class="extrasDocstring">
+          
+          <p></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>Patches views.</p>
+<p>| Copyright 2017-2024, Voxel51, Inc. | `voxel51.com &lt;https://voxel51.com/&gt;`_ |</p>
+</div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id472">
+  
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.patches.EvaluationPatchesView.html" class="internal-link" title="fiftyone.core.patches.EvaluationPatchesView"><wbr></wbr>Evaluation<wbr></wbr>Patches<wbr></wbr>View</a></code></td>
+    <td>A :class:`fiftyone.core.view.DatasetView` containing evaluation patches from a :class:`fiftyone.core.dataset.Dataset`.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.patches.EvaluationPatchView.html" class="internal-link" title="fiftyone.core.patches.EvaluationPatchView"><wbr></wbr>Evaluation<wbr></wbr>Patch<wbr></wbr>View</a></code></td>
+    <td>A patch in an :class:`EvaluationPatchesView`.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.patches.PatchesView.html" class="internal-link" title="fiftyone.core.patches.PatchesView"><wbr></wbr>Patches<wbr></wbr>View</a></code></td>
+    <td>A :class:`fiftyone.core.view.DatasetView` of patches from a :class:`fiftyone.core.dataset.Dataset`.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.patches.PatchView.html" class="internal-link" title="fiftyone.core.patches.PatchView"><wbr></wbr>Patch<wbr></wbr>View</a></code></td>
+    <td>A patch in a :class:`PatchesView`.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#make_evaluation_patches_dataset" class="internal-link" title="fiftyone.core.patches.make_evaluation_patches_dataset">make<wbr></wbr>_evaluation<wbr></wbr>_patches<wbr></wbr>_dataset</a></code></td>
+    <td>Creates a dataset based on the results of the evaluation with the given key that contains one sample for each true positive, false positive, and false negative example in the input collection, respectively.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#make_patches_dataset" class="internal-link" title="fiftyone.core.patches.make_patches_dataset">make<wbr></wbr>_patches<wbr></wbr>_dataset</a></code></td>
+    <td>Creates a dataset that contains one sample per object patch in the specified field of the collection.</td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.patches._PatchesView.html" class="internal-link" title="fiftyone.core.patches._PatchesView">_<wbr></wbr>Patches<wbr></wbr>View</a></code></td>
+    <td><span class="undocumented">No class docstring; 0/10 property, 0/6 instance variable, 0/1 class variable, 4/19 methods documented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><code><a href="fiftyone.core.patches._PatchView.html" class="internal-link" title="fiftyone.core.patches._PatchView">_<wbr></wbr>Patch<wbr></wbr>View</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_add_samples" class="internal-link" title="fiftyone.core.patches._add_samples">_add<wbr></wbr>_samples</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_get_patches_field" class="internal-link" title="fiftyone.core.patches._get_patches_field">_get<wbr></wbr>_patches<wbr></wbr>_field</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_make_eval_view" class="internal-link" title="fiftyone.core.patches._make_eval_view">_make<wbr></wbr>_eval<wbr></wbr>_view</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_make_patches_view" class="internal-link" title="fiftyone.core.patches._make_patches_view">_make<wbr></wbr>_patches<wbr></wbr>_view</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_make_pretty_summary" class="internal-link" title="fiftyone.core.patches._make_pretty_summary">_make<wbr></wbr>_pretty<wbr></wbr>_summary</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_merge_matched_labels" class="internal-link" title="fiftyone.core.patches._merge_matched_labels">_merge<wbr></wbr>_matched<wbr></wbr>_labels</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_upgrade_labels" class="internal-link" title="fiftyone.core.patches._upgrade_labels">_upgrade<wbr></wbr>_labels</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><code><a href="#_write_samples" class="internal-link" title="fiftyone.core.patches._write_samples">_write<wbr></wbr>_samples</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant private">
+    
+    <td>Constant</td>
+    <td><code><a href="#_NO_MATCH_ID" class="internal-link" title="fiftyone.core.patches._NO_MATCH_ID">_NO<wbr></wbr>_MATCH<wbr></wbr>_ID</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant private">
+    
+    <td>Constant</td>
+    <td><code><a href="#_PATCHES_TYPES" class="internal-link" title="fiftyone.core.patches._PATCHES_TYPES">_PATCHES<wbr></wbr>_TYPES</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basefunction">
+  
+  
+  <a name="fiftyone.core.patches.make_evaluation_patches_dataset">
+    
+  </a>
+  <a name="make_evaluation_patches_dataset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">make_evaluation_patches_dataset</span><span class="function-signature">(sample_collection, eval_key, other_fields=None, name=None, persistent=False, _generated=False)</span>:
+    
+    <a class="headerLink" href="#make_evaluation_patches_dataset" title="fiftyone.core.patches.make_evaluation_patches_dataset">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Creates a dataset based on the results of the evaluation with the given
+key that contains one sample for each true positive, false positive, and
+false negative example in the input collection, respectively.
+
+True positive examples will result in samples with both their ground truth
+and predicted fields populated, while false positive/negative examples will
+only have one of their corresponding predicted/ground truth fields
+populated, respectively.
+
+If multiple predictions are matched to a ground truth object (e.g., if the
+evaluation protocol includes a crowd attribute), then all matched
+predictions will be stored in the single sample along with the ground truth
+object.
+
+The returned dataset will also have top-level ``type`` and ``iou`` fields
+populated based on the evaluation results for that example, as well as a
+``sample_id`` field recording the sample ID of the example, and a ``crowd``
+field if the evaluation protocol defines a crowd attribute.
+
+.. note::
+
+    The returned dataset will contain patches for the contents of the input
+    collection, which may differ from the view on which the ``eval_key``
+    evaluation was performed. This may exclude some labels that were
+    evaluated and/or include labels that were not evaluated.
+
+    If you would like to see patches for the exact view on which an
+    evaluation was performed, first call
+    :meth:`load_evaluation_view() &lt;fiftyone.core.collections.SampleCollection.load_evaluation_view&gt;`
+    to load the view and then convert to patches.
+
+Args:
+    sample_collection: a
+        :class:`fiftyone.core.collections.SampleCollection`
+    eval_key: an evaluation key that corresponds to the evaluation of
+        ground truth/predicted fields that are of type
+        :class:`fiftyone.core.labels.Detections`,
+        :class:`fiftyone.core.labels.Polylines`, or
+        :class:`fiftyone.core.labels.Keypoints`
+    other_fields (None): controls whether fields other than the
+        ground truth/predicted fields and the default sample fields are
+        included. Can be any of the following:
+
+        -   a field or list of fields to include
+        -   ``True`` to include all other fields
+        -   ``None``/``False`` to include no other fields
+    name (None): a name for the dataset
+    persistent (False): whether the dataset should persist in the database
+        after the session terminates
+
+Returns:
+    a :class:`fiftyone.core.dataset.Dataset`</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="fiftyone.core.patches.make_patches_dataset">
+    
+  </a>
+  <a name="make_patches_dataset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">make_patches_dataset</span><span class="function-signature">(sample_collection, field, other_fields=None, keep_label_lists=False, name=None, persistent=False, _generated=False)</span>:
+    
+    <a class="headerLink" href="#make_patches_dataset" title="fiftyone.core.patches.make_patches_dataset">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Creates a dataset that contains one sample per object patch in the
+specified field of the collection.
+
+A ``sample_id`` field will be added that records the sample ID from which
+each patch was taken.
+
+By default, fields other than ``field`` and the default sample fields will
+not be included in the returned dataset.
+
+Args:
+    sample_collection: a
+        :class:`fiftyone.core.collections.SampleCollection`
+    field: the patches field, which must be of type
+        :class:`fiftyone.core.labels.Detections`,
+        :class:`fiftyone.core.labels.Polylines`, or
+        :class:`fiftyone.core.labels.Keypoints`
+    other_fields (None): controls whether fields other than ``field`` and
+        the default sample fields are included. Can be any of the
+        following:
+
+        -   a field or list of fields to include
+        -   ``True`` to include all other fields
+        -   ``None``/``False`` to include no other fields
+    keep_label_lists (False): whether to store the patches in label list
+        fields of the same type as the input collection rather than using
+        their single label variants
+    name (None): a name for the dataset
+    persistent (False): whether the dataset should persist in the database
+        after the session terminates
+
+Returns:
+    a :class:`fiftyone.core.dataset.Dataset`</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.patches._add_samples">
+    
+  </a>
+  <a name="_add_samples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_add_samples</span><span class="function-signature">(dataset, src_collection)</span>:
+    
+    <a class="headerLink" href="#_add_samples" title="fiftyone.core.patches._add_samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.patches._get_patches_field">
+    
+  </a>
+  <a name="_get_patches_field">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_get_patches_field</span><span class="function-signature">(sample_collection, field_name, keep_label_lists)</span>:
+    
+    <a class="headerLink" href="#_get_patches_field" title="fiftyone.core.patches._get_patches_field">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.patches._make_eval_view">
+    
+  </a>
+  <a name="_make_eval_view">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_make_eval_view</span><span class="function-signature">(sample_collection, eval_key, field, other_fields=None, skip_matched=False, crowd_attr=None)</span>:
+    
+    <a class="headerLink" href="#_make_eval_view" title="fiftyone.core.patches._make_eval_view">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.patches._make_patches_view">
+    
+  </a>
+  <a name="_make_patches_view">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_make_patches_view</span><span class="function-signature">(sample_collection, field, other_fields=None, keep_label_lists=False)</span>:
+    
+    <a class="headerLink" href="#_make_patches_view" title="fiftyone.core.patches._make_patches_view">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.patches._make_pretty_summary">
+    
+  </a>
+  <a name="_make_pretty_summary">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_make_pretty_summary</span><span class="function-signature">(dataset, is_frame_patches=False)</span>:
+    
+    <a class="headerLink" href="#_make_pretty_summary" title="fiftyone.core.patches._make_pretty_summary">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.patches._merge_matched_labels">
+    
+  </a>
+  <a name="_merge_matched_labels">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_merge_matched_labels</span><span class="function-signature">(dataset, src_collection, eval_key, field)</span>:
+    
+    <a class="headerLink" href="#_merge_matched_labels" title="fiftyone.core.patches._merge_matched_labels">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.patches._upgrade_labels">
+    
+  </a>
+  <a name="_upgrade_labels">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_upgrade_labels</span><span class="function-signature">(view, field)</span>:
+    
+    <a class="headerLink" href="#_upgrade_labels" title="fiftyone.core.patches._upgrade_labels">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  
+  <a name="fiftyone.core.patches._write_samples">
+    
+  </a>
+  <a name="_write_samples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_write_samples</span><span class="function-signature">(dataset, src_collection)</span>:
+    
+    <a class="headerLink" href="#_write_samples" title="fiftyone.core.patches._write_samples">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseconstant private">
+  
+  
+  <a name="fiftyone.core.patches._NO_MATCH_ID">
+    
+  </a>
+  <a name="_NO_MATCH_ID">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_NO_MATCH_ID</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#_NO_MATCH_ID" title="fiftyone.core.patches._NO_MATCH_ID">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string"></span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant private">
+  
+  
+  <a name="fiftyone.core.patches._PATCHES_TYPES">
+    
+  </a>
+  <a name="_PATCHES_TYPES">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_PATCHES_TYPES</span> =
+    
+    <a class="headerLink" href="#_PATCHES_TYPES" title="fiftyone.core.patches._PATCHES_TYPES">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>(<wbr></wbr><a href="fiftyone.core.labels.Detections.html" class="internal-link" title="fiftyone.core.labels.Detections">fol.Detections</a>, <wbr></wbr><a href="fiftyone.core.labels.Polylines.html" class="internal-link" title="fiftyone.core.labels.Polylines">fol.Polylines</a>, <wbr></wbr><a href="fiftyone.core.labels.Keypoints.html" class="internal-link" title="fiftyone.core.labels.Keypoints">fol.Keypoints</a>)</code></pre></td></tr></table>
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for fiftyone,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-11-17 20:16:35.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
